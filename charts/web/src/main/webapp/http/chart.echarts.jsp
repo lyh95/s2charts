@@ -15,24 +15,24 @@
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
-	<link href="/base/http/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
-	<link href="/base/http/lib/semantic/css/semantic.css" rel="stylesheet">
-	<link href="/base/http/lib/handsontable/handsontable.full.min.css" rel="stylesheet">
+	<link href="/http/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="/http/lib/semantic/css/semantic.css" rel="stylesheet">
+	<link href="/http/lib/handsontable/handsontable.full.min.css" rel="stylesheet">
 	<link href="css/upload.css" rel="stylesheet">
 	<link href="css/chart.css" rel="stylesheet">
-	<link href='/base/http/lib/spectrum-master/spectrum.css' rel='stylesheet'/>
-	<link href='/base/http/lib/jquery.range.css' rel='stylesheet'/>
+	<link href='/http/lib/spectrum-master/spectrum.css' rel='stylesheet'/>
+	<link href='/http/lib/jquery.range.css' rel='stylesheet'/>
 	
-	<script type="text/javascript" src="/base/http/lib/jquery-1.11.1.js"></script>
-	<script type="text/javascript" src="/base/http/lib/jquery.range.js"></script>
-    <script type="text/javascript" src="/base/http/lib/bootstrap/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="/base/http/lib/json2.js"></script>
-	<script type="text/javascript" src="/base/http/lib/html2canvas.js"></script>
-	<script type="text/javascript" src="/base/http/lib/json.show.format.js"></script>
-	<script type="text/javascript" src="/base/http/lib/handsontable/handsontable.min.js"></script>
-	<script type="text/javascript" src='/base/http/lib/spectrum-master/spectrum.js'></script>
+	<script type="text/javascript" src="/http/lib/jquery-1.11.1.js"></script>
+	<script type="text/javascript" src="/http/lib/jquery.range.js"></script>
+    <script type="text/javascript" src="/http/lib/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/http/lib/json2.js"></script>
+	<script type="text/javascript" src="/http/lib/html2canvas.js"></script>
+	<script type="text/javascript" src="/http/lib/json.show.format.js"></script>
+	<script type="text/javascript" src="/http/lib/handsontable/handsontable.min.js"></script>
+	<script type="text/javascript" src='/http/lib/spectrum-master/spectrum.js'></script>
 	<script type="text/javascript" src="/base/http/lib/Echarts/echarts-4.2.1/echarts.js"></script>
-	<script type="text/javascript" src="/base/http/lib/Echarts/echarts-liquidfill.js"></script>
+	<script type="text/javascript" src="/http/lib/Echarts/echarts-liquidfill.js"></script>
 	<script type="text/javascript" src="/base/http/js/common/SGIS.Base.js"></script>
 </head>
 <body>
@@ -50,9 +50,10 @@
 				<i id="remove_cion" class="remove icon" ></i>
 			</a>
 		</div>
-		<div class="clearfix"></div>	</div>
+		<div class="clearfix"></div>
+    </div>
 	<!--顶部导航-->
-	<%--<nav class="navbar navbar-inverse navbar-fixed-top" id="navbar" role="navigation" style="background-color:#123c5f;height:60px;">--%>
+	<nav class="navbar navbar-inverse navbar-fixed-top" id="navbar" role="navigation" >
 	</nav>
 <%
 	if(chartTypeChart == null || chartTypeChart.isEmpty()){
@@ -74,7 +75,7 @@
 <% 	
 	}else{
 %>
-	<div class="container-fluid" style="padding-top: 60px;">
+	<div class="container-fluid" style="padding-top: 65px;">
 		<!-- 左右 -->
 		<div class="row">
 		  <div class="col-xs-12 col-md-6">
@@ -186,7 +187,7 @@
 <script type="text/javascript" src='/base/http/lib/icon/iconfont.js'></script>
 <script type="text/javascript" src="/http/js/narBar.js"></script>
 
-<script type="text/javascript" src="js/cookie.js"></script>
+<script type="text/javascript" src="/http/js/cookie.js"></script>
 
 <script type="text/javascript">
 	//是否初始化
@@ -210,7 +211,7 @@
 	seajs.use('/http/js/chart.echarts',function(obj){
         obj.init(IS_CAN_INIT);
     });
-	seajs.use('/http/navBarJSP.tpl',function(obj){
+	seajs.use('/http/js/narBar',function(obj){
 		obj.into();
 	});
 </script>

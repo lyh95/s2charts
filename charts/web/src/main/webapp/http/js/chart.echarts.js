@@ -870,7 +870,7 @@ define(function(require, exports, module) {
 		 * 取得模板数据
 		 */
 		var getTemplateData = function(callback){
-			var url = SGIS.Config.BASE_MODULE_URL + "js/module/echarts/"
+			var url = SGIS.Config.BASE_MODULE_URL + "/js/module/echarts/"
 				+_chartTypeChart+".text.json";
 				//excel数据
 				//复杂json格式，可在json中设置chartData模式

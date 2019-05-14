@@ -1053,7 +1053,7 @@ define(function(require, exports, module) {
 		 * 取得模板数据
 		 */
 		var getTemplateData = function(callback){
-			var url = SGIS.Config.BASE_MODULE_URL + "js/module/d3/"
+			var url = SGIS.Config.BASE_MODULE_URL + "/js/module/d3/"
 				+_chartTypeChart+".text.json";
 	        $.getJSON(url,function(data){
 	        	//excel数据

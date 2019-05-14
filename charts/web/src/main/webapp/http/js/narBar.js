@@ -306,13 +306,12 @@ define(function(require, exports, module) {
             //添加导航栏
             $("#navbar").html("").append($(narBar));
             //绑定事件
+            // $(narbar).button.click(function () {
+                // $(narBar).find(ul>li).toggle();
+            // }
             bindEvent();
 
             UI.browerHeight();
-
-
-
-
         };
         var bindEvent = function(){
 

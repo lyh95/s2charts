@@ -53,7 +53,7 @@
 		<div class="clearfix"></div>
 	</div>
 	<!--顶部导航-->
-	<nav class="navbar navbar-inverse navbar-fixed-top" id="navbar" role="navigation" style="background-color:#123c5f;height:60px;">
+	<nav class="navbar navbar-inverse navbar-fixed-top" id="navbar" role="navigation" >
 	</nav>
 <%
 	if(chartId == null || chartId.isEmpty()){

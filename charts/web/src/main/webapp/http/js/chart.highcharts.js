@@ -1140,7 +1140,7 @@ define(function(require, exports, module) {
 		 * 取得模板数据
 		 */
 		var getTemplateData = function(callback){
-			var url = SGIS.Config.BASE_MODULE_URL + "js/module/highcharts/"
+			var url = SGIS.Config.BASE_MODULE_URL + "/js/module/highcharts/"
 				+_chartTypeChart+".text.json";
 	        $.getJSON(url,function(data){
 	        	//excel数据
