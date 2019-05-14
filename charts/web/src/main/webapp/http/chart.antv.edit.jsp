@@ -187,6 +187,8 @@
 	//是否初始化
 	var IS_CAN_INIT = <%= !(chartId == null || chartId.isEmpty()) ? true : false %> ;
 </script>
+<script type="text/javascript" src="/http/js/narBar.js"></script>
+
 <script type="text/javascript" src="/base/http/lib/seajs/sea.js"></script>
 <script type="text/javascript" src="/base/http/lib/seajs/seajs-text.js"></script>
 <script>

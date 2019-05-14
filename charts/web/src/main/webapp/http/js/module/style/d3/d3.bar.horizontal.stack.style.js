@@ -4,7 +4,8 @@
  */
 
 define(function (require, exports, module) {
-    var templateHtml = require("/http/.js/module/style/d3/d3.bar.horizontal.stack.html.tpl");
+
+    var templateHtml = require("/http/js/module/style/d3/d3.bar.horizontal.stack.html.tpl");
     var inputHtml = "<input type=\"color\" class=\"form-control\" style=\"width:45px;\" value=\"#ffffff\" />";
 
     var D3BarHorizontalStackStyle = (function () {

@@ -211,7 +211,7 @@
 	seajs.use('/http/js/chart.highcharts',function(obj){
         obj.init(IS_CAN_INIT);
     });
-	seajs.use('/http/js/navBarJSP.tpl',function(obj){
+	seajs.use('/http/js/narBar',function(obj){
 		obj.into();
 	});
 </script>

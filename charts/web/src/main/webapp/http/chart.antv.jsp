@@ -192,6 +192,8 @@
 </script>
 <script type="text/javascript" src="/http/lib/seajs/sea.js"></script>
 <script type="text/javascript" src="/http/lib/seajs/seajs-text.js"></script>
+<script type="text/javascript" src="/http/js/narBar.js"></script>
+
 <script>
 	seajs.config({
 		base : SGIS.Config.TOOL_MODULE_URL,			//基础路径
@@ -208,7 +210,7 @@
 	seajs.use('/http/js/chart.antv',function(obj){
 		obj.init(IS_CAN_INIT);
 	});
-    seajs.use('/http/js/navBarJSP.tpl',function(obj){
+    seajs.use('/http/js/narBar',function(obj){
         obj.into();
     });
 </script>

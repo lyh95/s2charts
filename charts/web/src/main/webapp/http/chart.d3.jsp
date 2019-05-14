@@ -208,7 +208,7 @@
 	seajs.use('/http/js/chart.d3',function(obj){
         obj.init(IS_CAN_INIT);
     });
-	seajs.use('/http/js/navBarJSP.tpl',function(obj){
+	seajs.use('/http/js/narBar',function(obj){
 		obj.into();
 	});
 </script>

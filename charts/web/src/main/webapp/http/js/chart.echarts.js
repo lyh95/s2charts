@@ -1070,7 +1070,7 @@ define(function(require, exports, module) {
 									});
 								}
 							}else{
-								SGIS.UI.alert("未找到数据！该图无法显示！",
+				 				SGIS.UI.alert("未找到数据！该图无法显示！",
 									null,false,function(modal){
 										modal.css({
 											"top":"40%",

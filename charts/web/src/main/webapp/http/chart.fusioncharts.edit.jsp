@@ -51,32 +51,35 @@
 	</div>
 	<div class="clearfix"></div>
 </div>
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color:rgb(27, 88, 87);">
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
-				<span class="sr-only">图集选择</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand">
-				<i class="icon photo"></i>可视化制图-编辑
-			</a>
-		</div>
-		<nav id="bs-navbar" class="collapse navbar-collapse">
-			<ul class="nav navbar-nav">
+<%--<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color:rgb(27, 88, 87);">--%>
+	<%--<div class="container-fluid">--%>
+		<%--<div class="navbar-header">--%>
+			<%--<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">--%>
+				<%--<span class="sr-only">图集选择</span>--%>
+				<%--<span class="icon-bar"></span>--%>
+				<%--<span class="icon-bar"></span>--%>
+				<%--<span class="icon-bar"></span>--%>
+			<%--</button>--%>
+			<%--<a class="navbar-brand">--%>
+				<%--<i class="icon photo"></i>可视化制图-编辑--%>
+			<%--</a>--%>
+		<%--</div>--%>
+		<%--<nav id="bs-navbar" class="collapse navbar-collapse">--%>
+			<%--<ul class="nav navbar-nav">--%>
 
-				<li>
-					<a type="button" class="btn" data-loading-text="正在更新..."  id="save_image">
-						<i class="icon save"></i>
-						更&nbsp;&nbsp;新
-					</a>
-				</li>
-			</ul>
+				<%--<li>--%>
+					<%--<a type="button" class="btn" data-loading-text="正在更新..."  id="save_image">--%>
+						<%--<i class="icon save"></i>--%>
+						<%--更&nbsp;&nbsp;新--%>
+					<%--</a>--%>
+				<%--</li>--%>
+			<%--</ul>--%>
 
-		</nav>
-	</div>
+		<%--</nav>--%>
+	<%--</div>--%>
+<%--</nav>--%>
+<!--顶部导航-->
+<nav class="navbar navbar-inverse navbar-fixed-top" id="navbar" role="navigation" style="background-color:#123c5f;height:60px;">
 </nav>
 <%
 	if(chartId == null || chartId.isEmpty()){
