@@ -329,6 +329,83 @@ define(function(require, exports, module) {
 						});
 						chartObj.init(objConfig);
 					});
+					//x轴颜色
+					$("#chart-x-font-color-select").change(function(){
+						var color = $(this).val();
+						objConfig["option"] = _style = $.extend(true,_style,{
+							xAxis : [
+								{
+									"axisLine": {
+										"lineStyle": {
+											"color": color
+										}
+									}
+								}
+							]
+						});
+						chartObj.init(objConfig);
+					});
+
+					//x轴字体颜色
+					$("#chart-x-font-color-select").change(function(){
+						var color = $(this).val();
+						objConfig["option"] = _style = $.extend(true,_style,{
+							xAxis : [
+								{
+									"axisLabel": {
+										"textStyle": {
+											"color": color
+										}
+									},
+									"nameTextStyle": {
+										"color": color
+									}
+								}
+							]
+						});
+						chartObj.init(objConfig);
+					});
+
+					//x轴字体大小
+					$("#chart-x-font-size-range").change(function(){
+						var size = $(this).val();
+
+						//设置值
+						$("#chart-x-font-size-text").val(size);
+						objConfig["option"] = _style = $.extend(true,_style,{
+							xAxis : [
+								{
+									"axisLabel": {
+										"textStyle": {
+											"fontSize": size
+										}
+									},
+									"nameTextStyle": {
+										"fontSize": size
+									}
+								}
+							]
+						});
+						chartObj.init(objConfig);
+					});
+
+					//x轴字体旋转角度
+					$("#chart-x-text-rotate-range").change(function(){
+						var size = $(this).val();
+
+						//设置值
+						$("#chart-x-text-rotate-text").val(size);
+						objConfig["option"] = _style = $.extend(true,_style,{
+							xAxis : [
+								{
+									"axisLabel": {
+										"rotate": size
+									}
+								}
+							]
+						});
+						chartObj.init(objConfig);
+					});
 
 					//y轴位置
 					$("input[name='chart-y-position-radio']").click(function(){
