@@ -8,7 +8,7 @@
 
 #infont_inmput {
 	display: inline-block;
-	background: red;
+	/*background: red;*/
 	position: relative;
 	overflow: hidden;
 }
