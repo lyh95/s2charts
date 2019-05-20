@@ -128,6 +128,7 @@ define(function (require, exports, module) {
                         that.option = $.extend(true, that.option, config.option || {});
                     }
                     myChart.resize();
+
                     myChart.setOption(that.option);
                 });
             }
