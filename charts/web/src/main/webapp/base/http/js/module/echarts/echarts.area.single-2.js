@@ -147,6 +147,7 @@ define(function(require, exports, module) {
                 	}
                     //增加自定义x轴(必须放在getOptionFromConfig后面)
                     that.appendXAxis($("#"+config.container),config,that.getRotateFromConfig(config));
+                    myChart.resize();
                     myChart.setOption(that.option);
                 });
             }
