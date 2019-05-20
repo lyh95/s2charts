@@ -67,8 +67,10 @@ define(function(require, exports, module) {
                      type : 'value',
                      scale:true,
                      axisLabel : {
-                         formatter: "        "
-                     }
+                         formatter: '{value}',
+                         "show":true
+                     },
+                "isShowXAxisText" : true
                  }
             ],
             yAxis : [
@@ -108,6 +110,7 @@ define(function(require, exports, module) {
                 	if(config.option){
                     	that.option = $.extend(true,that.option,config.option || {});
                 	}
+                    myChart.resize();
                     myChart.setOption(that.option);
                 });
             }
@@ -256,7 +259,7 @@ define(function(require, exports, module) {
             	}
                 
                 var re = {
-                	xAxisData:xAxisData,
+                	xAxisData: xAxisData,
                     legendData : legendData,
                     seriesName : seriesName,
                     seriesData : seriesData,

@@ -1,0 +1,331 @@
+<!--<!DOCTYPE html>-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+
+<title>数据地图 左右切换+文字联动</title>
+
+	<link href="/http/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="../css/lef-rig/base.css">
+	<link rel="stylesheet" href="../css/lef-rig/home.css">
+	<script type="text/javascript" src="/http/lib/bootstrap/js/bootstrap.min.js"></script>
+
+
+
+
+    <script src="../lib/jquery-1.9.1.min.js"></script>
+<!--	<script type="text/javascript" src="/http/lib/jquery-1.11.1.js"></script>-->
+	<script src="../lib/SuperSlide.js"></script>
+	<script src="../js/lef-rig.js"></script>
+	<script type="text/javascript" src="/base/http/js/common/SGIS.Base.js"></script>
+
+	<link rel="stylesheet" href="/http/css/navBar.css">
+
+	<script src="../base/http/lib/seajs/sea.js"></script>
+	<script src="../base/http/lib/seajs/sea-debug.js"></script>
+
+</head>
+<body >
+<nav class="navbar navbar-inverse navbar-fixed-top" id="navbar" role="navigation" style="background-color:#123c5f;height:60px;">
+ </nav>
+<div class="index-page">
+	<div class="solution-more">
+		<div class="solution-more-slide">
+			<div class="container">
+				<div class="hd">
+					<ul>
+						<li class="item-1 on">
+							<i></i>
+							<div class="text">
+								<h3>点层图</h3>
+								<p>全面点覆盖图层</p>
+							</div>
+						</li>
+						<li class="item-2">
+							<i></i>
+							<div class="text">
+								<h3>线层图</h3>
+								<p>全面线覆盖图层</p>
+							</div>
+						</li>
+						<li class="item-3">
+							<i></i>
+							<div class="text">
+								<h3>面层图</h3>
+								<p>多层面覆盖图层</p>
+							</div>
+						</li>
+						<li class="item-4">
+							<i></i>
+							<div class="text">
+								<h3>联合图</h3>
+								<p>多角度覆盖图层</p>
+							</div>
+						</li>
+						<li class="item-5">
+							<i></i>
+							<div class="text">
+								<h3>热力图层</h3>
+								<p>热度覆盖图层</p>
+							</div>
+						</li>
+						<li class="item-6">
+							<i></i>
+							<div class="text">
+								<h3>自定义图层</h3>
+								<p>打造专属地图</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<ul class="bd" style="position: relative; width: 1920px; height: 600px;">
+					<li class="item-1" style="position: absolute; width: 1920px; left: 0px; top: 0px; display: list-item;">
+						<div class="container">
+							<div class="inner">
+								<h2>点层图方案</h2>
+								<dl class="intro">
+									<dt>简介</dt>
+									<dd>灵活多变的点状控制图层的显示状态，将数据完美地展示出来，使地图更美观</dd>
+									<dt>使用</dt>
+									<dd>平台还提供地图控件、地图基础组件、地图高级组件三大类组件供使用，可根据需要将组件添加到展示区域，辅助可视化展示平台生成的可视化项目，
+										可导出为图片放入文档中，也可以通过URL直接在浏览器中访问或嵌入到网站中</dd>
+								</dl>
+<!--								<div class="btn-wrap">-->
+<!--									<a href="javascript:;">了解详情</a>-->
+<!--									<a href="javascript:;" class="btn-2">获取方案</a>-->
+<!--								</div>-->
+								<div class="example">
+									<h3>相关案例</h3>
+									<ul>
+										<li>
+											<a href="#"><img src="../img/lef-rig/point-one.png" height="852" width="1530"/> </a>
+										</li>
+										<li>
+											<a href="#"><img src="../img/lef-rig/point-two.png" height="1156" width="1600"/></a>
+										</li>
+										<li>
+											<a href="#"><img src="../img/lef-rig/point-three.png" height="818" width="1186"/></a>
+										</li>
+										<li>
+											<a href="#"><img src="../img/lef-rig/point-four.png" height="818" width="1186"/></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="item-2" style="position: absolute; width: 1920px; left: 0px; top: 0px; display: none;">
+						<div class="container">
+							<div class="inner">
+								<h2>线层图方案</h2>
+								<dl class="intro">
+									<dt>简介</dt>
+									<dd>丰富的线条将数据完美地展示出来，使地图更美观</dd>
+									<dt>使用</dt>
+									<dd>平台还提供地图控件、地图基础组件、地图高级组件三大类组件供使用，可根据需要将组件添加到展示区域，辅助可视化展示平台生成的可视化项目，
+										可导出为图片放入文档中，也可以通过URL直接在浏览器中访问或嵌入到网站中</dd>
+								</dl>
+<!--								<div class="btn-wrap">-->
+<!--									<a href="javascript:;">了解详情</a>-->
+<!--									<a href="javascript:;" class="btn-2">获取方案</a>-->
+<!--								</div>-->
+								<div class="example">
+									<h3>相关案例</h3>
+									<ul>
+										<li>
+											<a href="#"><img src="../img/lef-rig/line-one.png" height="1134" width="1728"/></a>
+										</li>
+										<li>
+											<a href="#"><img src="../img/lef-rig/line-two.png" height="1096" width="1650"/></a>
+										</li>
+										<li>
+											<a href="#"><img src="../img/lef-rig/line-three.png" height="818" width="1186"/></a>
+										</li>
+										<li>
+											<a href="#"><img src="../img/lef-rig/point-four.png" height="818" width="1186"/></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="item-3" style="position: absolute; width: 1920px; left: 0px; top: 0px; display: none;">
+						<div class="container">
+							<div class="inner">
+								<h2>面层图方案</h2>
+								<dl class="intro">
+									<dt>简介</dt>
+									<dd>强大的再开发能力，全面的地图数据支持</dd>
+									<dt>使用</dt>
+									<dd>平台还提供地图控件、地图基础组件、地图高级组件三大类组件供使用，可根据需要将组件添加到展示区域，辅助可视化展示平台生成的可视化项目，
+										可导出为图片放入文档中，也可以通过URL直接在浏览器中访问或嵌入到网站中</dd>
+								</dl>
+<!--								<div class="btn-wrap">-->
+<!--									<a href="javascript:;">了解详情</a>-->
+<!--									<a href="javascript:;" class="btn-2">获取方案</a>-->
+<!--								</div>-->
+								<div class="example">
+									<h3>相关案例</h3>
+									<ul>
+										<li>
+											<a href="#"><img src="../img/lef-rig/surface-one.png" height="810" width="1084"/></a>
+										</li>
+										<li>
+											<a href="#"><img src="../img/lef-rig/surface-two.png" height="806" width="1154"/></a>
+										</li>
+										<li>
+											<a href="#"><img src="../img/lef-rig/point-three.png" height="818" width="1186"/></a>
+										</li>
+										<li>
+											<a href="#"><img src="../img/lef-rig/point-four.png" height="818" width="1186"/></a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="item-4" style="position: absolute; width: 1920px; left: 0px; top: 0px; display: none;">
+						<div class="container">
+							<div class="inner">
+								<h2>联合图方案</h2>
+								<dl class="intro">
+									<dt>简介</dt>
+									<dd>灵活控制图层的显示状态</dd>
+									<dt>使用</dt>
+									<dd>平台还提供地图控件、地图基础组件、地图高级组件三大类组件供使用，可根据需要将组件添加到展示区域，辅助可视化展示平台生成的可视化项目，
+										可导出为图片放入文档中，也可以通过URL直接在浏览器中访问或嵌入到网站中</dd>
+								</dl>
+<!--								<div class="btn-wrap">-->
+<!--									<a href="javascript:;">了解详情</a>-->
+<!--									<a href="javascript:;" class="btn-2">获取方案</a>-->
+<!--								</div>-->
+								<div class="example">
+									<h3>相关案例</h3>
+									<ul>
+										<li>
+											<a href="#"><img src="../img/lef-rig/union-one.png" height="1108" width="1182"/></a>
+										</li>
+										<li>
+											<a href="#"><img src="../img/lef-rig/point-three.png" height="818" width="1186"/></a>
+										</li>
+										<li>
+											<a href="#"><img src="../img/lef-rig/point-three.png" height="818" width="1186"/></a>
+										</li>
+										<li>
+											<a href="#"><img src="../img/lef-rig/point-four.png" height="818" width="1186"/></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="item-5" style="position: absolute; width: 1920px; left: 0px; top: 0px; display: none;">
+						<div class="container">
+							<div class="inner">
+								<h2>热力图层方案</h2>
+								<dl class="intro">
+									<dt>简介</dt>
+									<dd>热力图是通过用户数量渲染地图颜色。实现展示该地区人的密度，关键就是数据的获取(坐标信息)</dd>
+									<dt>使用</dt>
+									<dd>平台还提供地图控件、地图基础组件、地图高级组件三大类组件供使用，可根据需要将组件添加到展示区域，辅助可视化展示平台生成的可视化项目，
+										可导出为图片放入文档中，也可以通过URL直接在浏览器中访问或嵌入到网站中</dd>
+								</dl>
+<!--								<div class="btn-wrap">-->
+<!--									<a href="javascript:;">了解详情</a>-->
+<!--									<a href="javascript:;" class="btn-2">获取方案</a>-->
+<!--								</div>-->
+								<div class="example">
+									<h3>相关案例</h3>
+									<ul>
+										<li>
+											<a href="#"><img src="../img/lef-rig/hot-one.png" height="316" width="424"/></a>
+										</li>
+										<li>
+											<a href="#"><img src="../img/lef-rig/point-three.png" height="818" width="1186"/></a>
+										</li>
+										<li>
+											<a href="#"><img src="../img/lef-rig/point-three.png" height="818" width="1186"/></a>
+										</li>
+										<li>
+											<a href="#"><img src="../img/lef-rig/point-four.png" height="818" width="1186"/></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="item-6" style="position: absolute; width: 1920px; left: 0px; top: 0px; display: none;">
+						<div class="container">
+							<div class="inner">
+								<h2>自定义图层解决方案</h2>
+								<dl class="intro">
+									<dt>简介</dt>
+									<dd>自己定制区域面、建筑物、水系、天空、道路、标注、行政边界等地图元素,随心所欲的设计心仪的地图样式</dd>
+									<dt>使用</dt>
+									<dd>地图元素可供设置是否显示、填充颜色、描边颜色、不透明度等多种属性，根据场景选择性显示地图元素，地图更简洁，更美观</dd>
+								</dl>
+<!--								<div class="btn-wrap">-->
+<!--									<a href="javascript:;">了解详情</a>-->
+<!--									<a href="javascript:;" class="btn-2">获取方案</a>-->
+<!--								</div>-->
+								<div class="example">
+									<h3>相关案例</h3>
+									<ul>
+										<li>
+											<a href="#"><img src="../img/lef-rig/custom-one.png" height="1014" width="1290"/></a>
+										</li>
+										<li>
+											<a href="#"><img src="../img/lef-rig/point-three.png" height="818" width="1186"/></a>
+										</li>
+										<li>
+											<a href="#"><img src="../img/lef-rig/point-three.png" height="818" width="1186"/></a>
+										</li>
+										<li>
+											<a href="#"><img src="../img/lef-rig/point-four.png" height="818" width="1186"/></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+<script type="text/javascript" src='/base/http/lib/icon/iconfont.js'></script>
+<script type="text/javascript" src="/http/js/narBar.js"></script>
+<script type="text/javascript" src="/http/js/cookie.js"></script>
+<script type="text/javascript" src="/base/http/lib/seajs/sea.js"></script>
+<script type="text/javascript" src="/base/http/lib/seajs/seajs-text.js"></script>
+<script>
+
+	seajs.config({    base : SGIS.Config.TOOL_MODULE_URL,          //基础路径 
+		paths:{       base:SGIS.Config.BASE_MODULE_URL,     //跨目录的base路径 
+			         tool:SGIS.Config.TOOL_MODULE_URL,     //跨目录的tool路径  
+			}, 
+		    map : [ [ '.json', '.json?t=' + new Date().getTime() ],
+		[ '.css', '.css?t=' + new Date().getTime() ] ] 
+	         }); 
+	// 单个图的页面加导航栏
+	//       seajs.use('../js/lef-rig.js',function(obj){ 
+	//       	   obj.init(IS_CAN_INIT); 
+	//       });
+	      //链接换成自己的出图的js文件的路径
+	// 模块的页面加导航栏
+	      seajs.use('../js/lef-rig.js');//链接换成自己模块页面的js文件的路径
+
+	// 加导航栏的样式
+	seajs.use('/http/js/narBar',function(obj){    obj.into(); 
+	});
+</script>
+</html>
