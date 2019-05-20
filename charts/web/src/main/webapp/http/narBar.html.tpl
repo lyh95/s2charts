@@ -73,7 +73,7 @@
                         <!--没写-->
                         <a class="btn narstyle"  id="go-login-btn" style="padding:17px 0; float: right;
 ">
-                            <span class="glyphicon glyphicon-user" style="padding-left: 15px"> </span>登录</a>
+                            <span  class="glyphicon glyphicon-user" style="padding-left: 15px"> </span>登录</a>
 
                     </li>
 				</ul>
