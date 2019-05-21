@@ -1,0 +1,160 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/** { margin: 0; padding: 0; }
+主要用途就是帮助你重置不同的浏览器默认样式，
+以达到不同浏览器显示网页的结果不会差太远的效果*/
+
+body{
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+}
+#top-nav{
+
+    margin: 0;
+    padding: 0;
+
+}
+
+#top-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 10%;
+}
+
+#top-nav ul li {
+    float: left;
+
+}
+
+#top-nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    /*超链接的下划线去掉*/
+}
+
+#top-nav ul li a:hover:not(.active) {
+    background-color: #111;
+}
+
+#top-nav ul li a.active {
+    background-color: #59636b;
+}
+
+
+li{
+
+    list-style: none;
+
+}
+
+
+#right-content{
+
+    width: 800px;
+
+    margin :0 auto;
+
+    padding: 20px;
+
+}
+
+
+/*#right-content .abstract{*/
+
+/*    margin-top: initial;*/
+/*    margin-bottom: 20px;*/
+
+
+/*}*/
+
+#right-content .item{
+
+    padding:20px;
+
+    margin-bottom: 20px;
+
+    border: 1px dotted #0088bb;
+
+}
+
+#right-content .item h2{
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    border-bottom: 2px solid #0088bb;
+
+    margin-bottom: 10px;
+
+}
+
+#right-content .item li{
+
+    display: inline;
+
+    margin-right: 10px;
+
+}
+
+#right-content .item li a img{
+
+    width: 240px;
+
+    height: 230px;
+
+    border:none;
+
+}
+/*注意right-content后面的空格*/
+#left-menu{
+
+    margin-top: 10%;
+}
+
+#left-menu ul{
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 15%;
+    background-color: #2e3237;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+
+
+
+}
+
+#left-menu li a {
+    display: block;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+#left-menu li a.current {
+    background-color: #59636b;
+    color: white;
+}
+
+#left-menu li a:hover:not(.current) {
+    background-color: #111;
+    color: white;
+}
