@@ -27,9 +27,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()	//定义权限配置
                 .antMatchers("/admin").hasRole("MEMBER")	//角色为ROLE_ADMIN才能访问，可省略prefix
+                //	.antMatchers("/orders/**").hasAnyRole("USER", "ADMIN")    //用户权限，管理员权限
+
 //				.anyRequest().authenticated()	//任何请求都必须经过认证才能访问
-                //				.antMatchers("/orders/**").hasAnyRole("USER", "ADMIN")    //用户权限，管理员权限
-                .antMatchers("/http/index.html").permitAll()     // 设置所有人都可以访问登录页面
+                .antMatchers("/needpermission").authenticated() //设置需要认证的请求
+//                .antMatchers(HttpMethod.POST,"/tests").authenticated()对/tests路径的HTTP POST请求必须要经过认证
 
 //                .antMatchers("/**/**").permitAll()
                 .and()

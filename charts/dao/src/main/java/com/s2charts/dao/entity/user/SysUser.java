@@ -3,14 +3,6 @@ package com.s2charts.dao.entity.user;
 public class SysUser {
     private Integer userId;
 
-    private Integer roleId;
-
-    private String userName;
-
-    private String passWord;
-    //one-to-one
-    private SysRole role;
-
     public Integer getUserId() {
         return userId;
     }
@@ -27,27 +19,36 @@ public class SysUser {
         this.roleId = roleId;
     }
 
-    public String getUsername() {
+    public String getUserName() {
         return userName;
     }
 
-    public void setUsername(String username) {
-        this.userName = username == null ? null : username.trim();
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public String getPassword() {
+    public String getPassWord() {
         return passWord;
     }
 
-    public void setPassword(String password) {
-        this.passWord = password == null ? null : password.trim();
+    public void setPassWord(String passWord) {
+        this.passWord = passWord;
     }
 
-	public SysRole getRole() {
-		return role;
-	}
+    public SysRole getRole() {
+        return role;
+    }
 
-	public void setRole(SysRole role) {
-		this.role = role;
-	}
+    public void setRole(SysRole role) {
+        this.role = role;
+    }
+
+    private Integer roleId;
+
+    private String userName;
+
+    private String passWord;
+    //one-to-one
+    private SysRole role;
+
 }
