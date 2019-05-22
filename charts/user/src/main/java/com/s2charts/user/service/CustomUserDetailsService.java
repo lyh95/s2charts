@@ -17,7 +17,7 @@ import java.util.List;
 public class CustomUserDetailsService implements UserDetailsService {
 
 	@Autowired
-	 SysUserMapper userMapper;
+	 private SysUserMapper userMapper;
 	
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -25,7 +25,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 		if(sysUser!=null) {
 			List<GrantedAuthority> authority = new ArrayList<GrantedAuthority>();
 			authority.add(new SimpleGrantedAuthority(sysUser.getRole().getRoleName()));
-			return new User(sysUser.getUsername(),sysUser.getPassword(),authority);
+			return new User(sysUser.getUserName(),sysUser.getPassWord(),authority);
 		}else {
 			throw new UsernameNotFoundException("用户 [" + username + "] 不存在！");
 		}
