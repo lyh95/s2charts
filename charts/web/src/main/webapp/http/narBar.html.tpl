@@ -71,9 +71,9 @@
 					</li>
                     <li class="listyle">
                         <!--没写-->
-                        <a class="btn narstyle"  id="go-login-btn" style="padding:17px 0; float: right;
-">
-                            <span  class="glyphicon glyphicon-user" style="padding-left: 15px"> </span>登录</a>
+						<a href="/login"> <input type="button" id="go-login-btn" class="btn narstyle " value="登录"
+							   style="padding:1px 0; float: right;color: black;">
+                            <span  class="glyphicon glyphicon-user" style="padding-right: 5px;padding-top: 5px;"> </span></a>
 
                     </li>
 				</ul>
