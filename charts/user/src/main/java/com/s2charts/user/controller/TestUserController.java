@@ -1,5 +1,10 @@
 package com.s2charts.user.controller;
 
+
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.s2charts.dao.entity.user.SysUser;
 import com.s2charts.user.service.CustomUserDetailsService;
 import com.s2charts.user.service.TestUserService;
@@ -42,44 +47,27 @@ public class TestUserController {
             request.getSession().setAttribute("session_user",user);     //将用户信息放入session
             return "success";
     }
-    /**
-//     * 服务器端获取所有用户信息
-//     */
-//
-////    @RequestMapping("/findAll")
-////    public ModelAndView findAll(
-////            @RequestParam("userName")String userName,@RequestParam("passWord")String passWord){
-////
-////        // 测试代码
-////
-////        //1. 获取绑定到当然线程上的SecurityContext
-////
-////        SecurityContext securityContext = SecurityContextHolder.getContext();
-////
-////        //2. 获取认证器对象
-////
-////        Authentication authentication = securityContext.getAuthentication();
-////
-////        //3. 获取认证身份信息. 注意这里的user是
-////// org.springframework.security.core.userdetails.User
-////        SysUser users = (SysUser) authentication.getPrincipal();
-////
-////        //4. 获取用户名
-////        System.out.println(users.getUserName());
-////        // 调用service查询
-////        List<SysUser> userList = testUserService.selectUser(userName,passWord);
-////        ModelAndView mv = new ModelAndView();
-////        mv.setViewName("user-list");
-////        mv.addObject("pageInfo",userList);
-////        return mv;
-//    }
 
-    //获取当前用户名
-    @RequestMapping(value = {"/getusername"})
+
+    //检验当前登录状态，并且获取当前用户名
+    @RequestMapping(value = {"/checklogin"})
     @ResponseBody
-    public String getCurrentUsername() {
-
-        return SecurityContextHolder.getContext().getAuthentication().getName();
-
+    public JsonNode getCurrentUsername() throws Exception{
+        JsonNode jsonNode=null;
+        if(SecurityContextHolder.getContext().getAuthentication().getName()!="anonymousUser"){
+            String user = SecurityContextHolder.getContext().getAuthentication().getName();
+            String json ="[{\"code\":200,\"username\":\""+user+"\"}]";
+            ObjectMapper mapper = new ObjectMapper();
+             jsonNode =mapper.readTree(json);
+//            objectNode = (ObjectNode) jsonNode;
+//            objectNode.put("username",user);
+        }
+        else{
+            String json ="[{\"username\":\"null\",\"code\":400}]";
+            ObjectMapper mapper = new ObjectMapper();
+            jsonNode = mapper.readTree(json);
+        }
+        return jsonNode ;
     }
+
 }
