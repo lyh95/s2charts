@@ -56,14 +56,14 @@ public class TestUserController {
         JsonNode jsonNode=null;
         if(SecurityContextHolder.getContext().getAuthentication().getName()!="anonymousUser"){
             String user = SecurityContextHolder.getContext().getAuthentication().getName();
-            String json ="[{\"code\":200,\"username\":\""+user+"\"}]";
+            String json ="{\"code\":200,\"username\":\""+user+"\"}";
             ObjectMapper mapper = new ObjectMapper();
              jsonNode =mapper.readTree(json);
 //            objectNode = (ObjectNode) jsonNode;
 //            objectNode.put("username",user);
         }
         else{
-            String json ="[{\"username\":\"null\",\"code\":400}]";
+            String json ="{\"username\":\"null\",\"code\":400}";
             ObjectMapper mapper = new ObjectMapper();
             jsonNode = mapper.readTree(json);
         }
