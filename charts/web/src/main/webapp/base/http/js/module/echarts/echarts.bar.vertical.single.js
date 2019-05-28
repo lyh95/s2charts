@@ -143,6 +143,7 @@ define(function (require, exports, module) {
                     callback && callback();
                 });
             } else {
+                console.log(typeof config.data)
                 this.getDataFromConfig(config.url, function (re) {
                     goTo(re);
                     callback && callback();
