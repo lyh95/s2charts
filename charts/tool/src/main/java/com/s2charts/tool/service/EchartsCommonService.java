@@ -229,7 +229,7 @@ public class EchartsCommonService extends EchartsService {
             }
             json.put(Result.JSON_RESULT_CODE, Result.RESULT_EXECUTE_OK);
             json.put(Result.JSON_RESULT_MESSAGE, "result.execute.ok");
-            json.put("data", reJsonArray.toString());
+            json.put("data", reJsonArray);
 
 
         return json;
