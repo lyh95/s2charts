@@ -1,13 +1,12 @@
 package com.s2charts.user.controller;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.util.JSONPObject;
 import com.s2charts.dao.entity.user.SysUserPermission;
 import com.s2charts.user.service.TestUserPermissionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,11 +19,12 @@ public class TestUserPermissionController {
     @RequestMapping(value = {"/checkdownload"})
     @ResponseBody
     public boolean test(@RequestParam("userPic") String userPic) {
+       // String userPic=params.get("userPic");
         String currentuser =SecurityContextHolder.getContext().getAuthentication().getName();
         if(currentuser=="admin"||currentuser=="lishuya"){
             return true;
         }
-        else if(currentuser=="zhangsan"){
+        else{
 
             List<SysUserPermission> users = testUserPermissionService.selectPermissionById(userPic);
             String s = "";
@@ -37,7 +37,6 @@ public class TestUserPermissionController {
             else
                 return true;
         }
-        return false;
        
     }
 }

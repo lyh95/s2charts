@@ -198,18 +198,20 @@
             </div><!-- .col-xs-5 -->
         </div>
         <div class="col-xs-12 col-md-6" style="margin-top: 3%">
-            <li class="pull-right" style="width: 300px">
-                <div class="pull-left">
-                    <button type="button" class="btn btnstyle" style="background-color: #333333">
+            <li class="pull-right" style="width: 300px;padding-bottom: 2px">
+                <div class="pull-left" >
+                    <div id="xiazai">
+                    <button type="button" class="btn btnstyle" id="download-pic" style="background-color: #333333">
                       <span class="glyphicon glyphicon-download-alt">下载
-                      <a href="./image/echarts/<%=chartTypeChart %>.png" ; download="11111.jpg" style="color: #EEEEEE"></a>
+                      <%--<a href="./image/echarts/<%=chartTypeChart %>.png" ; download="11111.jpg" style="color: #EEEEEE"></a>--%>
                       </span>
 
                     </button>
                 </div>
-                <div class="pull-left" style="margin-left: 1%">
+                </div>
+                <div class="pull-left" style="margin-left: 1%" >
 
-                    <button type="button" value="提交" class="btn btnstyle" style="background-color: #333333">
+                    <button type="button" value="提交" class="btn btnstyle" id="save-pic" style="background-color: #333333">
                         <span class="glyphicon glyphicon-check"><a href="#"></a>保存</span>
                     </button>
 
@@ -231,10 +233,8 @@
         $(":button").click(function () {
             $(":button").css("background", "#333333")
             $(this).css("background", "#D8BFD8");
-        })
+        });
 
-        // $ (":button").click(function(){
-        //     $(this).addClass("buttonstyle")})
     </script>
 
         <%
@@ -253,6 +253,8 @@
 </script>
 <script type="text/javascript" src="/base/http/lib/seajs/sea.js"></script>
 <script type="text/javascript" src="/base/http/lib/seajs/seajs-text.js"></script>
+<script type="text/javascript" src="/http/narbarlogin.js"></script>
+
 <script>
     seajs.config({
         base: SGIS.Config.TOOL_MODULE_URL,			//基础路径
@@ -269,8 +271,11 @@
     seajs.use('/http/js/chart.echarts', function (obj) {
         obj.init(IS_CAN_INIT);
     });
+
+    seajs.use('/http/js/xiazaidownload.js');
+    seajs.use('/http/narbarlogin');
     seajs.use('/http/js/narBar', function (obj) {
-        obj.into();
+            obj.into();
     });
 </script>
 </html>

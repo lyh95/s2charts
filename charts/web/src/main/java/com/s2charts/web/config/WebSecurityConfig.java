@@ -40,6 +40,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
+                .csrf().disable()//关闭csrf保护
                 .authorizeRequests()    //定义权限配置
                 .antMatchers("/admin").hasRole("MEMBER")    //角色为ROLE_ADMIN才能访问，可省略prefix
                 //	.antMatchers("/orders/**").hasAnyRole("USER", "ADMIN")    //用户权限，管理员权限
@@ -76,6 +77,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll()    //允许任何人访问登录url
                 .and()
                 .logout().permitAll();    //允许任何人访问登出url
+
     }
 
     @Override

@@ -70,7 +70,7 @@
 						</a>
 					</li>
                     <li class="listyle">
-                        <!--没写-->
+                        <!--没写//写了-->
 						<a href="/login"> <input type="button" id="go-login-btn" class="btn narstyle " value="登录"
 							   style="padding:1px 0; float: right;color: black;">
                             <span  class="glyphicon glyphicon-user" style="padding-right: 5px;padding-top: 5px;"> </span></a>
