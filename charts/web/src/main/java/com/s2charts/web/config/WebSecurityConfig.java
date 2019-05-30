@@ -54,28 +54,24 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .formLogin()    //定制登录表单
                 .loginPage("/login")    //设置登录url
                 .defaultSuccessUrl("/http/index.html")    //设置登录成功默认跳转url
-//                .successHandler(new AuthenticationSuccessHandler() {
-//
-//                    @Override
-//                    public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
-//                                                        Authentication authentication) throws IOException, ServletException {
-//                        response.setContentType("application/json;charset=utf-8");
-//
-//
-//                        RequestCache cache = new HttpSessionRequestCache();
-//                        SavedRequest savedRequest = cache.getRequest(request, response);
-//                        String url = null;
-//                        if(savedRequest != null){
-//                            url = savedRequest.getRedirectUrl();
-//                            response.sendRedirect(url);
-////                            response.sendRedirect(savedRequest.getRedirectUrl());
-//                        }
-//                        else{
-//                            response.getWriter().write("登陆成功");
-//                        }
-//
-//                    }
-//                })
+                .successHandler(new AuthenticationSuccessHandler() {
+            @Override
+            public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
+                                                Authentication authentication) throws IOException, ServletException {
+                response.setContentType("application/json;charset=utf-8");
+                RequestCache cache = new HttpSessionRequestCache();
+                SavedRequest savedRequest = cache.getRequest(request, response);
+                String url = null;
+                if(savedRequest != null){
+                    url = savedRequest.getRedirectUrl();
+                    response.sendRedirect(url);
+//                            response.sendRedirect(savedRequest.getRedirectUrl());
+                }
+                else{
+                    response.getWriter().write("登陆成功");
+                }
+            }
+        })
 
                 .permitAll()    //允许任何人访问登录url
                 .and()
