@@ -51,7 +51,7 @@ define(function(require, exports, module) {
                     type : 'category',
                     data : [],  //数据
                     "axisLabel": {
-                        "rotate": 0,
+                       "rotate": 0,
                         "interval": "auto",
                         "textStyle": {
                             "fontSize": 12,
@@ -64,14 +64,17 @@ define(function(require, exports, module) {
                         "show": false
                     },
                     "axisLine": {
+                        "onZero":false,
                         "lineStyle": {
                             "color": "#000000"
                         }
                     },
+
                     positionOffset:{
                         x:0,
                         y:0
                     },
+
                     "isShowXAxisText" : false
                 }
             ],
@@ -137,8 +140,7 @@ define(function(require, exports, module) {
                 	if(config.option){
                     	that.option = $.extend(true,that.option,config.option || {});
                 	}
-                    //增加自定义x轴(必须放在getOptionFromConfig后面)
-                    that.appendXAxis($("#"+config.container),config,that.getRotateFromConfig(config));
+                    myChart.resize();
                     myChart.setOption(that.option);
                 });
             }

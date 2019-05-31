@@ -64,6 +64,7 @@ define(function(require, exports, module) {
                         "show": false
                     },
                     "axisLine": {
+                        "onZero":false,
                         "lineStyle": {
                             "color": "#000000"
                         }
@@ -136,8 +137,7 @@ define(function(require, exports, module) {
                 	if(config.option){
                     	that.option = $.extend(true,that.option,config.option || {});
                 	}
-                    //增加自定义x轴(必须放在getOptionFromConfig后面)
-                    that.appendXAxis($("#"+config.container),config,that.getRotateFromConfig(config));
+                    myChart.resize();
                     myChart.setOption(that.option);
                 });
             }

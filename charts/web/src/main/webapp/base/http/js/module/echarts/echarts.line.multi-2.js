@@ -149,7 +149,8 @@ define(function(require, exports, module) {
                     	that.option = $.extend(true,that.option,config.option || {});
                 	}
                     //增加自定义x轴(必须放在getOptionFromConfig后面)
-                    that.appendXAxis($("#"+config.container),config,that.getRotateFromConfig(config));
+                   // that.appendXAxis($("#"+config.container),config,that.getRotateFromConfig(config));
+                    myChart.resize();
                     myChart.setOption(that.option);
                 });
             }
@@ -182,10 +183,15 @@ define(function(require, exports, module) {
                     $.extend(true,that.option.xAxis,[{
                         type : 'category',
                         data : re.xAxisData
-                    },{
+                    }
+                    /*,{
                         type : 'category',
                         data : re.xAxisData
-                    }]);
+                    }
+
+                     */
+                    ]);
+
 
                     $.extend(that.option.yAxis[0],{
                         name : re.unit

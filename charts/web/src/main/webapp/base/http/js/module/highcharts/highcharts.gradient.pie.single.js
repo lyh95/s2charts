@@ -93,6 +93,7 @@ define(function(require, exports, module) {
                         that.option = $.extend(true,that.option,config.option || {});
                     }
                     $(function () {
+
                         $(myChart).highcharts(that.option);
                         //$(myChart).highcharts(common.theme.gray);
                     });

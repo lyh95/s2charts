@@ -71,17 +71,7 @@ define(function(require, exports, module) {
 				var chartObj = hanlder.getChartObj();
 				var objConfig = hanlder.getChartConfig();
 				if(chartObj && objConfig){
-					//改变标题
-					$("input[id='chart-name']").change(function(){
-						var val=$(this).val();
-						objConfig["option"] = _style = $.extend(true,_style,{
-							"title" :{
-								text : val
-							}
-						})
-						chartObj.init(objConfig);
 
-					})
 					//修改图的高度
 					$("#chart-chart-height-range").change(function(){
 						var height = $(this).val();
@@ -110,7 +100,7 @@ define(function(require, exports, module) {
 						chartObj.init(objConfig);
 					});
 
-					//折线1是否为平滑曲线
+					//折线2是否为平滑曲线
 					$("#chart2-show-smooth-check").change(function(){
 						var isShow = $(this).is(":checked");
 						var isShow1 = $("#chart1-show-smooth-check").is(":checked");
@@ -507,13 +497,13 @@ define(function(require, exports, module) {
 									"axisLabel": {
 										"textStyle": {
 											"color": color
-										},
-										"show": false
-									},
-									"nameTextStyle": {
-										"color": color
-									},
-									"isShowXAxisText" : true
+										}
+										//"show": false
+									}
+									//"nameTextStyle": {
+										//"color": color
+									//}
+									//"isShowXAxisText" : true
 								}
 							]
 						});
@@ -526,7 +516,8 @@ define(function(require, exports, module) {
 
 						//设置值
 						$("#chart-x-font-size-text").val(size);
-						objConfig["option"] = _style = $.extend(true,_style,{
+						//修改X轴属性值
+						/*objConfig["option"] = _style = $.extend(true,_style,{
 							xAxis : [
 								{
 									"axisLabel": {
@@ -541,6 +532,17 @@ define(function(require, exports, module) {
 									"isShowXAxisText" : true
 								}
 							]
+						});*/
+						objConfig["option"] = _style = $.extend(true,_style,{
+							xAxis : [
+								{
+									"axisLabel": {
+										"textStyle": {
+											"fontSize": size
+										}
+									}
+								}
+							]
 						});
 						chartObj.init(objConfig);
 					});
@@ -550,8 +552,9 @@ define(function(require, exports, module) {
 						var angle = $(this).val();
 
 						//设置值
-						$("#chart-x-text-rotate-text").val(angle);
-						objConfig["option"] = _style = $.extend(true,_style,{
+						$("#chart-x-text-rotate-text").val(angle)
+						//修改X轴字体旋转角度
+						/*objConfig["option"] = _style = $.extend(true,_style,{
 							xAxis : [
 								{
 									"axisLabel": {
@@ -559,6 +562,15 @@ define(function(require, exports, module) {
 										"rotate": angle		//保存当前的x轴文字旋转角度
 									},
 									"isShowXAxisText":true
+								}
+							]
+						});*/
+						objConfig["option"] = _style = $.extend(true,_style,{
+							xAxis : [
+								{
+									"axisLabel": {
+										"rotate": angle		//保存当前的x轴文字旋转角度
+									}
 								}
 							]
 						});
@@ -582,6 +594,7 @@ define(function(require, exports, module) {
 						}
 					});
 
+					//调整y轴字段高度
 					$("#chart-textxy-color-container>.form-controly").change(function() {
 						var ymove = $(this).val();
 						if(ymove != ""){
@@ -689,6 +702,17 @@ define(function(require, exports, module) {
 						});
 						chartObj.init(objConfig);
 					});
+					//改变标题
+					$("input[id='chart-name']").change(function(){
+						var val=$(this).val();
+						objConfig["option"] = _style = $.extend(true,_style,{
+							"title" :{
+								text : val
+							}
+						})
+						chartObj.init(objConfig);
+
+					})
 				}//end if(chartObj && objConfig)
 			}//end if(hanlder)
 
@@ -949,8 +973,8 @@ define(function(require, exports, module) {
 			positionOffset: {
 						x:0,
 						y:0
-					},
-						"isShowXAxisText" : false
+					}
+					//修改	"isShowXAxisText" : false
 					}
 				]
 			},{

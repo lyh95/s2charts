@@ -15,6 +15,7 @@ define(function(require, exports, module) {
         this.option = {
             chart: {
                 type: 'pie',
+                height:'',
                 backgroundColor: '#FFFFFF',
                 options3d: {
                     enabled: true,
