@@ -82,7 +82,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 //触发注销操作的url
                     .logoutUrl("/logout")
                 //注销成功后跳转的url
-                    .logoutSuccessUrl("/login")
+                    .logoutSuccessUrl("/http/index.html")
                 //指定在注销时让HttpSession无效
                     .invalidateHttpSession(true)
                     ;    //允许任何人访问登出url
