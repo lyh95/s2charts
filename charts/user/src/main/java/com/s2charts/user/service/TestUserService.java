@@ -9,12 +9,13 @@ import java.util.List;
 
 
 @Service
+//通过用户名查询出用户的role_id
 public class TestUserService {
     @Autowired
     private SysUserMapper sysUserMapper;
 
-    public List<SysUser> selectUser(String userName, String passWord){
+    public int selectIdByUsername(String username){
 
-        return sysUserMapper.selectUser(userName,passWord);
+        return sysUserMapper.selectIdByUsername(username);
     }
 }

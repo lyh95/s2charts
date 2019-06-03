@@ -1,9 +1,11 @@
 package com.s2charts.user.controller;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.util.JSONPObject;
 import com.s2charts.dao.entity.user.SysUserPermission;
 import com.s2charts.user.service.TestUserPermissionService;
+import com.s2charts.user.service.TestUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
@@ -15,28 +17,55 @@ import java.util.List;
 public class TestUserPermissionController {
     @Autowired
     private TestUserPermissionService testUserPermissionService;
+    @Autowired
+    private TestUserService testUserService;
 
     @RequestMapping(value = {"/checkdownload"})
     @ResponseBody
-    public boolean test(@RequestParam("userPic") String userPic) {
-       // String userPic=params.get("userPic");
+    public JsonNode test(@RequestParam("userPic") String userPic) throws Exception{
+        JsonNode jsonNode=null;
         String currentuser =SecurityContextHolder.getContext().getAuthentication().getName();
-        if(currentuser=="admin"||currentuser=="lishuya"){
-            return true;
+        if(currentuser=="anonymousUser"){
+            String json ="{\"code\":400,\"userpermission\":\"null\"}";
+            ObjectMapper mapper = new ObjectMapper();
+            jsonNode =mapper.readTree(json);
         }
         else{
-
+            int userId = testUserService.selectIdByUsername(currentuser);
+            String id = userId+"";
             List<SysUserPermission> users = testUserPermissionService.selectPermissionById(userPic);
-            String s = "";
+                        String s = "";
             for (SysUserPermission user : users) {
-                s = s + user.getUserId() + user.getUserPic();
+                s = s + user.getUserId();
             }
-            System.out.println(s);
-            if (s == null || s.length() <= 0)
-                return false;
-            else
-                return true;
+            if(s.contains(id)){
+                String json ="{\"code\":200,\"userpermission\":\"yes\"}";
+                ObjectMapper mapper = new ObjectMapper();
+                jsonNode =mapper.readTree(json);
+            }else{
+            String json ="{\"code\":300,\"userpermission\":\"no\"}";
+            ObjectMapper mapper = new ObjectMapper();
+            jsonNode =mapper.readTree(json);}
         }
-       
+        return jsonNode ;
     }
+//        else{
+//            int userId = testUserService.selectIdByUsername(currentuser);
+//            //userId查不出来
+//            List<SysUserPermission> users = testUserPermissionService.selectPermissionById(userPic,userId);
+//            String s = "";
+//            for (SysUserPermission user : users) {
+//                s = s + user.getUserId() + user.getUserPic();
+//            }
+//            System.out.println(s);
+//           if(s==null){
+//               String json ="{\"code\":300,\"userpermission\":\"no\"}";
+//               ObjectMapper mapper = new ObjectMapper();
+//               jsonNode =mapper.readTree(json);
+//           }
+//            String json ="{\"code\":200,\"userpermission\":\"yes\"}";
+//            ObjectMapper mapper = new ObjectMapper();
+//            jsonNode =mapper.readTree(json);
+//
+//        }
 }
