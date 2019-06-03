@@ -11,7 +11,7 @@ define(function (require, exports, module) {
             },
             success: function (data, textStatus) {
                 console.log(data)
-                if (data == true) {
+                if (data.code == 200) {
                     var $canvas = $("#content canvas")      //找到Echarts自己画的canvas
                     var canvas = $canvas[0];                 //jquery对象转换为dom对象
                     // console.log(canvas)
@@ -25,8 +25,11 @@ define(function (require, exports, module) {
                     a.dispatchEvent(event); //当鼠标点击时，通知a开始执行
 
                 }
-                else {
+                if (data.code == 300) {
                     alert("没有权限")
+                }
+                if (data.code == 400){
+                    alert("未登录")
                 }
             }
         });
