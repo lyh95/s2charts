@@ -76,11 +76,18 @@ define(function(require, exports, module) {
 						var height = $(this).val();
 						//设置值
 						$("#chart-chart-height-text").val(height);
+                        objConfig["option"] = _style = $.extend(true,_style,{
 
-						_container["height"] = height;
-						objConfig["height"] = height;
-						chartObj.init(objConfig);
-					});
+                            chart: {
+                                height:height
+                            }
+                        });
+                        $("#content").css(height,height);
+                        _container["height"] = height
+                        objConfig["height"] = height;
+                        chartObj.init(objConfig);
+                    });
+
 					//修改图的alpha角度
 					$("#chart-chart-alpha-range").change(function(){
 						var alpha = $(this).val();

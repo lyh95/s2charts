@@ -144,8 +144,7 @@ define(function(require, exports, module) {
                 	if(config.option){
                     	that.option = $.extend(true,that.option,config.option || {});
                 	}
-                    //增加自定义x轴(必须放在getOptionFromConfig后面)
-                    that.appendXAxis($("#"+config.container),config,that.getRotateFromConfig(config));  ///////////////////
+                    myChart.resize();
                     myChart.setOption(that.option);
 
                 });
@@ -187,7 +186,7 @@ define(function(require, exports, module) {
                     //];
                     that.option.title={
                         show: true,
-                        text : "北美电影票房统计" ,
+                        text : "2006年文化创意从业人员增长" ,
                         left : "center",
                         "top" : "0"
                     }

@@ -1,6 +1,11 @@
 ﻿<!DOCTYPE html>
 <html lang="zh-cn">
 <head>
+	<!--<headers>-->
+
+		<!--<frame-options policy="SAMEORIGIN" />-->
+
+	<!--</headers>-->
 	<title>图集选择工具</title>
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="this is my page">
@@ -563,12 +568,14 @@
 
 </body>
 
-<script type="text/javascript" src='/base/http/lib/icon/iconfont.js'></script>
-<script type="text/javascript" src="/http/js/narBar.js"></script>
-
 <script type="text/javascript" src="/http/js/cookie.js"></script>
 <script type="text/javascript" src="/base/http/lib/seajs/sea.js"></script>
 <script type="text/javascript" src="/base/http/lib/seajs/seajs-text.js"></script>
+
+<script type="text/javascript" src='/base/http/lib/icon/iconfont.js'></script>
+<script type="text/javascript" src="/http/js/narBar.js"></script>
+<script type="text/javascript" src="/http/narbarlogin.js"></script>
+
 
 <script>
 	seajs.config({
@@ -587,6 +594,7 @@
 	seajs.use('/http/js/narBar',function(obj){
 		obj.into();
 	});
+	seajs.use('/http/narbarlogin');
 </script>
 
 </html>

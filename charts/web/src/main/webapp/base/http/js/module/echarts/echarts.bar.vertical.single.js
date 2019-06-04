@@ -128,6 +128,7 @@ define(function (require, exports, module) {
                         that.option = $.extend(true, that.option, config.option || {});
                     }
                     myChart.resize();
+
                     myChart.setOption(that.option);
                 });
             }
@@ -142,6 +143,7 @@ define(function (require, exports, module) {
                     callback && callback();
                 });
             } else {
+                console.log(typeof config.data)
                 this.getDataFromConfig(config.url, function (re) {
                     goTo(re);
                     callback && callback();

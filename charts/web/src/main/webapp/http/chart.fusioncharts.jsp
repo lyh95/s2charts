@@ -236,6 +236,8 @@
 	//是否初始化
 	var IS_CAN_INIT = <%= !(chartTypeChart == null || chartTypeChart.isEmpty()) ? true : false %> ;
 </script>
+<link href="/http/css/navBar.css" rel="stylesheet">
+<script type="text/javascript" src="/http/js/narBar.js"></script>
 <script type="text/javascript" src="/base/http/lib/seajs/sea.js"></script>
 <script type="text/javascript" src="/base/http/lib/seajs/seajs-text.js"></script>
 <script>

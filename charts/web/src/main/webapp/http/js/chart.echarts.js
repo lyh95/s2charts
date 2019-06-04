@@ -320,9 +320,9 @@ define(function(require, exports, module) {
 			
 			//得到表格数据
 			_currentData = $.extend([],excelData);
-			var height = $(window).height()-670;
-			if(height < 100){
-				height = 100;
+			var height = $(window).height()-470;
+			if(height < 200){
+				height = 200;
 			}
 
 			$("#excel-data").attr("data-height",$(window).height()/3);
@@ -375,9 +375,9 @@ define(function(require, exports, module) {
 
 			var excelData = _currentData;
 
-			var height = $(window).height()-670;
-			if(height < 100){
-				height = 100;
+			var height = $(window).height()-470;
+			if(height < 200){
+				height = 200;
 			}
 			$("#excel-data").attr("data-height",$(window).height()/3);
 			if(_isExcelInit){
@@ -503,7 +503,7 @@ define(function(require, exports, module) {
 							null,false,function(modal){
 								modal.css({
 									"top":"40%",
-									"height":"60px",
+									"height":"100px",
 									"width":"300px",
 									"margin-left":"-20px",
 									"overflow":"hidden",
@@ -536,7 +536,7 @@ define(function(require, exports, module) {
 							null,false,function(modal){
 								modal.css({
 									"top":"40%",
-									"height":"60px",
+									"height":"100px",
 									"width":"300px",
 									"margin-left":"-20px",
 									"overflow":"hidden",
@@ -599,7 +599,7 @@ define(function(require, exports, module) {
 					null,false,function(modal){
 						modal.css({
 							"top":"40%",
-							"height":"60px",
+							"height":"100px",
 							"width":"300px",
 							"margin-left":"-20px",
 							"overflow":"hidden",
@@ -636,7 +636,7 @@ define(function(require, exports, module) {
 					null,false,function(modal){
 						modal.css({
 							"top":"40%",
-							"height":"60px",
+							"height":"100px",
 							"width":"300px",
 							"margin-left":"-20px",
 							"overflow":"hidden",
@@ -661,7 +661,7 @@ define(function(require, exports, module) {
 					null,false,function(modal){
 						modal.css({
 							"top":"40%",
-							"height":"60px",
+							"height":"100px",
 							"width":"300px",
 							"margin-left":"-20px",
 							"overflow":"hidden",
@@ -681,7 +681,7 @@ define(function(require, exports, module) {
 					null,false,function(modal){
 						modal.css({
 							"top":"40%",
-							"height":"60px",
+							"height":"100px",
 							"width":"300px",
 							"margin-left":"-20px",
 							"overflow":"hidden",
@@ -779,7 +779,7 @@ define(function(require, exports, module) {
 								"top":"40%",
 								"width":"300px",
 								"margin-left":"-20px",
-								"height":"100px",
+								"height":"200px",
 								"overflow":"hidden"
 							});
 
@@ -800,7 +800,7 @@ define(function(require, exports, module) {
 					null,true,function(modal,close){
 						modal.css({
 							"top":"40%",
-							"height":"60px",
+							// "height":"60px",
 							"width":"300px",
 							"margin-left":"-20px",
 							"height":"100px",
@@ -842,7 +842,7 @@ define(function(require, exports, module) {
 			});
 
 			$("#code-api-switch").change(function(){
-				var height = $(window).height()-670;
+				var height = $(window).height()-470;
 				var isCheck = $(this).is(":checked");
 				if(isCheck){
 					$("#code-api-panel").fadeIn(100);
@@ -857,8 +857,8 @@ define(function(require, exports, module) {
 				//修改样式
 				var handsontableObj = HandsontableExcel.getHandsontableObj();
 				if(handsontableObj != null && typeof handsontableObj.updateSettings == "function"){
-					if(height < 100){
-						height = 100;
+					if(height < 200){
+						height = 200;
 					}
 
 					handsontableObj.updateSettings({"height":height});
@@ -952,7 +952,7 @@ define(function(require, exports, module) {
 									null,false,function(modal){
 										modal.css({
 											"top":"40%",
-											"height":"60px",
+											"height":"100px",
 											"width":"300px",
 											"margin-left":"-20px",
 											"overflow":"hidden",
@@ -1074,7 +1074,7 @@ define(function(require, exports, module) {
 									null,false,function(modal){
 										modal.css({
 											"top":"40%",
-											"height":"60px",
+											"height":"100px",
 											"width":"300px",
 											"margin-left":"-20px",
 											"overflow":"hidden",

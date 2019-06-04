@@ -18,12 +18,33 @@
   </sql>
   <select id="selectByUsername" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
-        *
+       *
     from
         tb_user
     where 
         user_name=#{userName,jdbcType=VARCHAR}
   </select>
+
+  <select id="selectIdByUsername" parameterType="java.lang.String" resultType="int">
+    select
+       user_id
+    from
+        tb_user
+    where
+        user_name=#{userName,jdbcType=VARCHAR}
+  </select>
+
+  <!--//通过用户名密码判断用户登录-->
+  <select id="selectUser" resultMap="BaseResultMap">
+    select
+        *
+    from
+        tb_user
+    where
+        user_name=#{userName,jdbcType=VARCHAR} and pass_word=#{passWord,jdbcType=VARCHAR}
+  </select>
+
+
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />

@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface SysUserPermissionMapper {
 
-     List<SysUserPermission> selectPermissionById(@Param("userId") Integer userId, @Param("userPic") String userPic);
+     List<SysUserPermission> selectPermissionById(@Param("userPic") String userPic);
 }

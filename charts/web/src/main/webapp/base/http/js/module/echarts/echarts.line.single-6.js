@@ -13,7 +13,11 @@ define(function(require, exports, module) {
      */
     var EChartLineSingle = function(){
         this.option = {
-            backgroundColor:'#293042',
+            title:{
+                show: true,
+                text : ''
+            },
+            backgroundColor:'rgba(203,192,65,0.6)',
             grid:{
                 left:20,
                 top:'10%',
@@ -129,6 +133,7 @@ define(function(require, exports, module) {
             ],
 
             series : [
+
             ]
         };
     };
@@ -188,10 +193,11 @@ define(function(require, exports, module) {
                     });
                     that.option.title={
                         show: true,
-                        text : "北美电影票房统计" ,
+                        text : "旅游收入" ,
                         left : "center",
                         "top" : "0"
                     };
+
                     that.option.series = [
                         {
                             type: 'line',
@@ -211,7 +217,7 @@ define(function(require, exports, module) {
                                         show:false,
                                         position:'top',
                                         textStyle:{
-                                            color:'#f17a52'
+                                            color:'#f11808'
 
                                         }
                                     }
@@ -246,6 +252,8 @@ define(function(require, exports, module) {
                             }
                         }
                     ];
+
+
                 }
             }
         },

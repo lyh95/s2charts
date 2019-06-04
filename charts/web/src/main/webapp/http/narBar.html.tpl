@@ -1,3 +1,4 @@
+
 <div class="container-fluid" style="
  background:#2D3338;
  height:60px;
@@ -70,12 +71,22 @@
 						</a>
 					</li>
                     <li class="listyle">
-                        <!--没写-->
-                        <a class="btn narstyle"  id="go-login-btn" style="padding:17px 0; float: right;
-">
-                            <span class="glyphicon glyphicon-user" style="padding-left: 15px"> </span>登录</a>
+                        <!--//写了-->
+						<a href="/login"> <input type="button" id="go-login-btn" class="btn narstyle " value="登录"
+							   style="padding:1px 0; float: right;color: black;">
+                            <span  class="glyphicon glyphicon-user" style="padding-right: 5px;padding-top: 5px;"> </span></a>
 
                     </li>
+                   <!--注销-->
+                    </li>
+              <li class="listyle">
+            <!--//写了-->
+   <a href="/logout"> <input type="button" id="go-login-btn" class="btn narstyle " value="注销"
+              style="padding:1px 0; float: right;color: black;">
+        <span  class="glyphicon glyphicon-user" style="padding-right: 5px;padding-top: 5px;"> </span></a>
+
+                                        </li>
+
 				</ul>
 				<!--<ul id="navbar" class="nav navbar-nav navbar-right" style="-->
 

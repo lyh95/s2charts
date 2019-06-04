@@ -18,7 +18,7 @@ public abstract class Service {
 	/**
 	 * 服务所在的包名
 	 */
-	public static final String SERVICE_PACKAGE_NAME = "com.supermap.service";
+	public static final String SERVICE_PACKAGE_NAME = "com.s2charts.tool.service";
 	
 	/**
 	 * 上传文件excel 存放相对本地目录
