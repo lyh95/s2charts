@@ -46,7 +46,7 @@ SGIS.Config.BASE_MODULE_URL = SGIS.Config.BASE + SGIS.Config.BASE_NAME + "http";
 //seajs所用的基础路径
 /*SGIS.Config.GALLERY_MOBILE_URL = SGIS.Config.BASE + SGIS.Config.GALLERY_NAME + "mobile/";*/
 //seajs所用的基础路径
-/*SGIS.Config.TOOL_MODULE_URL = SGIS.Config.BASE + SGIS.Config.TOOL_NAME + "http/";*/
+// SGIS.Config.TOOL_MODULE_URL = SGIS.Config.BASE + SGIS.Config.TOOL_NAME + "http/";
 
 SGIS.Config.TOOL_MODULE_URL = SGIS.Config.BASE  + "/http";
 //seajs所用的基础路径
