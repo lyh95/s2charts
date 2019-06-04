@@ -99,7 +99,7 @@ define(function(require, exports, module) {
 
                         //兼容旧省级地图
                         if(config.map.snType && (!config.map.url || config.map.url == "")){
-                            var configUrl = SGIS.Config.BASE_MODULE_URL+"js/module/component/china.all.province.config";
+                            var configUrl = SGIS.Config.BASE_MODULE_URL+"/js/module/component/china.all.province.config";
                             seajs.use(configUrl,function(ChinaAllProvinceConfig){
                                 if(ChinaAllProvinceConfig && ChinaAllProvinceConfig[config.map.snType]){
                                     echarts.util.mapData.params.params[mapType] = {
@@ -144,7 +144,7 @@ define(function(require, exports, module) {
                             renderEcharts();*/
                         }
                     }else{
-                        var url= SGIS.Config.BASE_MODULE_URL+"js/module/map/map.geo.china.config.json"
+                        var url= SGIS.Config.BASE_MODULE_URL+"/js/module/map/map.geo.china.config.json"
                         $.get(url, function (geoJson) {
                             echarts.registerMap('china', geoJson);
                             renderEcharts();
@@ -156,6 +156,7 @@ define(function(require, exports, module) {
                         if(config.option){
                             that.option = $.extend(true,that.option,config.option || {});
                         }
+                        myChart.resize();
                         myChart.setOption(that.option);
 
                     }

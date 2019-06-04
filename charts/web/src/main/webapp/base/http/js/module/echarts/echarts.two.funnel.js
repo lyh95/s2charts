@@ -31,7 +31,8 @@ define(function(require, exports, module) {
             title:{
               "text" : "不同手机品牌每月预期销量与实际销量对比",
               "left":"center",
-              "top":"-10px",
+              "top":"10px"
+
             },
             legend: {
                 data:[''],
@@ -43,7 +44,7 @@ define(function(require, exports, module) {
                 },
                 "selectedMode": true,
                 "show": true,
-                "top":"30px"
+                "top":"40px"
             },
             series: [
                 {
@@ -75,6 +76,7 @@ define(function(require, exports, module) {
                     if(config.option){
                         that.option = $.extend(true,that.option,config.option || {});
                     }
+                    myChart.resize();
                     myChart.setOption(that.option);
                 });
             }

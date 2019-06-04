@@ -117,6 +117,7 @@ define(function(require, exports, module) {
                 	if(config.option){
                     	that.option = $.extend(true,that.option,config.option || {});
                 	}
+                    myChart.resize();
                     myChart.setOption(that.option);
                 });
             }
@@ -134,6 +135,9 @@ define(function(require, exports, module) {
                     callback && callback();
                 });
             }
+
+
+
             
             //
             function goTo(re){
@@ -210,7 +214,7 @@ define(function(require, exports, module) {
                 for(var i=1;i<children2Sum;i++){
                     parallelAxisData.push({
                         "dim":i,
-                        "name":schema[i-1].text,
+                        "name":schema[i-1].text
                     })
                 };
                 parallelAxisData.push({
@@ -225,7 +229,7 @@ define(function(require, exports, module) {
                     schema:schema,
                     legendData : legendData,
                     seriesData : seriesData,
-                    parallelAxisData:parallelAxisData,
+                    parallelAxisData:parallelAxisData
                 };
                 callback && callback(re);
             }else{
