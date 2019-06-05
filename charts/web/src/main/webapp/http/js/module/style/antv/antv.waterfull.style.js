@@ -216,14 +216,15 @@ define(function(require, exports, module) {
                         //设置值
                         $("#chart-chart-height-text").val(radius);
 
-                        objConfig["option"] = _style = $.extend(true,_style,{
-                            // dataSource:[
-                            // 			{
-                            // 				"pieRadius":radius
-                            // 			}
-                            // 		]
-                            height:radius
-                        });
+                        // objConfig["option"] = _style = $.extend(true,_style,{
+                        //     // dataSource:[
+                        //     // 			{
+                        //     // 				"pieRadius":radius
+                        //     // 			}
+                        //     // 		]
+                        //     height:radius
+                        // });
+                        objConfig["height"] = radius;
                         chartObj.init(objConfig);
                     });
                     $("#chart-slicing-distance").change(function(){
