@@ -306,70 +306,136 @@ define(function(require, exports, module) {
                     //
                     // 是否显示图列
 
+                    // $("#chart-show-legend-check").change(function(){
+                    //     var isShow = $(this).is(":checked");
+                    //     var ishow1 = 1;
+                    //     // 	//控制是否可以修改
+                    //     	$("#chart-font-color-select").attr("disabled",!isShow);
+                    //     	$("#chart-font-size-range").attr("disabled",!isShow);
+                    //     	$("input[name='chart-font-position-radio']").attr("disabled",!isShow);
+                    //
+                    //     if (isShow)
+                    //         ishow1 = 1;
+                    //     else
+                    //         ishow1 = 0;
+                    //     objConfig["option"] = _style = $.extend(true,_style,{
+                    //         dataSource:
+                    //             {
+                    //                 "chart": {
+                    //                     "showLegend":ishow1
+                    //                 }
+                    //             }
+                    //
+                    //     });
+                    //     chartObj.init(objConfig);
+                    // });
+                    //
+                    //
+                    // $("#chart-line-slant-check").change(function(){
+                    //     var isShow = $(this).is(":checked");
+                    //     var ishow1 = 1;
+                    //     // 	//控制是否可以修改
+                    //     // 	$("#chart-font-color-select").attr("disabled",!isShow);
+                    //     // 	$("#chart-font-size-range").attr("disabled",!isShow);
+                    //     // 	$("input[name='chart-font-position-radio']").attr("disabled",!isShow);
+                    //     //
+                    //     if (isShow)
+                    //         ishow1 = 1;
+                    //     else
+                    //         ishow1 = 0;
+                    //     objConfig["option"] = _style = $.extend(true,_style,{
+                    //         dataSource:
+                    //             {
+                    //                 "chart": {
+                    //                     "isSmartLineSlanted":ishow1
+                    //                 }
+                    //             }
+                    //
+                    //     });
+                    //     chartObj.init(objConfig);
+                    // });
+                    // $("#chart-show-yuanhuan-check").change(function(){
+                    //     var isShow = $(this).is(":checked");
+                    //     var ishow1 = 1;
+                    //     // 	//控制是否可以修改
+                    //     // 	$("#chart-font-color-select").attr("disabled",!isShow);
+                    //     // 	$("#chart-font-size-range").attr("disabled",!isShow);
+                    //     // 	$("input[name='chart-font-position-radio']").attr("disabled",!isShow);
+                    //     //
+                    //     if (isShow)
+                    //         ishow1 = 'doughnut2d';
+                    //     else
+                    //         ishow1 ='pie2d';
+                    //     objConfig["option"] = _style = $.extend(true,_style,{
+                    //         type:ishow1
+                    //
+                    //     });
+                    //     chartObj.init(objConfig);
+                    // });
+
+                    //是否显示图列
                     $("#chart-show-legend-check").change(function(){
                         var isShow = $(this).is(":checked");
-                        var ishow1 = 1;
-                        // 	//控制是否可以修改
-                        // 	$("#chart-font-color-select").attr("disabled",!isShow);
-                        // 	$("#chart-font-size-range").attr("disabled",!isShow);
-                        // 	$("input[name='chart-font-position-radio']").attr("disabled",!isShow);
-                        //
-                        if (isShow)
-                            ishow1 = 1;
-                        else
-                            ishow1 = 0;
+                        //控制是否可以修改图例文字颜色
+                        $("#chart-legend-color-select").attr("disabled",!isShow);
+
                         objConfig["option"] = _style = $.extend(true,_style,{
-                            dataSource:
-                                {
-                                    "chart": {
-                                        "showLegend":ishow1
-                                    }
+                            legend:{
+                                show:isShow
+                            }
+                        });
+                        chartObj.init(objConfig);
+                    });
+
+                    //图列文字颜色
+                    $("#chart-legend-color-select").change(function(){
+                        var color = $(this).val();
+                        objConfig["option"] = _style = $.extend(true,_style,{
+                            legend:{
+                                textStyle:{
+                                    color:color
                                 }
-
+                            }
                         });
                         chartObj.init(objConfig);
                     });
-                    $("#chart-line-slant-check").change(function(){
-                        var isShow = $(this).is(":checked");
-                        var ishow1 = 1;
-                        // 	//控制是否可以修改
-                        // 	$("#chart-font-color-select").attr("disabled",!isShow);
-                        // 	$("#chart-font-size-range").attr("disabled",!isShow);
-                        // 	$("input[name='chart-font-position-radio']").attr("disabled",!isShow);
-                        //
-                        if (isShow)
-                            ishow1 = 1;
-                        else
-                            ishow1 = 0;
-                        objConfig["option"] = _style = $.extend(true,_style,{
-                            dataSource:
-                                {
-                                    "chart": {
-                                        "isSmartLineSlanted":ishow1
-                                    }
-                                }
 
-                        });
-                        chartObj.init(objConfig);
-                    });
-                    $("#chart-show-yuanhuan-check").change(function(){
-                        var isShow = $(this).is(":checked");
-                        var ishow1 = 1;
-                        // 	//控制是否可以修改
-                        // 	$("#chart-font-color-select").attr("disabled",!isShow);
-                        // 	$("#chart-font-size-range").attr("disabled",!isShow);
-                        // 	$("input[name='chart-font-position-radio']").attr("disabled",!isShow);
-                        //
-                        if (isShow)
-                            ishow1 = 'doughnut2d';
-                        else
-                            ishow1 ='pie2d';
-                        objConfig["option"] = _style = $.extend(true,_style,{
-                            type:ishow1
+                    // //是否显示标签
+                    // $("#chart-show-label-check").change(function(){
+                    //     var isShow = $(this).is(":checked");
+                    //
+                    //     //控制是否可以修改
+                    //     $("#chart1-font-color-select").attr("disabled",!isShow);
+                    //     $("#chart2-font-color-select").attr("disabled",!isShow);
+                    //     $("#chart1-font-size-range").attr("disabled",!isShow);
+                    //     $("#chart2-font-size-range").attr("disabled",!isShow);
+                    //     $("input[name='chart1-font-position-radio']").attr("disabled",!isShow);
+                    //     $("input[name='chart2-font-position-radio']").attr("disabled",!isShow);
+                    //
+                    //     objConfig["option"] = _style = $.extend(true,_style,{
+                    //         series:[
+                    //             {
+                    //                 "itemStyle": {
+                    //                     "normal": {
+                    //                         "label": {
+                    //                             "show":isShow
+                    //                         }
+                    //                     }
+                    //                 }
+                    //             },{
+                    //                 "itemStyle": {
+                    //                     "normal": {
+                    //                         "label": {
+                    //                             "show":isShow
+                    //                         }
+                    //                     }
+                    //                 }
+                    //             }
+                    //         ]
+                    //     });
+                    //     chartObj.init(objConfig);
+                    // });
 
-                        });
-                        chartObj.init(objConfig);
-                    });
                     //是否显示3D光效果
                     $("#chart-show-3d-check").change(function(){
                         var isShow = $(this).is(":checked");
