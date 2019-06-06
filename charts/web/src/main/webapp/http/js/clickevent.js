@@ -40,7 +40,17 @@ define(function (require, exports, module) {
     //保存功能
     $("#save-pic").click(function () {
         var mychart = common.myECharts.getChart("content")   //getchart的API，用getchart来找图片的id content
-        var option = mychart.getOption()
+        var pic_option = mychart.getOption()
+
+        pic_option.tooltip[0].formatter = pic_option.tooltip[0].formatter.toString()//可以直接替换原先的
+
+        // pic_option = $.extend({}, pic_option,formatter)
+
+        // console.log(typeof pic_option.tooltip[0].formatter)
+        // console.log(pic_option)
+       var pic_option= JSON.stringify(pic_option) //转换数据格式
+        console.log(typeof pic_option)
+
         // var mychart = common.myECharts.getChart(document.getElementById('content.image'))  //getchart的API，用getchart来找图片的id content
         //验证数据能不能画图，重新画个容器，把option数据导进去，看能不能出图
         console.log("savejson")
@@ -57,12 +67,12 @@ define(function (require, exports, module) {
                         async: "false",//把同步请求改成了异步请求，异步会立即执行，取不到optin
                         url: " /savejson",
                         data: {
-                            username: username,
-                            userPic: userPic,
-                            option: option,
+                            userName: username,
+                            pic_type: userPic,
+                            pic_option: pic_option,
                         },
                         success: function (data, textStatus) {
-                            alert(保存成功)
+                            alert("保存成功")
                         }
                     })
 

@@ -204,7 +204,7 @@ define(function (require, exports, module) {
                     }
                     that.option.tooltip = {
                         formatter: function (params) {   //formatter提示框浮层内容格式器，支持字符串模板和回调函数两种形式,params 是 formatter 需要的数据集
-                            console.log(params)
+                            // console.log(params)
                             var res = params.seriesName + '<br/>';
                             var place = params.name + ' : ' + params.data;
                             return res + place;
