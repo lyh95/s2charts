@@ -42,14 +42,12 @@ define(function (require, exports, module) {
     $("#save-pic").click(function () {
         var mychart = common.myECharts.getChart("content")   //getchart的API，用getchart来找图片的id content
         var pic_option = mychart.getOption()
-
-        pic_option.tooltip[0].formatter = pic_option.tooltip[0].formatter.toString()//可以直接替换原先的
-
-        // pic_option = $.extend({}, pic_option,formatter)
-
-        // console.log(typeof pic_option.tooltip[0].formatter)
-        // console.log(pic_option)
-       var pic_option= JSON.stringify(pic_option) //转换数据格式
+        console.log(pic_option)
+  // if (pic_option.tooltip[0].formatter!=""){
+      pic_option.tooltip[0].formatter = pic_option.tooltip[0].formatter.toString()//可以直接替换原先的
+  // }
+  // console.log(pic_option.tooltip[0].formatter)
+       var pic_option= JSON.stringify(pic_option) //把数据转换string数据格式
         console.log(typeof pic_option)
 
         // var mychart = common.myECharts.getChart(document.getElementById('content.image'))  //getchart的API，用getchart来找图片的id content
@@ -69,8 +67,8 @@ define(function (require, exports, module) {
                         url: " /savejson",
                         data: {
                             // userName: username,
-                            pic_type: userPic,
-                            pic_option: pic_option,
+                            userPic: userPic,
+                            picOption: pic_option,
                         },
                         success: function (data, textStatus) {
                             alert("保存成功")

@@ -72,13 +72,11 @@ public class ToolUserController {
     //用户保存：把数据存进数据库
     @RequestMapping(value = {"/savejson"})
     @ResponseBody
-    public void save(@RequestParam("pic_type") String userPic,@RequestParam("pic_option")
-            String pic_option)
+    public void save(@RequestParam("userPic") String userPic,@RequestParam("picOption")
+            String picOption)
                          {
 
-        System.out.println("用户标识："+userPic+"参数编辑："+pic_option);
-
-
+        System.out.println("用户标识："+userPic+"参数编辑："+picOption);
 
     }
 
