@@ -75,7 +75,9 @@ public class ToolUserController {
     public void save(@RequestParam("pic_type") String userPic,@RequestParam("pic_option") String pic_option,
                          @RequestParam("userName") String userName){
 
-        System.out.println("用户标识："+userPic+"参数编辑："+pic_option+"当前用户名："+userName);
+        System.out.println("用户标识："+userPic);
+        System.out.println("参数编辑："+pic_option);
+        System.out.println("当前用户名："+userName);
 
 
 
