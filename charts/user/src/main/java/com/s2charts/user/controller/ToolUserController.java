@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.util.JSONPObject;
 import com.s2charts.dao.entity.user.SysUserPermission;
+import com.s2charts.user.service.SaveDataService;
 import com.s2charts.user.service.TestUserPermissionService;
 import com.s2charts.user.service.TestUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,8 @@ public class ToolUserController {
     private TestUserPermissionService testUserPermissionService;
     @Autowired
     private TestUserService testUserService;
+    @Autowired
+    private SaveDataService saveDataService;
 
     @RequestMapping(value = {"/checkdownload"})
     @ResponseBody
@@ -76,7 +79,14 @@ public class ToolUserController {
             String picOption)
                          {
 
-        System.out.println("用户标识："+userPic+"参数编辑："+picOption);
+                             System.out.println("用户标识："+userPic);
+                             System.out.println("参数编辑："+picOption);
+
+                             String currentuser =SecurityContextHolder.getContext().getAuthentication().getName();
+                             int userId = testUserService.selectIdByUsername(currentuser);
+                             String user_pic =userPic;
+                             String pic_option=picOption;
+                             saveDataService.insertUserPic(userId,user_pic,pic_option);
 
     }
 
