@@ -1,5 +1,5 @@
 define(function (require, exports, module) {
-
+//检查登录状态
     $(function () {
         $.ajax({
             type: "get",

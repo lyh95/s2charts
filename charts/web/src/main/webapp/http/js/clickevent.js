@@ -2,7 +2,8 @@ define(function (require, exports, module) {
 
     var common = require("/base/http/js/module/echarts/echarts.common.js");
     var userPic = $("input[name=chart-type-chart]").val() //name=chart-type-chart的值给userPic
-    var username = $("#go-login-btn").val();
+    // var username = $("#go-login-btn").html();
+    // console.log(username+",,,")
     //下载功能
     $("#download-pic").click(function () {
         $.ajax({
@@ -67,7 +68,7 @@ define(function (require, exports, module) {
                         async: "false",//把同步请求改成了异步请求，异步会立即执行，取不到optin
                         url: " /savejson",
                         data: {
-                            userName: username,
+                            // userName: username,
                             pic_type: userPic,
                             pic_option: pic_option,
                         },
