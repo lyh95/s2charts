@@ -43,16 +43,15 @@ define(function (require, exports, module) {
         var mychart = common.myECharts.getChart("content")   //getchart的API，用getchart来找图片的id content
         var pic_option = mychart.getOption()
         console.log(pic_option)
-  // if (pic_option.tooltip[0].formatter!=""){
+        //判断echarts是否用了formatter
+  if (pic_option.tooltip[0].formatter =="undefined"){
+      console.log(pic_option.tooltip[0].formatter)
       pic_option.tooltip[0].formatter = pic_option.tooltip[0].formatter.toString()//可以直接替换原先的
-  // }
+  }
   // console.log(pic_option.tooltip[0].formatter)
        var pic_option= JSON.stringify(pic_option) //把数据转换string数据格式
-        console.log(typeof pic_option)
-
         // var mychart = common.myECharts.getChart(document.getElementById('content.image'))  //getchart的API，用getchart来找图片的id content
         //验证数据能不能画图，重新画个容器，把option数据导进去，看能不能出图
-        console.log("savejson")
         $.ajax({
             type: "POST",
             url: "/checkdownload",
