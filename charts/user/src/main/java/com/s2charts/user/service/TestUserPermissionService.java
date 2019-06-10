@@ -12,7 +12,7 @@ public class TestUserPermissionService {
     @Autowired
     private SysUserPermissionMapper sysUserPermissionMapper;
 
-    public List<SysUserPermission> selectPermissionById(String userPic){
+    public  List<SysUserPermission> selectPermissionById(String userPic){
         List<SysUserPermission> users=sysUserPermissionMapper.selectPermissionById(userPic);
         return users;
     }

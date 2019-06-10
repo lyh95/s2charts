@@ -19,28 +19,9 @@ import java.util.List;
 
 //测试用户的登录controller
 @RestController
-public class TestUserController {
+public class CheckLoginController {
     @Autowired
     private TestUserService testUserService;
-    @RequestMapping(value = {"/testuser"})
-    @ResponseBody
-    public String testuser(@RequestParam("userName")String userName,@RequestParam("passWord")String passWord, HttpServletRequest request){
-
-        List<SysUser> user = testUserService.selectUser(userName,passWord);
-        String s="";
-        for(SysUser users:user)
-        {
-            s=s+users.getUserName()+users.getPassWord();
-        }
-        System.out.println(s);
-        if(s == null || s.length()<=0){
-            return "error";
-        }
-        else
-            request.getSession().setAttribute("session_user",user);     //将用户信息放入session
-            return "success";
-    }
-
 
     //检验当前登录状态，并且获取当前用户名
     @RequestMapping(value = {"/checklogin"})

@@ -121,8 +121,9 @@ define(function(require, exports, module) {
                     // var FusionCharts;
                     // Antv.ready(function(){
                         //const data = that.option.dataSource.data; // G2 对数据源格式的要求，仅仅是 JSON 数组，数组的每个元素是一个标准 JSON 对象。
+                       // const data = [];
                         const size = that.option.dataSource.chart.pieRadius;
-                        // Step 1: 创建 Chart 对象
+                       // Step 1: 创建 Chart 对象
                         const data = that.option.dataSource.data;
                         for (var i = 0; i < data.length; i++) {
                             var item = data[i];
@@ -134,11 +135,13 @@ define(function(require, exports, module) {
                                 }
                             }
                         }
+                        $("#content").empty();
+                       // console.log(config)
                         const chart = new G2.Chart({
                             container: myChart, // 指定图表容器 ID
-                            width : 700, // 指定图表宽度
+                            width : config.width, // 指定图表宽度
                             forceFit: true,
-                            height : 500 // 指定图表高度;
+                            height : config.height // 指定图表高度;
                         });
                         // Step 2: 载入数据源
                         chart.source(data);

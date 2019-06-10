@@ -199,7 +199,7 @@ define(function(require, exports, module) {
                 	if(configColors && configColors != null && configColors[index]){
                 		$.extend(true,cOption,{color:configColors[index]});
                 	}
-                	
+                    myChart.resize();
                     myChart.setOption(cOption);
                 }
                 

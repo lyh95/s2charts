@@ -271,11 +271,10 @@
     seajs.use('/http/js/chart.echarts', function (obj) {
         obj.init(IS_CAN_INIT);
     });
-    seajs.use('/http/js/savepicture.js');
-    seajs.use('/http/js/xiazaidownload.js');
-    seajs.use('/http/narbarlogin');
     seajs.use('/http/js/narBar', function (obj) {
             obj.into();
     });
+    seajs.use('/http/narbarlogin');
+    seajs.use('/http/js/clickevent.js');
 </script>
 </html>

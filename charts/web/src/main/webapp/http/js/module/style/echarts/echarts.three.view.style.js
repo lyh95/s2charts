@@ -20,7 +20,7 @@ define(function(require, exports, module) {
 		var getJsonFilePath = function (_level,_regionCode) {
 			var paths = "";
 
-			var basepath = "js/module/map/";
+			var basepath = "/js/module/map/";
 
 			_level = _level + "";
 			switch (_level){

@@ -17,7 +17,7 @@ define(function (require, exports, module) {
                 show: true,
                 trigger: 'item',
                 "axisPointer": {
-                    "type": "shadow"
+                    "type": "shadow"   // tooltip 被 axisPointer 触发的时候，params 是多个系列的数据数组
                 },
             },
             "grid": {
@@ -125,11 +125,11 @@ define(function (require, exports, module) {
             if (myChart) {
                 this.getOptionFromConfig(config, function () {
                     if (config.option) {
-                        that.option = $.extend(true, that.option, config.option || {});
+                        that.option = $.extend(true, that.ogetOptionFromConfigption, config.option || {});
                     }
                     myChart.resize();
 
-                    myChart.setOption(that.option);
+                    myChart.setOption(that.option,);
                 });
             }
             ;
@@ -160,14 +160,7 @@ define(function (require, exports, module) {
                     $.extend(that.option.yAxis[0], {
                         name: re.unit
                     });
-                    that.option.tooltip = {
-                        formatter: function (params) {
-                            var res = params.seriesName + '<br/>';
-                            var place = params.name + ' : ' + params.data;
-                            return res + place;
 
-                        }
-                    };
                     that.option.series = [
                         {
                             "name": re.seriesName,
@@ -197,8 +190,8 @@ define(function (require, exports, module) {
                                 }
                             },
                             "label": {
-                                normal:{
-                                    show:true
+                                normal: {
+                                    show: true
                                 }
                             }
                         }
@@ -209,6 +202,15 @@ define(function (require, exports, module) {
                         left: "right",
                         "top": "5%"
                     }
+                    that.option.tooltip = {
+                        formatter: function (params) {   //formatter提示框浮层内容格式器，支持字符串模板和回调函数两种形式,params 是 formatter 需要的数据集
+                            // console.log(params)
+                            var res = params.seriesName + '<br/>';
+                            var place = params.name + ' : ' + params.data;
+                            return res + place;
+                        }
+                    };
+
                 }
             }
         },

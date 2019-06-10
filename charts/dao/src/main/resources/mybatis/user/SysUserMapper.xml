@@ -18,10 +18,19 @@
   </sql>
   <select id="selectByUsername" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
-        *
+       *
     from
         tb_user
     where 
+        user_name=#{userName,jdbcType=VARCHAR}
+  </select>
+
+  <select id="selectIdByUsername" parameterType="java.lang.String" resultType="int">
+    select
+       user_id
+    from
+        tb_user
+    where
         user_name=#{userName,jdbcType=VARCHAR}
   </select>
 

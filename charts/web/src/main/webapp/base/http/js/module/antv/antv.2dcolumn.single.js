@@ -64,10 +64,11 @@ define(function(require, exports, module) {
                     const data=[];
                         const size = that.option.dataSource.chart.pieRadius;
                         // Step 1: 创建 Chart 对象
+                        $("#content").empty();
                         const chart = new G2.Chart({
                             container: myChart, // 指定图表容器 ID
-                            width : 700, // 指定图表宽度
-                            height : 500 // 指定图表高度;
+                            width : config.width, // 指定图表宽度
+                            height : config.height // 指定图表高度;
                         });
                         const newData = that.option.dataSource.data;
                         // Step 2: 载入数据源

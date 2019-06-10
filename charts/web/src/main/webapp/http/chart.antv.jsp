@@ -32,7 +32,8 @@
 	<script type="text/javascript" src='/http/lib/spectrum-master/spectrum.js'></script>
 	<%--<script type="text/javascript" src="/base2.1/http/lib/Echarts/echarts-2.2.7/echarts-all.js"></script>--%>
 	<script type="text/javascript" src="/http/lib/Antv/g2.min.js"></script>
-	<script type="text/javascript" src="/http/js/common/SGIS.Base.js"></script>
+<%--	<script type="text/javascript" src="/http/js/common/SGIS.Base.js"></script>--%>
+	<script type="text/javascript" src="/base/http/js/common/SGIS.Base.js"></script>
 </head>
 <body>
 <div id="top-alert-container" class="IEindecl" style="display:none;position: fixed;top:0px;z-index:100000;width: 100%;height: 50px;background: #FFC125;font-family: 微软雅黑;font-size: 1.3em;">

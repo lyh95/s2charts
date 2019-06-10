@@ -1,7 +1,8 @@
 package com.s2charts.dao.entity.user;
 
+import java.util.List;
+
 public class SysUserPermission {
-    private Integer userId;
 
     public Integer getUserId() {
         return userId;
@@ -10,6 +11,10 @@ public class SysUserPermission {
     public void setUserId(Integer userId) {
         this.userId = userId;
     }
+
+    private Integer userId;
+
+
 
     public String getUserPic() {
         return userPic;

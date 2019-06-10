@@ -55,6 +55,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .formLogin()    //定制登录表单
                 .loginPage("/login")    //设置登录url
                 .defaultSuccessUrl("/http/index.html")    //设置登录成功默认跳转url
+                //成功跳转到登陆前的页面
 //                .successHandler(new AuthenticationSuccessHandler() {
 //            @Override
 //            public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
@@ -76,7 +77,15 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
                 .permitAll()    //允许任何人访问登录url
                 .and()
-                .logout().permitAll();    //允许任何人访问登出url
+                .logout()
+                    .permitAll()
+                //触发注销操作的url
+                    .logoutUrl("/logout")
+                //注销成功后跳转的url
+                    .logoutSuccessUrl("/http/index.html")
+                //指定在注销时让HttpSession无效
+                    .invalidateHttpSession(true)
+                    ;    //允许任何人访问登出url
 
     }
 
