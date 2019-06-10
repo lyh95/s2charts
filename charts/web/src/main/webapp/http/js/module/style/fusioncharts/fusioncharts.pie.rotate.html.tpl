@@ -6,7 +6,7 @@
 <ul class="nav nav-list bs-docs-sidenav pull-left">
   <li class="active"><a href="#panel-common" data-toggle="tab">通用</a></li>
 </ul>		
-<div class="tab-content bs-docs-sidenav-content pull-left">
+<div class="tab-content bs-docs-sidenav-content pull-left" style="height:500px;overflow:scroll">
   <div class="tab-pane active" id="panel-common">
     <div class="panel panel-default">
         	<div class="panel-body">
@@ -140,4 +140,3 @@
     </div>
   </div>
 </div>
-<div class="clearfix"></div>

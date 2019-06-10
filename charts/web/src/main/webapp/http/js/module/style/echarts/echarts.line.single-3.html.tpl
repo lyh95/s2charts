@@ -9,7 +9,7 @@
 	<li><a href="#panel-y" data-toggle="tab">y轴</a></li>
 
 </ul>		
-<div class="tab-content bs-docs-sidenav-content pull-left">
+<div class="tab-content bs-docs-sidenav-content pull-left" style="height:500px;overflow:scroll">
 	<!--通用-->
     <div class="tab-pane active" id="panel-common">
     <div class="panel panel-default">

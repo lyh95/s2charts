@@ -6,8 +6,8 @@
 <ul class="nav nav-list bs-docs-sidenav pull-left">
   <li class="active"><a href="#panel-common" data-toggle="tab">通用</a></li>
 </ul>		
-<div class="tab-content bs-docs-sidenav-content pull-left">
-  <div class="tab-pane active" id="panel-common">
+<div class="tab-content bs-docs-sidenav-content pull-left" style="height:470px;overflow:scroll">
+  <div class="tab-pane active" id="panel-common" >
     <div class="panel panel-default">
     	<div class="panel-body">
 	  		<div class="input-group">
@@ -15,7 +15,7 @@
 		        	图高度
 		      	</span>
 		       	<span class="input-group-addon" style="width:auto;">
-		       		<input id="chart-chart-height-range" type="range" value="200" min="200" max="800">
+		       		<input id="chart-chart-height-range" type="range" value="200" min="200" max="400">
 		       	</span>
 		      	<input id="chart-chart-height-text" type="text" class="form-control"  disabled="disabled" value="200" style="width:60px;" >
 		       	<span class="input-group-addon" style="width:auto;">
