@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 //用户下载：测试用户是否有某张图的权限controller
@@ -78,10 +79,8 @@ public class ToolUserController {
     public void save(@RequestParam("userPic") String userPic,@RequestParam("picOption")
             String picOption)
                          {
-
                              System.out.println("用户标识："+userPic);
                              System.out.println("参数编辑："+picOption);
-
                              String currentuser =SecurityContextHolder.getContext().getAuthentication().getName();
                              int userId = testUserService.selectIdByUsername(currentuser);
                              String user_pic =userPic;
@@ -89,5 +88,13 @@ public class ToolUserController {
                              saveDataService.insertUserPic(userId,user_pic,pic_option);
 
     }
-
+//取出用户编辑的数据
+    @RequestMapping(value = "/getoption")
+    @ResponseBody
+    public List<String> getoption(){
+        String currentuser =SecurityContextHolder.getContext().getAuthentication().getName();
+        int userId = testUserService.selectIdByUsername(currentuser);
+        List<String> options = saveDataService.getPicOption(userId);
+        return options;
+    }
 }

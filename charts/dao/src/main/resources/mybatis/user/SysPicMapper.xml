@@ -8,4 +8,10 @@
         INSERT into tb_pic(user_id,user_pic,pic_option) VALUES
         (#{userId,jdbcType=INTEGER},#{userPic,jdbcType=VARCHAR},#{picOption,jdbcType=VARCHAR});
     </select>
+
+
+    <select id = "getPicOption" resultType="String">
+       select pic_option from tb_pic where user_id=#{userId,jdbcType=INTEGER};
+    </select>
+
 </mapper>
