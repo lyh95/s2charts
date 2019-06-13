@@ -50,7 +50,8 @@
                 </a>
             </li>
             <li class="listyle">
-                <a class="btn narstyle" id="go-third-btn" style="padding:17px 0;float: right;
+                <a href="/Professional_customization/html/professionalcustomization.html"
+                class="btn narstyle" id="go-third-btn" style="padding:17px 0;float: right;
 ">
 
                     专业定制

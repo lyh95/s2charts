@@ -4,14 +4,46 @@
 <!--    <base href="//webapi.amap.com/ui/1.0/ui/misc/PositionPicker/examples/" />-->
     <meta charset="utf-8">
     <title>专业定制</title>
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
-    <script type="text/javascript" src="/base/http/js/common/SGIS.Base.js"></script>
+
     <link href="/http/css/navBar.css" rel="stylesheet">
+    <link href="/http/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="/http/lib/semantic/css/semantic.css" rel="stylesheet">
+    <link href='/http/lib/spectrum-master/spectrum.css' rel='stylesheet' />
+
+    <script type="text/javascript" src="/base/http/js/common/SGIS.Base.js"></script>
     <script type="text/javascript" src="/http/lib/jquery-1.11.1.js"></script>
     <script type="text/javascript" src="/http/lib/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src='/http/lib/spectrum-master/spectrum.js'></script>
-    <!--<script type="text/javascript" src="/base/http/js/common/SGIS.Base.js"></script>-->
+    <link href="/http/css/navBar.css" rel="stylesheet">
+    <!--<style type="text/css">-->
+        <!--img.bottom {vertical-align:text-bottom}-->
+        <!--body{ text-align:center}-->
+
+        <!--#divcss5{margin:0 auto;}-->
+        <!--a{-->
+            <!--color:black;-->
+        <!--}-->
+        <!--a:hover{-->
+            <!--color: blue;-->
+        <!--}-->
+        <!--@media (max-width: 600px){-->
+            <!--#divcss5{-->
+                <!--text-align: left;-->
+                <!--margin:0 20%;-->
+            <!--}-->
+            <!--.row-right .row-right-container .im-ul>li{-->
+                <!--float: left;-->
+                <!--list-style-type: none;-->
+                <!--margin:10px 1%;-->
+                <!--width: 40%;-->
+            <!--}-->
+        <!--}-->
+    <!--</style>-->
 
 </head>
 
@@ -22,7 +54,9 @@
      id="navbar" role="navigation" style="background-color:#123c5f;height:60px;">
 </nav>
 
-<div style="position:relative; left : 335px;">
+<div style="position:relative; left : 320px;
+/*margin: 100px;*/padding:100px 10px 5px 20px;
+">
     <h1 style="font-size:50px;color: #434343;line-height:0.3">专题定制</h1>
     <div class="bold" style="font-size:23px;color: #434343;">Thematic customization</div>
 </div>
@@ -328,10 +362,13 @@
 </center>
 
 </body>
+<script type="text/javascript" src="/http/js/cookie.js"></script>
 <script type="text/javascript" src="/base/http/lib/seajs/sea.js"></script>
 <script type="text/javascript" src="/base/http/lib/seajs/seajs-text.js"></script>
 <script type="text/javascript" src="/http/js/narBar.js"></script>
 <script type="text/javascript" src="/http/narbarlogin.js"></script>
+
+
 <script>
     seajs.config({
         base : SGIS.Config.TOOL_MODULE_URL,		//基础路径
