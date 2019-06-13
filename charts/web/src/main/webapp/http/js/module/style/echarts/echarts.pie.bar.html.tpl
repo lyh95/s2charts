@@ -19,7 +19,7 @@
 		        	图高度
 		      	</span>
 		       	<span class="input-group-addon" style="width:auto;">
-		       		<input id="chart-chart-height-range" type="range" value="200" min="200" max="800">
+		       		<input id="chart-chart-height-range" type="range" value="200" min="200" max="400">
 		       	</span>
 		      	<input id="chart-chart-height-text" type="text" class="form-control"  disabled="disabled" value="200" style="width:60px;" >
 		       	<span class="input-group-addon" style="width:auto;">

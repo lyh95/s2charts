@@ -11,6 +11,6 @@
         select
           *
         from
-          tb_user_permission where user_id=#{userId} and user_pic=#{userPic}
+          tb_user_permission where user_pic=#{userPic}
     </select>
 </mapper>
