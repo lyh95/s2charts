@@ -28,4 +28,7 @@ public interface SysUserMapper {
     //通过用户名密码判断用户登录
     List<SysUser> selectUser(@Param("userName")String userName, @Param("passWord") String passWord);
 
+    //注册功能
+    int adduser(@Param("username") String username, @Param("password") String password);
+
 }

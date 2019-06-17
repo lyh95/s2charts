@@ -25,6 +25,11 @@
         user_name=#{userName,jdbcType=VARCHAR}
   </select>
 
+  <!--注册功能-->
+  <insert id="adduser" parameterType="user">
+        INSERT INTO tb_user(user_name,pass_word,role_id) VALUES (#{username},#{password},2)
+  </insert>
+
   <select id="selectIdByUsername" parameterType="java.lang.String" resultType="int">
     select
        user_id

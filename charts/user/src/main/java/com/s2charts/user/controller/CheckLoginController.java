@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 
-//测试用户的登录controller
+//测试用户的登录/注册的controller
 @RestController
 public class CheckLoginController {
     @Autowired
@@ -44,6 +44,23 @@ public class CheckLoginController {
         return jsonNode ;
     }
 
+    //注册
+    @ResponseBody
+    @RequestMapping(value = {"/doRegister"})
+    public String addUser(@RequestParam("username") String username,
+                          @RequestParam("password") String password,
+                          @RequestParam("password2") String password2){
 
+        if (!password.equals(password2)) {
 
+            return "两次密码不相同，注册失败！！";
+        } else {
+            int res = testUserService.adduser(username, password);
+            if (res == 0) {
+                return "注册失败！";
+            } else {
+                return "注册成功！";
+            }
+        }
+    }
 }

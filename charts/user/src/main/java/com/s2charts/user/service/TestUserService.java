@@ -18,4 +18,8 @@ public class TestUserService {
 
         return sysUserMapper.selectIdByUsername(username);
     }
+    //注册
+    public int adduser(String username,String password){
+        return sysUserMapper.adduser(username,password);
+    }
 }
