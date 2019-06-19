@@ -124,11 +124,11 @@ ul li{
     height: 100%;
     width: 20%;
 }
-img{
-    vertical-align:middle;
-    width:40px;
-    height:35px;
-}
+/*img{*/
+    /*vertical-align:middle;*/
+    /*width:40px;*/
+    /*height:35px;*/
+/*}*/
 #go-index-btn #go-tool-btn #go-map-btn #go-data-analysis-btn #go-third-btn #go-large-screen-btn #go-gallery-btn #go-login-btn
 .navbar-inverse .navbar-nav > li > a
 {
