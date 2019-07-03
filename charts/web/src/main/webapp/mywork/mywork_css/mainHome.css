@@ -8,6 +8,7 @@
     width: 1200px;
     margin: 0 auto;
     padding: 0;
+
 }
 
 .container:after {
@@ -65,8 +66,9 @@
 }
 
 .index-page{
-    margin-top: 8%;
+    margin-top: 0.5px;
 }
+
 .index-page .index-title {
     font-size: 16px;
     text-align: center;
@@ -907,8 +909,7 @@
     left: 0;
     top: 0;
     color: #fff;
-
-    margin-top: 8%;
+    margin-top: 5%;
 }
 
 .index-page .solution-more-slide .hd ul {
@@ -1062,9 +1063,10 @@
 
 .index-page .solution-more-slide .bd .inner {
     padding-left: 360px;
-    padding-top: 100px;
+    padding-top: 180px;
     color: #fff;
     overflow: scroll;
+
 }
 
 .index-page .solution-more-slide .bd h2 {
@@ -1144,5 +1146,4 @@
 .index-page .video .inner {
     display: block;
     cursor: pointer;
-    overflow: scroll;
 }

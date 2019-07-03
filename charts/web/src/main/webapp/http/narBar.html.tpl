@@ -36,9 +36,9 @@
                 </a>
             </li>
             <li class="listyle">
-                <a class="btn narstyle" id="go-map-btn" style="padding:17px 0; float: right;
+                <a href="/html/lef-rig.html"
+                   class="btn narstyle" id="go-third-btn" style="padding:17px 0;float: right;
 ">
-
                     数据地图
                 </a>
             </li>
@@ -64,7 +64,8 @@
                 </a>
             </li>
             <li class="listyle">
-                <a class="btn narstyle" id="go-gallery-btn" style="padding:17px 0;float: right;
+                <a href="/mywork/mywork_html/mywork.html"
+                   class="btn narstyle" id="go-third-btn" style="padding:17px 0;float: right;
 ">
 
                     我的作品
