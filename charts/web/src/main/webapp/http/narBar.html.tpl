@@ -65,8 +65,8 @@
             </li>
             <li class="listyle">
                 <a href="/mywork/mywork_html/mywork.html"
-                   class="btn narstyle" id="go-third-btn" style="padding:17px 0;float: right;
-">
+                   class="btn narstyle" id="go-third-btn" style="padding:17px 0;float: right;"
+                >
 
                     我的作品
                 </a>
