@@ -29,9 +29,7 @@
                 </a>
             </li>
             <li class="listyle">
-                <a class="btn narstyle" id="go-tool-btn" style="padding:17px 0;float: right;
-">
-
+                <a class="btn narstyle" id="go-tool-btn" style="padding:17px 0;float: right;" href="index.html">
                     图集工具
                 </a>
             </li>
@@ -45,22 +43,18 @@
             <li class="listyle">
                 <a class="btn narstyle" id="go-data-analysis-btn" style="padding:17px 0;float: right;
 ">
-
                     数据分析
                 </a>
             </li>
             <li class="listyle">
                 <a href="/Professional_customization/html/professionalcustomization.html"
-                class="btn narstyle" id="go-third-btn" style="padding:17px 0;float: right;
-">
-
+                class="btn narstyle" id="go-third-btn" style="padding:17px 0;float: right;" href="#">
                     专业定制
                 </a>
             </li><!--没做，idid需要新加大屏模板跳转页面-->
             <li class="listyle">
-                <a class="btn narstyle" id="go-large-screen-btn" style="padding:17px 0;float: right;
-">
-                    大屏模板
+                <a class="btn narstyle" id="go-large-screen-btn" style="padding:17px 0;float: right;" href="../large-screen/test01/index.html">
+                大屏模板
                 </a>
             </li>
             <li class="listyle">
