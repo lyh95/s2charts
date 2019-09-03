@@ -29,14 +29,12 @@
                 </a>
             </li>
             <li class="listyle">
-                <a class="btn narstyle" id="go-tool-btn" style="padding:17px 0;float: right;" href="index.html">
+                <a class="btn narstyle" id="go-tool-btn" style="padding:17px 0;float: right;" href="/http/index.html">
                     图集工具
                 </a>
             </li>
             <li class="listyle">
-                <a href="/html/lef-rig.html"
-                   class="btn narstyle" id="go-third-btn" style="padding:17px 0;float: right;
-">
+                <a href="/html/lef-rig.html" class="btn narstyle" id="go-third-btn" style="padding:17px 0;float: right;">
                     数据地图
                 </a>
             </li>
@@ -48,29 +46,27 @@
             </li>
             <li class="listyle">
                 <a href="/Professional_customization/html/professionalcustomization.html"
-                class="btn narstyle" id="go-third-btn" style="padding:17px 0;float: right;" href="#">
+                   class="btn narstyle" id="go-third-btn" style="padding:17px 0;float: right;">
                     专业定制
                 </a>
             </li><!--没做，idid需要新加大屏模板跳转页面-->
             <li class="listyle">
-                <a class="btn narstyle" id="go-large-screen-btn" style="padding:17px 0;float: right;" href="../large-screen/test01/index.html">
+                <a class="btn narstyle" id="go-large-screen-btn" style="padding:17px 0;float: right;" href="/large-screen/test01/index.html">
                 大屏模板
                 </a>
             </li>
             <li class="listyle">
                 <a href="/mywork/mywork_html/mywork.html"
-                   class="btn narstyle" id="go-third-btn" style="padding:17px 0;float: right;"
-                >
-
+                   class="btn narstyle" id="go-third-btn" style="padding:17px 0;float: right;">
                     我的作品
                 </a>
             </li>
-
             <li class=" listyle">
                 <!--//写了-->
                 <div id="login_dropdown">
                     <button type="button" id="go-login-btn" class="btn narstyle dropdown-toggle">
-                        <span class="glyphicon glyphicon-user" style="padding-right: 5px;padding-top: 5px;">登录</span>
+                        <i  class="glyphicon glyphicon-user" style="padding: 20px 0;vertical-align: middle;"></i>
+                        <span style="vertical-align: middle">登录</span>
                     </button>
                     <ul class="dropdown-menu">
                         <li id="logout_li"><a href="/logout">注销</a></li>

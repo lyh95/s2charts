@@ -24,6 +24,7 @@ SGIS.Config = {
         }
         return loc.protocol+"//"+loc.host;
     })(),
+	//配本地路径
 	// SERVICE_NAME:"/gallery2.1/",								//后台服务名称
 /*    BASE_NAME:"/base2.1/",                          			//base项目名称*/
     BASE_NAME:"/base/",                          			//base项目名称
@@ -52,7 +53,6 @@ SGIS.Config.TOOL_MODULE_URL = SGIS.Config.BASE  + "/http";
 //seajs所用的基础路径
 SGIS.Config.WEB_MODULE_URL = SGIS.Config.BASE + SGIS.Config.WEB_NAME ;
 /********************************************************************************************/
-
 /**
  * 注册命名空间
  * @param {String}	nameSpace	命名空间,多层级的可以用"点"来分割

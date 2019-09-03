@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="test">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scale=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <title>大屏</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/apple.css" />
+    <script type="text/javascript" src="/http/lib/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="/base/http/js/common/SGIS.Base.js"></script>
+    <link href="/http/css/navBar.css" rel="stylesheet">
+
+    <style>
+        .screen-effect{
+            border-color:blue;
+            border-style:solid
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top"  id="navbar" role="navigation" >
+</nav>
+<div class="header" style="margin-top: 60px">
+    <h3 class="header-title">人员分析</h3>
+</div>
+<div class="wrapper" style="margin-top:50px">
+    <div class="container-fluid" style="position:relative">
+<!--        <div class="row">-->
+<!--            <button   id="screen-edit"   type="button" value="编辑">编辑</button>-->
+<!--            <button type="button" id="screen-save"  value="保存">保存</button>-->
+<!--        </div>-->
+        <div class="row">
+            <div class="col-md-3 ">
+                 <div class="xpanel-wrapper xpanel-wrapper-1-2">
+                     <div class="xpanel" id="screen-effect1">
+                         <div id="screen-edit1" ></div>
+                             <div class="fill-h" id="pic-1" style="width: 400px;height:270px;z-index:-1;">
+                             </div>
+
+                     </div>
+                 </div>
+                <div class="xpanel-wrapper xpanel-wrapper-1-2">
+                    <div class="xpanel">
+                        <div id="screen-edit2"></div>
+                        <div class="fill-h" id="pic-2" style="width: 300px;height:250px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="xpanel-wrapper xpanel-wrapper-1">
+                    <div class="xpanel-1">
+                        <div id="screen-edit3"></div>
+                        <div class="fill-h" id="pic-3" style="width:550px;height:620px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 ">
+                <div class="xpanel-wrapper xpanel-wrapper-1-2">
+                    <div class="xpanel-2">
+                        <div id="screen-edit4"></div>
+                        <div class="fill-h" id="pic-4" style="width:400px;height:300px;"></div>
+                    </div>
+                </div>
+                <div class="xpanel-wrapper xpanel-wrapper-1-2">
+                    <div class="xpanel-2">
+                        <div id="screen-edit5"></div>
+                        <div class="fill-h" id="pic-5" style="width:400px;height:300px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- 编辑面板-->
+        <div id="control-panel"
+             style="height:300px;width:400px;position:absolute;top:100px;right: 0;background-color: #fff;display: none">
+           <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">参数编辑</a></li>
+                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">数据编辑</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="home">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                样式修改
+                            </div>
+                            <div class="panel-body">
+                                <div class="input-group  pull-left">
+                                    <span class="input-group-addon" style="width:auto;">标题</span>
+                                    <input id="chart-title" style="width:100px;" value="" />
+                                </div>
+                            </div>
+                            <div style="position: absolute">
+                                <button id="screen-pic-save" type='button' value='保存'>保存</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="profile">
+
+                    </div>
+                </div>
+
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="./lib/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="./lib/echarts-3.8.5.min.js"></script>
+<script type="text/javascript" src="./lib/bootstrap.js"></script>
+<script type="text/javascript">
+    //  左一
+ var myChart = echarts.init(document.getElementById('pic-1'));
+        console.log(1111)
+ var dataAxis = ['信通', '电子', '光研', '理学院', '经管',];
+ var data = [2220, 1882, 1691, 1434, 1290,];
+ var yMax = 500;
+ var dataShadow = [];
+
+ for (var i = 0; i < data.length; i++) {
+     dataShadow.push(yMax);
+ }
+
+ var option = {
+         title: {
+             text: '各院总人数',
+             textStyle:{
+                 color:'#37A2DA',
+             },
+         },
+         xAxis: {
+             data: dataAxis,
+             axisLabel: {
+                 inside: true,
+                 textStyle: {
+                     color: '#fff',
+                     fontWeight:"bold"
+                 }
+             },
+             axisTick: {
+                 show: false
+             },
+             axisLine: {
+                 show: false,
+             },
+
+             z: 10
+         },
+         yAxis: {
+             axisLine:{
+                 show: false,
+             },
+             axisTick: {
+                 show: false
+             },
+             splitLine: {
+                 show: true,
+                 lineStyle: {
+                     color: '#ffffff1f'
+                 }
+             },
+             axisLabel: {
+                 textStyle: {
+                     color: '#37A2DA',
+                     fontWeight:"bold"
+                 }
+             }
+         },
+         dataZoom: [
+             {
+                 type: 'inside'
+             }
+         ],
+         series: [
+             { // For shadow
+                 type: 'bar',
+                 itemStyle: {
+                     normal: {color: 'rgba(0,0,0,0.05)'}
+                 },
+                 barGap:'-100%',
+                 barCategoryGap:'20%',
+                 data: dataShadow,
+                 animation: false
+             },
+             {
+                 type: 'bar',
+                 itemStyle: {
+                     normal: {
+                         color: new echarts.graphic.LinearGradient(
+                             0, 0, 0, 1,
+                             [
+                                 {offset: 0, color: '#83bff6'},
+                                 {offset: 0.5, color: '#188df0'},
+                                 {offset: 1, color: '#188df0'}
+                             ]
+                         )
+                     },
+                     emphasis: {
+                         color: new echarts.graphic.LinearGradient(
+                             0, 0, 0, 1,
+                             [
+                                 {offset: 0, color: '#2378f7'},
+                                 {offset: 0.7, color: '#2378f7'},
+                                 {offset: 1, color: '#83bff6'}
+                             ]
+                         )
+                     }
+                 },
+                 data: data
+             }
+         ]
+ };
+
+ // Enable data zoom when user click bar.
+ var zoomSize = 6;
+ myChart.on('click', function (params) {
+     console.log(dataAxis[Math.max(params.dataIndex - zoomSize / 2, 0)]);
+     myChart.dispatchAction({
+         type: 'dataZoom',
+         startValue: dataAxis[Math.max(params.dataIndex - zoomSize / 2, 0)],
+         endValue: dataAxis[Math.min(params.dataIndex + zoomSize / 2, data.length - 1)]
+     });
+ });
+ // console.log(option)
+        myChart.setOption(option);
+    // 左二
+ var myChart2 = echarts.init(document.getElementById('pic-2'));
+ var option2 = {
+     color:['#5F9EA0','#48D1CC','#AFEEEE'],
+     title: {
+         text: 'X院学生人数',
+         textStyle:{
+             color:'#37A2DA',
+         },
+     },
+     tooltip : {
+         trigger: 'axis',
+         axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+             type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+         },
+         formatter: function (params) {
+             var tar = params[1];
+             return tar.name + '<br/>' + tar.seriesName + ' : ' + tar.value;
+         }
+     },
+     grid: {
+         left: '3%',
+         right: '4%',
+         bottom: '3%',
+         containLabel: true,
+     },
+     xAxis: {
+         type : 'category',
+         splitLine: {show:false},
+         data : ['总数','本科','硕士','博士'],
+         axisLine:{
+             lineStyle:{
+                 color:'#37A2DA'
+             }
+         },
+         axisLabel: {
+               margin:2,
+                textStyle: {
+                 color: '#37A2DA',
+                    fontWeight:"bold"
+             }
+         },
+     },
+     yAxis: {
+         type : 'value',
+         axisLine:{
+             lineStyle:{
+                 color:'#37A2DA'
+             }
+         },
+         splitLine: {
+             show: true,
+             lineStyle: {
+                 color: '#ffffff1f'
+             }
+         },
+         axisLabel: {
+             // margin:5,
+             textStyle: {
+                 color: '#37A2DA',
+                 fontWeight:"bold"
+             }
+         },
+     },
+     series: [
+         {
+             name: '辅助',
+             type: 'bar',
+             stack:  '总量',
+             itemStyle: {
+
+                 normal: {
+                     barBorderColor: 'rgba(0,0,0,0)',
+                     color: 'rgba(0,0,0,0)'
+                 },
+                 emphasis: {
+                     barBorderColor: 'rgba(0,0,0,0)',
+                     color: 'rgba(0,0,0,0)'
+                 }
+             },
+             data: [0, 682, 182, 0]
+         },
+         {
+             name: '数量',
+             type: 'bar',
+             stack: '总量',
+             label: {
+                 normal: {
+                     show: true,
+                     position: 'inside'
+                 }
+             },
+             itemStyle: {
+                 normal: {
+                     color: new echarts.graphic.LinearGradient(
+                         0, 0, 0, 1,
+                         [
+                             {offset: 0, color: '#AFEEEE'},
+                             {offset: 0.5, color: '#48D1CC'},
+                             {offset: 1, color: '#00CED1'},
+                         ]
+                     )
+                 },
+                 emphasis: {
+                     color: new echarts.graphic.LinearGradient(
+                         0, 0, 0, 1,
+                         [
+                             {offset: 1, color: '#5F9EA0'},
+                             {offset: 0.5, color: '#48D1CC'},
+                             {offset: 0, color: '#AFEEEE'},
+                         ]
+                     )
+                 }
+             },
+             data:[1882, 1200, 500, 182]
+         }
+     ]
+ };
+         myChart2.setOption(option2);
+//   中间的图
+ var myChart3 = echarts.init(document.getElementById('pic-3'));
+ var option3 = {
+     color: ['#0000FF','#7B49A9','#188df0', '#83bff6'],
+         title: {
+             text: '历年人数变化图',
+
+                 textStyle: {
+                     color: "#37A2DA",
+                     fontSize: 18
+                 }
+         },
+         tooltip : {
+             trigger: 'axis',
+             axisPointer: {
+                 type: 'cross',
+                 label: {
+                     backgroundColor: '#6a7985'
+                 }
+             }
+         },
+         legend: {
+             data:['学生','教师','行政人员'],
+             left: "right",
+                 orient: 'horizontal',
+                 textStyle: {
+                     color: "#37A2c2",
+                 }
+         },
+         //单个图的下载按钮
+         // toolbox: {
+         //     feature: {
+         //         saveAsImage: {}
+         //     }
+         // },
+         grid: {
+             left: '3%',
+             right: '4%',
+             bottom: '3%',
+             containLabel: true
+         },
+         xAxis : [
+             {
+                 type : 'category',
+                 boundaryGap : false,
+                 data : ['2011','2012','2013','2014','2015','2016','2017'],
+                 axisTick: {
+                             show: true,
+                             length: 5,
+                             lineStyle: {
+                                 color: "#ffffff1f"
+                             }
+                         },
+             }
+         ],
+         yAxis : [
+             {
+                 type : 'value',
+                 position: 'right',
+                 //坐标轴轴线
+                 axisLabel: {
+                         margin: 10,
+                         color: '#ffffff63',
+                         fontWeight:"bold"
+                 },
+                 axisTick: {
+                             show: true,
+                             length: 15,
+                             lineStyle: {
+                                 color: "#ffffff1f",
+                             }
+                         },
+                 //坐标轴在区域内的分割线
+                 splitLine: {
+                             show: false,
+                             lineStyle: {
+                                 color: '#ffffff1f'
+                             }
+                 },
+             }
+         ],
+         series : [
+             {
+                 name:'学生',
+                 type:'line',
+                 smooth: true, //是否平滑曲线显示
+                 showAllSymbol: true,
+                 symbol: 'circle',
+                 symbolSize: 6,
+                 stack: '总量',
+                 lineStyle: {
+                                 normal: {
+                                     color: "rgb(131,191,246)", // 线条颜色
+                                 },
+                             },
+                 label: {
+                                 show: true,
+                                 position: 'top',
+                                 textStyle: {
+                                     color: '#fff',
+                                 }
+                 },
+                 itemStyle: {
+                                 color: "red",
+                                 borderColor: "#fff",
+                                 borderWidth: 3
+                 },
+                 // tooltip: {
+                 //                 show: false
+                 // },//鼠标放置显示数字
+                 areaStyle: {
+                                 normal: {
+                                     color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                     //     {
+                                     //     offset: 0, color: '#0000FF'
+                                     // },
+                                         {offset: 0, color: '#188df0'},
+                                         {offset: 0.5, color: '#188df0'},
+                                         {offset: 1, color: '#83bff6'}
+                                         // {
+                                         //     offset: 1,
+                                         //     color: '#3fbbff0d'
+                                         // }
+                                     ], false),
+                                 }
+                 },
+                 data:[ 1031, 1089, 1124, 1287, 1300, 1300, 1460]
+             },
+             {
+                 name:'教师',
+                 type:'line',
+                 stack: '总量',
+                 lineStyle: {
+                     normal: {
+                         color: "rgb(0,141,240)", // 线条颜色
+                     },
+                 },
+                 areaStyle: {normal: {}},
+                 data:[ 435, 431,424, 487, 500, 550, 600]
+             },
+             {
+                 name:'行政人员',
+                 type:'line',
+                 stack: '总量',
+                 smooth: true, //是否平滑曲线显示
+                 showAllSymbol: true,
+                 symbol: 'circle',
+                 symbolSize: 6,
+                 lineStyle: {
+                     normal: {
+                         color: "rgb(24,141,240)", // 线条颜色
+                     },
+                 },
+                 label: {
+                     show: true,
+                     position: 'top',
+                     textStyle: {
+                         color: '#fff',
+                     }
+                 },
+                 itemStyle: {
+                     color: "red",
+                     borderColor: "#fff",
+                     borderWidth: 3
+                 },
+                 // tooltip: {
+                 //     show: false
+                 // },
+                 areaStyle: {
+                     normal: {
+                         color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                             {offset: 0, color: '#4169E1'},
+                             {offset: 1, color: '#188df0'}
+                         ], false),
+                     }
+                 },
+                 data:[81, 89, 94, 100, 120, 135, 160]
+             }
+         ]
+ };
+ myChart3.setOption(option3);
+    // 右一
+    var myChart4 = echarts.init(document.getElementById('pic-4'));
+   var option4={
+       color: ['#0000FF', '#83bff6', '#7B49A9', '#188df0'],
+       title: {
+           text: "X院教师人数",
+           left: "5%",
+           bottom: "85%",
+           textStyle: {
+               color: "#37A2DA",
+               fontSize: 18
+           }
+       },
+       tooltip: {
+           trigger: 'axis',
+           axisPointer: {
+               type: 'shadow'
+           }
+       },
+       legend: {
+           data: ['总数', '讲师','副教授', '教授'],
+           left: "right",
+           bottom: "80%",
+           orient: 'horizontal',
+           textStyle: {
+               color: "#37A2c2",
+           }
+       },
+       toolbox: {
+           show: true,
+           orient: 'vertical',
+           left: 'right',
+           top: 'center',
+       },
+       calculable: true,
+       xAxis: [
+           {
+               type: 'category',
+               axisTick: {show: false},
+               data: ['信通', '电子', '光研', '理学院', '经管院'],
+               axisLabel: {
+                   textStyle: {
+                       color: '#37A2DA',
+                       fontWeight:"bold"
+                   }
+               },
+               axisLine: {
+                   show: false
+               },
+           }
+       ],
+       yAxis: [
+           {
+               type: 'value',
+               axisLabel: {
+                   margin: 5,
+                   color: '#37A2DA',
+                   fontWeight:"bold"
+               },
+               axisLine: {
+                   show: false
+               },
+               splitLine: {
+                   show: true,
+                   lineStyle: {
+                       color: '#ffffff1f'
+                   }
+               },
+           }
+       ],
+       series: [
+           {
+               name: '总人数',
+               type: 'bar',
+               barGap: 0,
+               // label: labelOption,
+               data: [320, 332, 301, 334, 390]
+           },
+           {
+               name: '讲师',
+               type: 'bar',
+               // label: labelOption,
+               data: [220, 182, 191, 234, 290]
+           },
+           {
+               name: '副教授',
+               type: 'bar',
+               // label: labelOption,
+               data: [150, 232, 201, 154, 190]
+           },
+           {
+               name: '教授',
+               type: 'bar',
+               // label: labelOption,
+               data: [98, 77, 101, 99, 40]
+           }
+       ]
+   };
+     myChart4.setOption(option4);
+    // 右二
+     var myChart5 = echarts.init(document.getElementById('pic-5'));
+    var option5 = {
+        color:['#37A2DA','#48D1CC','#AFEEEE'],
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            x: 'left',
+            textStyle: {
+                color: "#37A2c2",
+            },
+            data:['学生','教师','行政人员',]
+        },
+        series: [
+            {
+                name:'人员比例',
+                type:'pie',
+                radius: ['50%', '70%'],
+                avoidLabelOverlap: false,
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'center'
+                    },
+                    emphasis: {
+                        show: true,
+                        textStyle: {
+                            fontSize: '30',
+                            fontWeight: 'bold'
+                        }
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data:[
+                    {value:12000, name:'学生'},
+                    {value:1000, name:'教师'},
+                    {value:800, name:'行政人员'},
+
+                ]
+            }
+        ]
+    };
+
+    //联动
+    // myChart3.on('updateAxisPointer', function (event) {
+    //     var xAxisInfo = event.axesInfo[0];
+    //     if (xAxisInfo) {
+    //         var dimension = xAxisInfo.value + 1;
+    //         myChart5.setOption({
+    //             series: {
+    //                 id: 'pie',
+    //                 label: {
+    //                     formatter: '{b}: {@[' + dimension + ']} ({d}%)'
+    //                 },
+    //                 encode: {
+    //                     value: dimension,
+    //                     tooltip: dimension
+    //                 }
+    //             }
+    //         });
+    //     }
+    // });
+
+
+     myChart5.setOption(option5);
+</script>
+</body>
+<script type="text/javascript" src="/large-screen/test01/lib/seajs/sea.js"></script>
+<script type="text/javascript" src="/large-screen/test01/lib/seajs/seajs-text.js"></script>
+
+
+<script type="text/javascript" src="/http/js/narBar.js"></script>
+<!--<script type="text/javascript" src="/base/http/lib/seajs/sea.js"></script>-->
+<!--<script type="text/javascript" src="/base/http/lib/seajs/seajs-text.js"></script>-->
+<script>
+    seajs.config({
+        base : SGIS.Config.TOOL_MODULE_URL,		//基础路径
+        paths:{
+            base:SGIS.Config.BASE_MODULE_URL,		//跨目录的base路径
+            tool:SGIS.Config.TOOL_MODULE_URL,		//跨目录的tool路径
+            mapData:SGIS.Config.WEB_MODULE_URL  	//跨目录的web路径
+        },
+        map : [
+            [ '.json', '.json?t=' + new Date().getTime() ],
+//			[ '.js', '.js?t=' + new Date().getTime() ],
+            [ '.css', '.css?t=' + new Date().getTime() ]
+        ]});
+    seajs.use('/large-screen/test01/index.html');
+    seajs.use('/http/js/narBar',function(obj){
+        obj.into();
+    });
+    seajs.use('/http/narbarlogin');
+</script>
+<script src="../test01/JS/index.js">
+</script>
+</html>

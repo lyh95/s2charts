@@ -142,11 +142,11 @@
                     <a href="#data-pane" data-toggle="tab" class="astyle"><span class="glyphicon glyphicon-th-list "
                                                                                 style="padding-right: 4px"></span>数据</a>
                 </li>
-                <li class="leftbarstyle">
-                    <%--没做--%>
-                    <a href="#figure-pane " data-toggle="tab" class="astyle"> <span class="glyphicon glyphicon-picture"
-                                                                                    style="padding-right: 4px"></span>图型</a>
-                </li>
+<%--                <li class="leftbarstyle">--%>
+<%--                    &lt;%&ndash;没做&ndash;%&gt;--%>
+<%--                    <a href="#figure-pane " data-toggle="tab" class="astyle"> <span class="glyphicon glyphicon-picture"--%>
+<%--                                                                                    style="padding-right: 4px"></span>图型</a>--%>
+<%--                </li>--%>
                 <li class="leftbarstyle">
                     <a href="#param-pane" data-toggle="tab" class="astyle"> <span class="glyphicon glyphicon-edit"
                                                                                   style="padding-right: 4px"></span>编辑</a>

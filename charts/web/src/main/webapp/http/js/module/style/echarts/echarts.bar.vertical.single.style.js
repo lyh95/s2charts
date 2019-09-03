@@ -68,6 +68,7 @@ define(function(require, exports, module) {
 		 * @param callback
 		 */
 		var eventBind = function(hanlder,callback){
+			console.log(hanlder)
 			if(hanlder){
 				var chartObj = hanlder.getChartObj();
 				var objConfig = hanlder.getChartConfig();
