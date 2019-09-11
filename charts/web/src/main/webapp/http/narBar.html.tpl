@@ -39,7 +39,7 @@
                 </a>
             </li>
             <li class="listyle">
-                <a class="btn narstyle" id="go-data-analysis-btn" style="padding:17px 0;float: right;
+                <a href="/data_analyse/html/index.html" class="btn narstyle" id="go-data-analysis-btn" style="padding:17px 0;float: right;
 ">
                     数据分析
                 </a>
