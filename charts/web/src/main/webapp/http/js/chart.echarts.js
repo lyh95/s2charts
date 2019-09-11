@@ -342,7 +342,6 @@ define(function(require, exports, module) {
 					rowHeaders : true,
 					stretchH:'all',
 					columnSorting : true,
-					contextMenu : true,
 		        	minSpareRows: 1,
 		        	autoWrapRow: true,
 		        	contextMenu: true,

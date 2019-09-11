@@ -9,6 +9,23 @@
     /*background-color: #89ae00;*/
     /*background-image: url("background.png");*/
 /*}*/
+#login_dropdown >button{
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-appearance: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+
+}
+#go-login-btn:hover{
+    color:#4169E1 ;
+}
+.glyphicon-user:before{
+    padding-right: 6px;
+}
 #bs-navbar >ul:first-child a.btn:hover{
     color: #4169E1 !important;
 }
@@ -129,12 +146,20 @@ ul li{
     /*width:40px;*/
     /*height:35px;*/
 /*}*/
-#go-index-btn #go-tool-btn #go-map-btn #go-data-analysis-btn #go-third-btn #go-large-screen-btn #go-gallery-btn #go-login-btn
+#go-index-btn #go-tool-btn #go-map-btn #go-data-analysis-btn #go-third-btn #go-large-screen-btn #go-gallery-btn
 .navbar-inverse .navbar-nav > li > a
 {
     padding:15px 0; float: left;color: #eeeeee ;
 }
-
+#go-login-btn{
+    padding:15px 0; float: left;color: #eeeeee ;font-weight: 500;
+    font-family: 微软雅黑;
+    font-size: 17px;
+    display: inline-block;
+    height: 100%;
+    width: auto;
+    line-height: 20px;
+}
 @media screen and (max-width: 768px) {
     #ulstyle {
         width: 100%;

@@ -15,7 +15,7 @@ define(function (require, exports, module) {
         this.option = {
             tooltip: {
                 show: true,
-                trigger: 'item',
+                trigger: 'axis',
                 "axisPointer": {
                     "type": "shadow"   // tooltip 被 axisPointer 触发的时候，params 是多个系列的数据数组
                 },
@@ -128,8 +128,7 @@ define(function (require, exports, module) {
                         that.option = $.extend(true, that.ogetOptionFromConfigption, config.option || {});
                     }
                     myChart.resize();
-
-                    myChart.setOption(that.option,);
+                    myChart.setOption(that.option);
                 });
             }
             ;
@@ -231,9 +230,10 @@ define(function (require, exports, module) {
 
                 var unit = "";
 
-                var regex = /\([^\)]+\)/g;
+                var regex = /\([^\)]+\)/g;//在全部范围内查找匹配前后有两组花括号的字符串,例如：“{{}}”、“{{asdfasdfasdf56745}}”、“{{yuyuy#$%8787 9+_)(*)87 }}”
                 for (var i = 0; i < data.length; i++) {
                     if (!isNaN(data[i].value)) {
+                        //判断(data[i].value)的数据值是NaN时，
                         seriesData.push(data[i].value);
                         xAxisData.push(data[i].name);
                     }
