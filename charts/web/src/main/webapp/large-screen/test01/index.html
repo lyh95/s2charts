@@ -2,19 +2,40 @@
 <html lang="test">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scale=no"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
     <title>大屏</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./css/apple.css" />
     <script type="text/javascript" src="/http/lib/jquery-1.11.1.js"></script>
     <script type="text/javascript" src="/base/http/js/common/SGIS.Base.js"></script>
+    <script type="text/javascript" src="./lib/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="./lib/echarts-3.8.5.min.js"></script>
+    <script type="text/javascript" src="./lib/bootstrap.js"></script>
+    <link rel="stylesheet" href="./css/apple.css" />
     <link href="/http/css/navBar.css" rel="stylesheet">
-
     <style>
+        #screen-pic-save{
+            float: right;
+            margin: 0 10px;
+        }
+        #screen-pic-close{
+            float: right;
+            margin: 0 10px;
+        }
         .screen-effect{
             border-color:blue;
             border-style:solid
+        }
+        #control-panel{
+            height:21.5rem;
+            width:18rem;
+            position:absolute;
+            top:7rem;right: 0;background-color: #fff;
+            display: none
+
+        }
+        .panel-footer{
+            background-color: #ffffff;
         }
     </style>
 </head>
@@ -26,92 +47,95 @@
 </div>
 <div class="wrapper" style="margin-top:50px">
     <div class="container-fluid" style="position:relative">
-<!--        <div class="row">-->
-<!--            <button   id="screen-edit"   type="button" value="编辑">编辑</button>-->
-<!--            <button type="button" id="screen-save"  value="保存">保存</button>-->
-<!--        </div>-->
         <div class="row">
-            <div class="col-md-3 ">
+            <button   id="screen-edit"   type="button" value="编辑">编辑</button>
+<!--            <button type="button" id="screen-save"  value="保存">保存</button>-->
+        </div>
+        <div class="row">
+            <div class="col-md-3">
                  <div class="xpanel-wrapper xpanel-wrapper-1-2">
                      <div class="xpanel" id="screen-effect1">
                          <div id="screen-edit1" ></div>
-                             <div class="fill-h" id="pic-1" style="width: 400px;height:270px;z-index:-1;">
+                             <div class="fill-h" id="pic-1" style="width: 22rem;height:19rem;">
                              </div>
-
                      </div>
                  </div>
                 <div class="xpanel-wrapper xpanel-wrapper-1-2">
-                    <div class="xpanel">
-                        <div id="screen-edit2"></div>
-                        <div class="fill-h" id="pic-2" style="width: 300px;height:250px;"></div>
+                    <div class="xpanel" id="screen-effect2">
+                        <div id="screen-edit2">
+                        </div>
+                        <div class="fill-h" id="pic-2" style="width:22rem;height:19rem;"></div>
                     </div>
                 </div>
             </div>
             <div class="col-md-5">
                 <div class="xpanel-wrapper xpanel-wrapper-1">
-                    <div class="xpanel-1">
-                        <div id="screen-edit3"></div>
-                        <div class="fill-h" id="pic-3" style="width:550px;height:620px;"></div>
+                    <div class="xpanel-1" id="screen-effect3">
+                        <div id="screen-edit3">
+                        </div>
+                        <div class="fill-h" id="pic-3" style="width:36rem;height:37rem;"></div>
+<!--                        -->
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 ">
+            <div class="col-md-4">
                 <div class="xpanel-wrapper xpanel-wrapper-1-2">
-                    <div class="xpanel-2">
-                        <div id="screen-edit4"></div>
-                        <div class="fill-h" id="pic-4" style="width:400px;height:300px;"></div>
+                    <div class="xpanel-2" id="screen-effect4">
+                        <div id="screen-edit4">
+                        </div>
+                        <div class="fill-h" id="pic-4" style="width:29rem;height:20rem;"></div>
                     </div>
                 </div>
                 <div class="xpanel-wrapper xpanel-wrapper-1-2">
-                    <div class="xpanel-2">
-                        <div id="screen-edit5"></div>
-                        <div class="fill-h" id="pic-5" style="width:400px;height:300px;"></div>
+                    <div class="xpanel-2" id="screen-effect5">
+                        <div id="screen-edit5">
+                        </div>
+                        <div class="fill-h" id="pic-5" style="width:29rem;height:20rem;"></div>
+<!--                        -->
                     </div>
                 </div>
             </div>
         </div>
 <!-- 编辑面板-->
-        <div id="control-panel"
-             style="height:300px;width:400px;position:absolute;top:100px;right: 0;background-color: #fff;display: none">
-           <!-- Nav tabs -->
+        <div id="control-panel">
                 <ul class="nav nav-tabs" role="tablist">
                     <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">参数编辑</a></li>
-                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">数据编辑</a></li>
+<!--                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">数据编辑</a></li>-->
                 </ul>
-                <!-- Tab panes -->
                 <div class="tab-content">
+<!--                    参数编辑-->
                     <div role="tabpanel" class="tab-pane active" id="home">
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 样式修改
                             </div>
-                            <div class="panel-body">
-                                <div class="input-group  pull-left">
-                                    <span class="input-group-addon" style="width:auto;">标题</span>
-                                    <input id="chart-title" style="width:100px;" value="" />
+                            <div class="panel-body" id="param-edit">
+                                <div class="input-group" style="padding:0.5rem 0">
+                                    <span class="input-group-addon" >图片标题</span>
+                                    <input id="chart-chart-title-text" type="text" class="form-control" style="width:10rem">
+                                    </input>
+                                </div>
+                                <div id="color-select" class="input-group" style="padding:0.5rem 0">
+		                        	<span class="input-group-addon" >柱颜色</span>
+                                    <input id="chart-bar-color-select-0" type="color" class="form-control" style="width:4rem;" value="#37648B" />
                                 </div>
                             </div>
-                            <div style="position: absolute">
-                                <button id="screen-pic-save" type='button' value='保存'>保存</button>
+                            <div class="panel-footer form-inline" style="position: absolute;">
+                                <label id="screen-pic-save" class="form-control" type='button' value='保存'>保存</label>
+                                <label id="screen-pic-close" class="form-control" type='button' value='关闭'>关闭</label>
                             </div>
                         </div>
-
                     </div>
                     <div role="tabpanel" class="tab-pane" id="profile">
-
+<!--数据编辑-->
                     </div>
                 </div>
-
         </div>
     </div>
 </div>
-<script type="text/javascript" src="./lib/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="./lib/echarts-3.8.5.min.js"></script>
-<script type="text/javascript" src="./lib/bootstrap.js"></script>
 <script type="text/javascript">
     //  左一
- var myChart = echarts.init(document.getElementById('pic-1'));
-        console.log(1111)
+ var myChart1 = echarts.init(document.getElementById('pic-1'));
  var dataAxis = ['信通', '电子', '光研', '理学院', '经管',];
  var data = [2220, 1882, 1691, 1434, 1290,];
  var yMax = 500;
@@ -121,11 +145,12 @@
      dataShadow.push(yMax);
  }
 
- var option = {
+ var option1 = {
          title: {
              text: '各院总人数',
              textStyle:{
                  color:'#37A2DA',
+                 fontSize:24,
              },
          },
          xAxis: {
@@ -213,7 +238,7 @@
 
  // Enable data zoom when user click bar.
  var zoomSize = 6;
- myChart.on('click', function (params) {
+ myChart1.on('click', function (params) {
      console.log(dataAxis[Math.max(params.dataIndex - zoomSize / 2, 0)]);
      myChart.dispatchAction({
          type: 'dataZoom',
@@ -222,7 +247,7 @@
      });
  });
  // console.log(option)
-        myChart.setOption(option);
+        myChart1.setOption(option1);
     // 左二
  var myChart2 = echarts.init(document.getElementById('pic-2'));
  var option2 = {
@@ -231,6 +256,7 @@
          text: 'X院学生人数',
          textStyle:{
              color:'#37A2DA',
+             fontSize:24,
          },
      },
      tooltip : {
@@ -345,13 +371,13 @@
 //   中间的图
  var myChart3 = echarts.init(document.getElementById('pic-3'));
  var option3 = {
-     color: ['#0000FF','#7B49A9','#188df0', '#83bff6'],
          title: {
+             left: "5%",
+             bottom: "90%",
              text: '历年人数变化图',
-
                  textStyle: {
                      color: "#37A2DA",
-                     fontSize: 18
+                     fontSize: 24
                  }
          },
          tooltip : {
@@ -365,10 +391,12 @@
          },
          legend: {
              data:['学生','教师','行政人员'],
-             left: "right",
+             left: "5%",
+             bottom: "80%",
                  orient: 'horizontal',
                  textStyle: {
-                     color: "#37A2c2",
+                     color: "#42b2d3",
+                     fontSize:20,
                  }
          },
          //单个图的下载按钮
@@ -392,7 +420,7 @@
                              show: true,
                              length: 5,
                              lineStyle: {
-                                 color: "#ffffff1f"
+                                 color: "#3cc01c"
                              }
                          },
              }
@@ -411,7 +439,7 @@
                              show: true,
                              length: 15,
                              lineStyle: {
-                                 color: "#ffffff1f",
+                                 color: "#fffff1f",
                              }
                          },
                  //坐标轴在区域内的分割线
@@ -434,7 +462,7 @@
                  stack: '总量',
                  lineStyle: {
                                  normal: {
-                                     color: "rgb(131,191,246)", // 线条颜色
+                                     color: "rgb(25,207,207)", // 线条颜色
                                  },
                              },
                  label: {
@@ -445,28 +473,15 @@
                                  }
                  },
                  itemStyle: {
-                                 color: "red",
-                                 borderColor: "#fff",
-                                 borderWidth: 3
+                     normal:{
+                         color:"rgb(25,207,207)",
+                     },
                  },
                  // tooltip: {
                  //                 show: false
                  // },//鼠标放置显示数字
                  areaStyle: {
-                                 normal: {
-                                     color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-                                     //     {
-                                     //     offset: 0, color: '#0000FF'
-                                     // },
-                                         {offset: 0, color: '#188df0'},
-                                         {offset: 0.5, color: '#188df0'},
-                                         {offset: 1, color: '#83bff6'}
-                                         // {
-                                         //     offset: 1,
-                                         //     color: '#3fbbff0d'
-                                         // }
-                                     ], false),
-                                 }
+                                 normal: {}
                  },
                  data:[ 1031, 1089, 1124, 1287, 1300, 1300, 1460]
              },
@@ -476,8 +491,13 @@
                  stack: '总量',
                  lineStyle: {
                      normal: {
-                         color: "rgb(0,141,240)", // 线条颜色
+                         color: "rgb(66,179,211)", // 线条颜色
                      },
+                 },
+                 itemStyle: {
+                     normal: {
+                         color: 'rgb(66,179,211)'
+                     }
                  },
                  areaStyle: {normal: {}},
                  data:[ 435, 431,424, 487, 500, 550, 600]
@@ -492,7 +512,7 @@
                  symbolSize: 6,
                  lineStyle: {
                      normal: {
-                         color: "rgb(24,141,240)", // 线条颜色
+                         color: "rgb(30,144,255)", // 线条颜色
                      },
                  },
                  label: {
@@ -503,20 +523,15 @@
                      }
                  },
                  itemStyle: {
-                     color: "red",
-                     borderColor: "#fff",
-                     borderWidth: 3
+                     normal:{
+                         color:'rgb(30,144,255)'
+                     },
                  },
                  // tooltip: {
                  //     show: false
                  // },
                  areaStyle: {
-                     normal: {
-                         color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-                             {offset: 0, color: '#4169E1'},
-                             {offset: 1, color: '#188df0'}
-                         ], false),
-                     }
+                     normal: {}
                  },
                  data:[81, 89, 94, 100, 120, 135, 160]
              }
@@ -526,14 +541,13 @@
     // 右一
     var myChart4 = echarts.init(document.getElementById('pic-4'));
    var option4={
-       color: ['#0000FF', '#83bff6', '#7B49A9', '#188df0'],
        title: {
            text: "X院教师人数",
            left: "5%",
-           bottom: "85%",
+           bottom: "90%",
            textStyle: {
                color: "#37A2DA",
-               fontSize: 18
+               fontSize: 24
            }
        },
        tooltip: {
@@ -545,10 +559,11 @@
        legend: {
            data: ['总数', '讲师','副教授', '教授'],
            left: "right",
-           bottom: "80%",
+           bottom: "89%",
            orient: 'horizontal',
            textStyle: {
                color: "#37A2c2",
+               fontSize:20,
            }
        },
        toolbox: {
@@ -598,24 +613,44 @@
                name: '总人数',
                type: 'bar',
                barGap: 0,
+               itemStyle:{
+                   normal:{
+                       color:'#42b2d3'
+                   }
+               },
                // label: labelOption,
                data: [320, 332, 301, 334, 390]
            },
            {
                name: '讲师',
                type: 'bar',
+               itemStyle:{
+                   normal:{
+                       color:'#ffc973',
+                   }
+               },
                // label: labelOption,
                data: [220, 182, 191, 234, 290]
            },
            {
                name: '副教授',
                type: 'bar',
+               itemStyle:{
+                   normal:{
+                       color:'#6997d3',
+                   }
+               },
                // label: labelOption,
                data: [150, 232, 201, 154, 190]
            },
            {
                name: '教授',
                type: 'bar',
+               itemStyle:{
+                   normal:{
+                       color: '#ffa773',
+                   }
+               },
                // label: labelOption,
                data: [98, 77, 101, 99, 40]
            }
@@ -625,16 +660,27 @@
     // 右二
      var myChart5 = echarts.init(document.getElementById('pic-5'));
     var option5 = {
-        color:['#37A2DA','#48D1CC','#AFEEEE'],
+        title: {
+            text: "人数比例",
+            left: "5%",
+            bottom: "85%",
+            textStyle: {
+                color: "#37A2DA",
+                fontSize: 24
+            }
+        },
+        color:['#6997d3','#ffc700','#42b2d3'],
         tooltip: {
             trigger: 'item',
             formatter: "{a} <br/>{b}: {c} ({d}%)"
         },
         legend: {
             orient: 'vertical',
-            x: 'left',
+            x:'5%',
+            y: '25%',
             textStyle: {
                 color: "#37A2c2",
+                fontSize:20,
             },
             data:['学生','教师','行政人员',]
         },
@@ -671,38 +717,37 @@
             }
         ]
     };
+    myChart5.setOption(option5);
+</script>
+<script type="text/javascript">
+    var width=$(window).width()
+    function Resize(){
 
-    //联动
-    // myChart3.on('updateAxisPointer', function (event) {
-    //     var xAxisInfo = event.axesInfo[0];
-    //     if (xAxisInfo) {
-    //         var dimension = xAxisInfo.value + 1;
-    //         myChart5.setOption({
-    //             series: {
-    //                 id: 'pie',
-    //                 label: {
-    //                     formatter: '{b}: {@[' + dimension + ']} ({d}%)'
-    //                 },
-    //                 encode: {
-    //                     value: dimension,
-    //                     tooltip: dimension
-    //                 }
-    //             }
-    //         });
-    //     }
-    // });
+            if (width<1600) {
+                alert(width)
+                $('#pic-1').css({'width':'350px','height':'350px'})
+                $('#pic-2').css({'width':'350px','height':'350px'})
+                $('#pic-3').css({'width':'650px','height':'700px'})
+                $('#pic-4').css({'width':'450px','height':'350px'})
+                $('#pic-5').css({'width':'450px','height':'350px'})
+                myChart1.resize(option1)
+                myChart2.resize(option2)
+                myChart3.resize(option3)
+                myChart4.resize(option4)
+                myChart5.resize(option5)
+            }else {
 
-
-     myChart5.setOption(option5);
+            }
+    }
+     Resize(1)
+    $(window).resize(function () {
+        Resize()
+        })
 </script>
 </body>
-<script type="text/javascript" src="/large-screen/test01/lib/seajs/sea.js"></script>
-<script type="text/javascript" src="/large-screen/test01/lib/seajs/seajs-text.js"></script>
-
-
+<script type="text/javascript" src="/base/http/lib/seajs/sea.js"></script>
+<script type="text/javascript" src="/base/http/lib/seajs/seajs-text.js"></script>
 <script type="text/javascript" src="/http/js/narBar.js"></script>
-<!--<script type="text/javascript" src="/base/http/lib/seajs/sea.js"></script>-->
-<!--<script type="text/javascript" src="/base/http/lib/seajs/seajs-text.js"></script>-->
 <script>
     seajs.config({
         base : SGIS.Config.TOOL_MODULE_URL,		//基础路径
@@ -721,6 +766,7 @@
         obj.into();
     });
     seajs.use('/http/narbarlogin');
+    seajs.use('/large-screen/test01/JS/edit.echarts.js')
 </script>
 <script src="../test01/JS/index.js">
 </script>
