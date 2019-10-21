@@ -14,7 +14,7 @@
         </button>
         <a class="navbar-brand" id="go-cover-btn">
             <!--type="button" -->
-            <span class="logotext" >  <img src="/http/logo-sushui.png" style="width:40px; height:35px;"></img>S2CHARTS</span>
+            <span class="logotext" >  <img src="/http/logo-sushui.png" style="width:40px; height:35px;font-family:Georgia;"></img>BYCHARTS</span>
             <!--无论宽屏还是窄屏都要显示的内容-->
         </a>
     </div>

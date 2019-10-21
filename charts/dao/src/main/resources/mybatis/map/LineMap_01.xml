@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace= "com.s2charts.dao.mapper.map.LineMap_01Mapper" >
+    <resultMap id ="LineDemo1Map" type="com.s2charts.dao.entity.map.LineMap_01">
+
+        <result column="line_from" jdbcType="VARCHAR" property="line_from"/>
+        <result column="line_to" jdbcType="VARCHAR" property="line_to"/>
+        <result column="name" jdbcType="VARCHAR"  property="name"/>
+    </resultMap>
+
+    <select id = "getInitLineMapData" resultMap="LineDemo1Map" parameterType="java.lang.String">
+        select * from  tb_linemap
+        <!--select * from  tb_dotmap where state='ACTIVE'-->
+        <!--&lt;!&ndash;如果传入了id,就根据id查询,如果传入了loginname和password就根据这些来查询,如果都没有就使用性别为男性来查找&ndash;&gt;-->
+        <!--<choose>-->
+
+            <!--<when test="userid!=null and tableid!=null">-->
+                <!--and userid=#{userid} and tableid=#{table}-->
+            <!--</when>-->
+
+        <!--</choose>-->
+
+
+    </select>
+
+
+</mapper>
