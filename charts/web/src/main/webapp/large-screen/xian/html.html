@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>大屏展示</title>
+    <script type="text/javascript" src="/large-screen/lib/seajs/sea.js" id="seajsnode"></script>
+    <script type="text/javascript" src="/large-screen/lib/seajs/seajs-text.js"></script>
+    <script type="text/javascript" src="/large-screen/lib/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/large-screen/lib/bootstrap.js"></script>
+    <script type="text/javascript" src="/large-screen/lib/echarts-3.8.5.min.js"></script>
+    <script type="text/javascript" src="/large-screen/lib/echarts.js"></script>
+    <link rel="stylesheet" href="/large-screen/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/large-screen/xian/largescreen2nd.css">
+</head>
+<body>
+<div style="height:20px">
+    <ol class="breadcrumb">
+        <li><a href="/large-screen/1st/index.html">大屏模块首页</a></li>
+        <li class="active">文地分析</li>
+    </ol>
+</div>
+<div class="wrapper" style="top:30px">
+    <div class="container-fluid">
+        <div class="row fill-h">
+            <div class="col-lg-3 fill-h">
+                <div class="xpanel-wrapper xpanel-wrapper-2">
+                    <div class="xpanel">
+                        <!-- 左上 -->
+                        <div class="fill-h" id="pic1"></div>
+                    </div>
+                </div>
+                <div class="xpanel-wrapper xpanel-wrapper-2">
+                    <div class="xpanel">
+                        <!-- 左下 -->
+                        <div class="fill-h" id="pic2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 fill-h">
+                <div class="xpanel-wrapper xpanel-wrapper-1">
+                    <div class="xpanel">
+                        <!-- 中间 -->
+                       <div class="fill-h" id="pic3"> </div>
+                            <div class="back">返回</div>
+                            <!--                        不用的代码-->
+                            <div class="input-card" style="display: none">
+                                <h4>下属行政区查询</h4>
+                                <div class="input-item">
+                                    <div class="input-item-prepend"><span class="input-item-text">省市区</span></div>
+                                    <select id='province'></select>
+                                </div>
+                                <div class="input-item">
+                                    <div class="input-item-prepend"><span class="input-item-text">地级市</span></div>
+                                    <select id='city'></select>
+                                </div>
+                                <div class="input-item">
+                                    <div class="input-item-prepend"><span class="input-item-text">区县</span></div>
+                                    <select id='district' ></select>
+                                </div>
+                                <div class="input-item-" style='display: none;'>
+                                    <div class="input-item-prepend"><span class="input-item-text" >街道</span></div>
+                                    <select id='street' onchange='setCenter(this)'></select>
+                                </div>
+                                <p>请选择文件命名方式</p>
+                                <div class="radio">
+                                    <input type="radio" value="name" name="nameType">地域名称
+                                    <input type="radio" value="code" checked name="nameType">地域行政编码
+                                </div>
+                                <div class="input-item download" >下载geoJson数据</div>
+                            </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 fill-h">
+                <div class="xpanel-wrapper xpanel-wrapper-3">
+                    <div class="xpanel">
+                        <!-- 右上 -->
+                        <div class="fill-h" id="pic4"></div>
+                    </div>
+                </div>
+                <div class="xpanel-wrapper xpanel-wrapper-3">
+                    <div class="xpanel">
+                        <!-- 右下 -->
+                        <div class="fill-h" id="pic5"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=4c4050aecc55468f218b12408fecc9cb"></script>
+<script src="//webapi.amap.com/ui/1.0/main.js?v=1.0.11"></script>
+<script type="text/javascript">
+    seajs.use('/large-screen/xian/largescreen2nd.js')
+</script>
+</html>

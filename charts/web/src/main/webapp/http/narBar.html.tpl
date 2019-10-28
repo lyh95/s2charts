@@ -14,7 +14,8 @@
         </button>
         <a class="navbar-brand" id="go-cover-btn">
             <!--type="button" -->
-            <span class="logotext" >  <img src="/http/logo-sushui.png" style="width:40px; height:35px;font-family:Georgia;"></img>BYCHARTS</span>
+            <span class="logotext" >
+                <img src="/http/logo-sushui.png" style="width:40px; height:35px;font-family:Georgia;display: inline"></img>BYCHARTS</span>
             <!--无论宽屏还是窄屏都要显示的内容-->
         </a>
     </div>
@@ -51,7 +52,7 @@
                 </a>
             </li><!--没做，idid需要新加大屏模板跳转页面-->
             <li class="listyle">
-                <a class="btn narstyle" id="go-large-screen-btn" style="padding:17px 0;float: right;" href="/large-screen/test01/index.html">
+                <a class="btn narstyle" id="go-large-screen-btn" style="padding:17px 0;float: right;" href="/large-screen/1st/index.html">
                 大屏模板
                 </a>
             </li>
