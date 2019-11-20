@@ -384,7 +384,6 @@ function Render2(x) {
         myChart2.setOption(option2);
     })
 }
-
 function Render3(x) {
     var path=x,
         baseurl="./json/"
@@ -411,11 +410,11 @@ function Render4(x) {
     $.getJSON(baseurl+path+".json", function (res){
         var option4 = myChart4.getOption();
         option4.legend[0].data =res.legenddata;
-        // res.data0[0].splice(0,1)
-        // res.data0[1].splice(0,1)
-        // res.data0[2].splice(0,1)
-        // res.data0[3].splice(0,1)
-        // res.data0[4].splice(0,1)
+        res.data0[0].splice(0,1)
+        res.data0[1].splice(0,1)
+        res.data0[2].splice(0,1)
+        res.data0[3].splice(0,1)
+        res.data0[4].splice(0,1)
         option4.xAxis[0].data =res.data0[0];
         option4.series[0].data =res.data0[1];
         option4.series[1].data =res.data0[2];
