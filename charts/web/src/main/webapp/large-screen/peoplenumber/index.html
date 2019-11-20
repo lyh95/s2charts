@@ -17,8 +17,8 @@
 <!--    <link href="/http/css/navBar.css" rel="stylesheet">-->
     <style>
         #data-edit{
-            width: 500px;
-            height: 200px;
+            /*width: 400px;*/
+            height: 300px;
         }
         .handsontable td{
             white-space: nowrap;
@@ -46,11 +46,15 @@
             width:17rem;
             position:absolute;
             top:7rem;right: 0;background-color: #fff;
-            display: none
-
+            display: none;
+            border-radius: 10px;
+/*background-color: rgba(169,169,169,0.5);*/
         }
         .panel-footer{
             background-color: #ffffff;
+        }
+        .listyle{
+            margin-left: 20px;
         }
     </style>
 </head>
@@ -116,7 +120,7 @@
 <!-- 编辑面板-->
         <div id="control-panel">
                 <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">参数编辑</a></li>
+                    <li role="presentation" class="active"><a href="#home" aria-controls="home" class="listyle" role="tab" data-toggle="tab">参数编辑</a></li>
                     <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">数据编辑</a></li>
                 </ul>
                 <div class="tab-content">
@@ -124,7 +128,7 @@
                     <div role="tabpanel" class="tab-pane active" id="home">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                样式修改
+<!--                                样式修改-->
                             </div>
                             <div class="panel-body" id="param-edit">
                                 <div class="input-group" style="padding:0.5rem 0">
@@ -147,7 +151,7 @@
 <!--数据编辑-->
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                模板数据修改
+<!--                                模板数据修改-->
                             </div>
                             <div class="panel-body" id="data-edit"></div>
                             <div class="panel-footer form-inline" style="position: absolute;">
