@@ -1,19 +1,19 @@
 html,
 body,
 
-/*.hmc {*/
+    /*.hmc {*/
     /*margin-left: 5%;*/
     /*margin-top: -22px;*/
     /*padding: 0;*/
     /*width: 100%;*/
     /*height: 100%;*/
     /*z-index:12;*/
-/*}*/
+    /*}*/
 
-/*#backback {*/
+    /*#backback {*/
     /*position: fixed;*/
     /*top: 5%;*/
-/*}*/
+    /*}*/
 #backback {
     float: top;
     top: 100px;
@@ -70,7 +70,7 @@ body,
 ::-webkit-color-swatch-wrapper{width: 18px;}    /*外面的容器*/
 ::-webkit-color-swatch{}                     /*内部的颜色按钮*/
 #innerDotColor_position{
-    left: 150px;
+    left: 223px;
     top: 110px;
     position: fixed;
 }
@@ -78,7 +78,7 @@ body,
 ::-webkit-color-swatch-wrapper{width: 18px;}    /*外面的容器*/
 ::-webkit-color-swatch{}                     /*内部的颜色按钮*/
 #borderDotColor_position{
-    left: 150px;
+    left: 223px;
     top: 140px;
     position: fixed;
 }
@@ -86,7 +86,7 @@ body,
 ::-webkit-color-swatch-wrapper{width: 18px;}    /*外面的容器*/
 ::-webkit-color-swatch{}                     /*内部的颜色按钮*/
 #selectDotColor_position{
-    left: 150px;
+    left: 223px;
     top: 170px;
     position: fixed;
 }
@@ -102,7 +102,7 @@ body,
 }
 /*行政区划选择*/
 span.DistrictSelect{
-    font-size:11px;
+    font-size:13px;
     left: 40px;
     top: -18px;
 }
@@ -162,17 +162,17 @@ span.aaa{
 }
 span.bbb{
     font-size:13px;
-    left: 140px;
+    left: 170px;
 }
 /*选择框1*/
 span.ccc{
     top: -5px;
-    font-size:11px;
+    font-size:13px;
     left: 40px;
 }
 /*选择框2*/
 span.ddd{
-    font-size:11px;
+    font-size:13px;
     left: 26px;
     top: -14px;
 }
@@ -186,30 +186,27 @@ span.eee{
     border-radius: 40px;
     background-color: rgb(252,249,242);
     position: fixed;
-    width: 10px;
-    height: 10px;
-    left: 30px;
+    width: 13px;
+    height: 13px;
+    left: 50px;
     top: 53px;
     z-index:30;
 }
 
 #example1{
-    height: 300px;
-    left: -30px ;
+    height: 800px;
+    width: 280px;
     z-index: 50;
-    width: 160px;
-    top: 10px;
     text-align: left;
-    /*display: block;*/
 }
 
 .map-circle_2{
     border-radius: 40px;
     background-color: rgb(153,153,153);
     position: fixed;
-    width: 10px;
-    height: 10px;
-    left: 60px;
+    width: 13px;
+    height: 13px;
+    left: 90px;
     top: 53px;
     z-index:30;
 }
@@ -218,9 +215,9 @@ span.eee{
     border-radius: 40px;
     background-color: rgb(0,197,198);
     position: fixed;
-    width: 10px;
-    height: 10px;
-    left: 90px;
+    width: 13px;
+    height: 13px;
+    left: 130px;
     top: 53px;
     z-index:30;
 }
@@ -229,9 +226,9 @@ span.eee{
     border-radius: 40px;
     background-color: rgb(230,157,135);
     position: fixed;
-    width: 10px;
-    height: 10px;
-    left: 120px;
+    width: 13px;
+    height: 13px;
+    left: 170px;
     top: 53px;
     z-index:30;
 }
@@ -240,9 +237,9 @@ span.eee{
     border-radius: 40px;
     background-color: rgb(248,155,88);
     position: fixed;
-    width: 10px;
-    height: 10px;
-    left: 30px;
+    width: 13px;
+    height: 13px;
+    left: 50px;
     top: 118px;
     z-index:30;
 }
@@ -250,9 +247,9 @@ span.eee{
     border-radius: 40px;
     background-color: rgb(231,200,92);
     position: fixed;
-    width: 10px;
-    height: 10px;
-    left: 60px;
+    width: 13px;
+    height: 13px;
+    left: 90px;
     top: 118px;
     z-index:30;
 }
@@ -260,9 +257,9 @@ span.eee{
     border-radius: 40px;
     background-color: rgb(181,185,52);
     position: fixed;
-    width: 10px;
-    height: 10px;
-    left: 90px;
+    width: 13px;
+    height: 13px;
+    left: 130px;
     top: 118px;
     z-index:30;
 }
@@ -270,9 +267,9 @@ span.eee{
     border-radius: 40px;
     background-color: rgb(0,132,198);
     position: fixed;
-    width: 10px;
-    height: 10px;
-    left: 120px;
+    width: 13px;
+    height: 13px;
+    left: 170px;
     top: 118px;
     z-index:30;
 }
@@ -281,9 +278,9 @@ span.eee{
     border-radius: 40px;
     background-color: rgb(248,155,88);
     position: fixed;
-    width: 10px;
-    height: 10px;
-    left: 30px;
+    width: 13px;
+    height: 13px;
+    left: 50px;
     top: 148px;
     z-index:30;
 }
@@ -291,9 +288,9 @@ span.eee{
     border-radius: 40px;
     background-color: rgb(231,200,92);
     position: fixed;
-    width: 10px;
-    height: 10px;
-    left: 60px;
+    width: 13px;
+    height: 13px;
+    left: 90px;
     top: 148px;
     z-index:30;
 }
@@ -301,9 +298,9 @@ span.eee{
     border-radius: 40px;
     background-color: rgb(181,185,52);
     position: fixed;
-    width: 10px;
-    height: 10px;
-    left: 90px;
+    width: 13px;
+    height: 13px;
+    left: 130px;
     top: 148px;
     z-index:30;
 }
@@ -311,9 +308,9 @@ span.eee{
     border-radius: 40px;
     background-color: rgb(0,132,198);
     position: fixed;
-    width: 10px;
-    height: 10px;
-    left: 120px;
+    width: 13px;
+    height: 13px;
+    left: 170px;
     top: 148px;
     z-index:30;
 }
@@ -322,9 +319,9 @@ span.eee{
     border-radius: 40px;
     background-color: rgb(248,155,88);
     position: fixed;
-    width: 10px;
-    height: 10px;
-    left: 30px;
+    width: 13px;
+    height: 13px;
+    left: 50px;
     top: 178px;
     z-index:30;
 }
@@ -332,9 +329,9 @@ span.eee{
     border-radius: 40px;
     background-color: rgb(231,200,92);
     position: fixed;
-    width: 10px;
-    height: 10px;
-    left: 60px;
+    width: 13px;
+    height: 13px;
+    left: 90px;
     top: 178px;
     z-index:30;
 }
@@ -342,9 +339,9 @@ span.eee{
     border-radius: 40px;
     background-color: rgb(181,185,52);
     position: fixed;
-    width: 10px;
-    height: 10px;
-    left: 90px;
+    width: 13px;
+    height: 13px;
+    left: 130px;
     top: 178px;
     z-index:30;
 }
@@ -352,15 +349,15 @@ span.eee{
     border-radius: 40px;
     background-color: rgb(0,132,198);
     position: fixed;
-    width: 10px;
-    height: 10px;
-    left: 120px;
+    width: 13px;
+    height: 13px;
+    left: 170px;
     top: 178px;
     z-index:999;
 }
 /*#remake{*/
-    /*top: 200px;*/
-    /*z-index: 999;*/
+/*top: 200px;*/
+/*z-index: 999;*/
 /*}*/
 /*是否选择的选择框按钮*/
 label{
@@ -375,7 +372,7 @@ label, input, select{
     width: 30px;
     height: 15px;
     top: 14px;
-    left: 110px;
+    left: 140px;
     position: relative;
     border: 1px solid #dfdfdf;
     background-color: #fdfdfd;
@@ -415,13 +412,13 @@ label, input, select{
 .mui-switch-01:checked:before {
     left: 21px; }
 /*.mui-switch.mui-switch-animbg {*/
-    /*transition: background-color ease 0.4s; }*/
+/*transition: background-color ease 0.4s; }*/
 /*.mui-switch.mui-switch-animbg:before {*/
-    /*transition: left 0.3s; }*/
+/*transition: left 0.3s; }*/
 /*.mui-switch.mui-switch-animbg:checked {*/
-    /*box-shadow: #dfdfdf 0 0 0 0 inset;*/
-    /*background-color: #64bd63;*/
-    /*transition: border-color 0.4s, background-color ease 0.4s; }*/
+/*box-shadow: #dfdfdf 0 0 0 0 inset;*/
+/*background-color: #64bd63;*/
+/*transition: border-color 0.4s, background-color ease 0.4s; }*/
 .mui-switch-01.mui-switch-animbg-01:checked:before {
     transition: left 0.3s; }
 .mui-switch-01.mui-switch-anim-01 {
@@ -442,7 +439,7 @@ label, input, select{
     width: 30px;
     height: 15px;
     top: 2px;
-    left: 110px;
+    left: 140px;
     position: relative;
     border: 1px solid #dfdfdf;
     background-color: #fdfdfd;
@@ -625,7 +622,7 @@ label, input, select{
     position: fixed;
     left: 100px;
     top: 0;
-    width: 200px;
+    width: 300px;
     height: 100%;
     background: #252829;
     /*transform: rotateY(120deg);*/
@@ -663,7 +660,7 @@ label, input, select{
 .nav-slide-o li a{
     line-height: 100%;
     display: block;
-    left:-20px;
+    left:20px;
     top:20px;
     /*padding: 0 20px;*/
     /*font-size: 14px;*/
@@ -698,7 +695,19 @@ label, input, select{
 /*.nav-slide-o li a:hover{background: #357dd7;}*/
 /*.nav-slide-o li a:hover:before{left: 0px;}*/
 .nav-slide-o li a span{position: relative;z-index: 1;}
-.nav-slide-o {display: none;}
+.nav-slide-o {display: none;width: 300px;height: 100%;}
+.nav-slide-o1 {
+    width: 240px
+}
+#buttonGroup {
+    position: absolute;
+    left: 55px;
+    bottom: 20px;
+    width: 250px;
+    height: 50px;
+}
+
+
 
 
 /*省市区三级联动*/

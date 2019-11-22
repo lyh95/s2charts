@@ -84,7 +84,7 @@ body,
 ::-webkit-color-swatch{}                     /*内部的颜色按钮*/
 
 #lineColor_position{
-    left: 150px;
+    left: 223px;
     top: 110px;
     position: fixed;
 }
@@ -92,10 +92,10 @@ body,
 .plus-icon {
     display: inline-block;
     background: deepskyblue;
-    height: 12px;
+    height: 15px;
     position: fixed;
     width: 2px;
-    left: 120px;
+    left: 170px;
     z-index: 999;
     top: 153px;
 }
@@ -103,8 +103,8 @@ body,
 .plus-icon:after {
     background: deepskyblue;
     content: "";
-    height: 12px;
-    left: 120px;
+    height: 15px;
+    left: 170px;
     position: fixed;
     /*top: 0;*/
     width: 2px;
@@ -115,8 +115,8 @@ body,
 .minus-icon{
     background: deepskyblue;
     content: "";
-    height: 12px;
-    left: 168px;
+    height: 15px;
+    left: 218px;
     position: fixed;
     /*top: 0;*/
     top: 153px;
@@ -129,25 +129,25 @@ body,
 #text-disabled{
     width: 10px;
     height: 10px;
-    left: 134px;
+    left: 184px;
     z-index: 999;
     top: 146px;
     position: fixed;
 }
 
 #text-disabled-again{
-width: 10px;
-height: 10px;
+    width: 10px;
+    height: 10px;
 }
 
 /*设置透明度*/
 .plus-icon02 {
     display: inline-block;
     background: deepskyblue;
-    height: 12px;
+    height: 15px;
     position: fixed;
     width: 2px;
-    left: 120px;
+    left: 170px;
     z-index: 999;
     top: 187px;
 }
@@ -155,8 +155,8 @@ height: 10px;
 .plus-icon02:after {
     background: deepskyblue;
     content: "";
-    height: 12px;
-    left: 120px;
+    height: 15px;
+    left: 170px;
     position: fixed;
     /*top: 0;*/
     width: 2px;
@@ -167,8 +167,8 @@ height: 10px;
 .minus-icon02{
     background: deepskyblue;
     content: "";
-    height: 12px;
-    left: 168px;
+    height: 15px;
+    left: 218px;
     position: fixed;
     /*top: 0;*/
     top: 187px;
@@ -180,7 +180,7 @@ height: 10px;
 #text-disabled02{
     width: 10px;
     height: 10px;
-    left: 134px;
+    left: 184px;
     z-index: 999;
     top: 181px;
     position: fixed;
@@ -236,34 +236,34 @@ span.aaa{
 }
 span.bbb{
     font-size:13px;
-    left: 140px;
+    left: 170px;
 }
 /*选择框1*/
 span.ccc{
     top: -5px;
-    font-size:11px;
+    font-size:13px;
     left: 40px;
 }
 /*选择框2*/
 span.ddd{
-    font-size:11px;
+    font-size:13px;
     left: 30px;
     top: -14px;
 }
 /*国家地区选择*/
 span.eee{
-    font-size:11px;
+    font-size:13px;
     left: 50px;
 }
 /*设置透明度*/
 span.fff{
-    font-size:11px;
+    font-size:13px;
     left: 30px;
     color: white;
 }
 /*行政区划选择*/
 span.DistrictSelect{
-    font-size:11px;
+    font-size:13px;
     left: 40px;
     top: -18px;
 }
@@ -272,30 +272,28 @@ span.DistrictSelect{
     border-radius: 40px;
     background-color: rgb(252,249,242);
     position: fixed;
-    width: 10px;
-    height: 10px;
-    left: 30px;
+    width: 13px;
+    height: 13px;
+    left: 50px;
     top: 53px;
     z-index:30;
 }
 
 #example1{
-    height: 300px;
-    left: -30px ;
+    height: 800px;
     z-index: 50;
-    width: 160px;
-    top: 10px;
+    width: 300px;
     text-align: left;
-    /*display: block;*/
+    overflow: hidden;
 }
 
 .map-circle_2{
     border-radius: 40px;
     background-color: rgb(153,153,153);
     position: fixed;
-    width: 10px;
-    height: 10px;
-    left: 60px;
+    width: 13px;
+    height: 13px;
+    left: 90px;
     top: 53px;
     z-index:30;
 }
@@ -304,9 +302,9 @@ span.DistrictSelect{
     border-radius: 40px;
     background-color: rgb(0,197,198);
     position: fixed;
-    width: 10px;
-    height: 10px;
-    left: 90px;
+    width: 13px;
+    height: 13px;
+    left: 130px;
     top: 53px;
     z-index:30;
 }
@@ -315,9 +313,9 @@ span.DistrictSelect{
     border-radius: 40px;
     background-color: rgb(230,157,135);
     position: fixed;
-    width: 10px;
-    height: 10px;
-    left: 120px;
+    width: 13px;
+    height: 13px;
+    left: 170px;
     top: 53px;
     z-index:30;
 }
@@ -326,9 +324,9 @@ span.DistrictSelect{
     border-radius: 40px;
     background-color: rgb(248,155,88);
     position: fixed;
-    width: 10px;
-    height: 10px;
-    left: 30px;
+    width: 13px;
+    height: 13px;
+    left: 50px;
     top: 118px;
     z-index:30;
 }
@@ -336,9 +334,9 @@ span.DistrictSelect{
     border-radius: 40px;
     background-color: rgb(231,200,92);
     position: fixed;
-    width: 10px;
-    height: 10px;
-    left: 60px;
+    width: 13px;
+    height: 13px;
+    left: 90px;
     top: 118px;
     z-index:30;
 }
@@ -346,9 +344,9 @@ span.DistrictSelect{
     border-radius: 40px;
     background-color: rgb(181,185,52);
     position: fixed;
-    width: 10px;
-    height: 10px;
-    left: 90px;
+    width: 13px;
+    height: 13px;
+    left: 130px;
     top: 118px;
     z-index:30;
 }
@@ -356,9 +354,9 @@ span.DistrictSelect{
     border-radius: 40px;
     background-color: rgb(0,132,198);
     position: fixed;
-    width: 10px;
-    height: 10px;
-    left: 120px;
+    width: 13px;
+    height: 13px;
+    left: 170px;
     top: 118px;
     z-index:30;
 }
@@ -367,9 +365,9 @@ span.DistrictSelect{
     border-radius: 40px;
     background-color: rgb(248,155,88);
     position: fixed;
-    width: 10px;
-    height: 10px;
-    left: 30px;
+    width: 13px;
+    height: 13px;
+    left: 50px;
     top: 148px;
     z-index:30;
 }
@@ -377,9 +375,9 @@ span.DistrictSelect{
     border-radius: 40px;
     background-color: rgb(231,200,92);
     position: fixed;
-    width: 10px;
-    height: 10px;
-    left: 60px;
+    width: 13px;
+    height: 13px;
+    left: 90px;
     top: 148px;
     z-index:30;
 }
@@ -387,9 +385,9 @@ span.DistrictSelect{
     border-radius: 40px;
     background-color: rgb(181,185,52);
     position: fixed;
-    width: 10px;
-    height: 10px;
-    left: 90px;
+    width: 13px;
+    height: 13px;
+    left: 130px;
     top: 148px;
     z-index:30;
 }
@@ -397,9 +395,9 @@ span.DistrictSelect{
     border-radius: 40px;
     background-color: rgb(0,132,198);
     position: fixed;
-    width: 10px;
-    height: 10px;
-    left: 120px;
+    width: 13px;
+    height: 13px;
+    left: 170px;
     top: 148px;
     z-index:30;
 }
@@ -408,9 +406,9 @@ span.DistrictSelect{
     border-radius: 40px;
     background-color: rgb(248,155,88);
     position: fixed;
-    width: 10px;
-    height: 10px;
-    left: 30px;
+    width: 13px;
+    height: 13px;
+    left: 50px;
     top: 178px;
     z-index:30;
 }
@@ -418,9 +416,9 @@ span.DistrictSelect{
     border-radius: 40px;
     background-color: rgb(231,200,92);
     position: fixed;
-    width: 10px;
-    height: 10px;
-    left: 60px;
+    width: 13px;
+    height: 13px;
+    left: 90px;
     top: 178px;
     z-index:30;
 }
@@ -428,9 +426,9 @@ span.DistrictSelect{
     border-radius: 40px;
     background-color: rgb(181,185,52);
     position: fixed;
-    width: 10px;
-    height: 10px;
-    left: 90px;
+    width: 13px;
+    height: 13px;
+    left: 130px;
     top: 178px;
     z-index:30;
 }
@@ -438,9 +436,9 @@ span.DistrictSelect{
     border-radius: 40px;
     background-color: rgb(0,132,198);
     position: fixed;
-    width: 10px;
-    height: 10px;
-    left: 120px;
+    width: 13px;
+    height: 13px;
+    left: 170px;
     top: 178px;
     z-index:999;
 }
@@ -461,7 +459,7 @@ label, input, select{
     width: 30px;
     height: 15px;
     top: 14px;
-    left: 110px;
+    left: 140px;
     position: relative;
     border: 1px solid #dfdfdf;
     background-color: #fdfdfd;
@@ -528,7 +526,7 @@ label, input, select{
     width: 30px;
     height: 15px;
     top: 2px;
-    left: 110px;
+    left: 140px;
     position: relative;
     border: 1px solid #dfdfdf;
     background-color: #fdfdfd;
@@ -711,14 +709,9 @@ label, input, select{
     position: fixed;
     left: 100px;
     top: 0;
-    width: 200px;
+    width: 300px;
     height: 100%;
     background: #252829;
-    /*transform: rotateY(120deg);*/
-    /*-webkit-transform: rotateY(120deg);*/
-    /*-moz-transform: rotateY(120deg);*/
-    /*-o-transform: rotateY(120deg);*/
-    /*-ms-transform: rotateY(120deg);*/
     z-index: 10;
     visibility: hidden;
     transform-origin: 0 0;
@@ -749,7 +742,7 @@ label, input, select{
 .nav-slide-o li a{
     line-height: 100%;
     display: block;
-    left:-20px;
+    left:20px;
     top:20px;
     /*padding: 0 20px;*/
     /*font-size: 14px;*/
@@ -784,7 +777,19 @@ label, input, select{
 /*.nav-slide-o li a:hover{background: #357dd7;}*/
 /*.nav-slide-o li a:hover:before{left: 0px;}*/
 .nav-slide-o li a span{position: relative;z-index: 1;}
-.nav-slide-o {display: none;}
+.nav-slide-o {display: none;width: 300px;
+    height: 100%;}
+.nav-slide-o1 {
+    width: 240px;
+    height: 100%;
+}
+#buttonGroup {
+    position: absolute;
+    left: 55px;
+    bottom: 20px;
+    width: 250px;
+    height: 50px;
+}
 
 
 /*省市区三级联动*/
