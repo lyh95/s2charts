@@ -47,19 +47,28 @@ public class CheckLoginController {
     //注册
     @ResponseBody
     @RequestMapping(value = {"/doRegister"})
-    public String addUser(@RequestParam("username") String username,
-                          @RequestParam("password") String password,
+    public Integer addUser(@RequestParam("username") String username,
+                          @RequestParam("password1") String password1,
                           @RequestParam("password2") String password2){
 
-        if (!password.equals(password2)) {
+        if (!password1.equals(password2)) {
 
-            return "两次密码不相同，注册失败！！";
-        } else {
-            int res = testUserService.adduser(username, password);
+           // return "两次密码不相同，注册失败！！";
+            return 401;
+        }
+        if(username==null||"".equals(username)||password1==null||"".equals(password1)||password2==null||"".equals(password2))
+        {
+           // return"用户名或者密码并不能为空";
+            return 402;
+        }
+        else {
+            int res = testUserService.adduser(username, password1);
             if (res == 0) {
-                return "注册失败！";
+               // return "注册失败！";
+                return 404;
             } else {
-                return "注册成功！";
+               // return "注册成功！";
+                return 200;
             }
         }
     }
