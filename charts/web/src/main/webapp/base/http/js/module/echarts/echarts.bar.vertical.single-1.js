@@ -135,6 +135,7 @@ define(function(require, exports, module) {
             var that = this;
             if(typeof config.data == "object" && config.data != null){
             	this.getDataFromData(config.data,function(re){
+            	    console.log("rere============",re)
             		goTo(re);
                     callback && callback();
             	});

@@ -5,7 +5,7 @@
  */
 define(function(require, exports, module) {
 
-    var templateHtml = require("/http/js/module/style/echarts/echarts.bar.vertical.single.html.tpl");
+    var templateHtml = require("/http/js/module/style/echarts/echarts.bar.vertical.single-1.html.tpl");
     var inputHtml = "<input type=\"color\" class=\"form-control\" style=\"width:45px;\" value=\"#26C0C0\" />";
 
     /**

@@ -12,7 +12,6 @@ var hot=new Handsontable(container,{
             return;
         }
         if (changes!=null) {
-// console.log(123456)
            var dateList = this.getSourceData()
             var updateList=JSON.parse(JSON.stringify(dateList))
             console.log(updateList)

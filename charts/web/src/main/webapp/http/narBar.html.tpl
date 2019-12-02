@@ -64,12 +64,12 @@
             </li>
             <li class=" listyle">
                 <!--//写了-->
-                <div id="login_dropdown">
+                <div id="login_dropdown" class="dropdown">
                     <button type="button" id="go-login-btn" class="btn narstyle dropdown-toggle">
                         <i  class="glyphicon glyphicon-user" style="padding: 20px 0;vertical-align: middle;"></i>
                         <span style="vertical-align: middle">登录</span>
                     </button>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu" aria-labelledby="go-login-btn">
                         <li id="logout_li"><a href="/logout">注销</a></li>
                     </ul>
                 </div>
