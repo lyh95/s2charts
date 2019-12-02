@@ -78,7 +78,7 @@ public class ToolUserController {
     //用户保存：把数据存进数据库 并且取出option
     @RequestMapping(value = {"/savejson"})
     @ResponseBody
-    public List save(@RequestParam("userPic") String userPic, @RequestParam("picOption")
+    public void save(@RequestParam("userPic") String userPic, @RequestParam("picOption")
             String picOption)
                          {
                              System.out.println("用户标识："+userPic);
@@ -88,17 +88,25 @@ public class ToolUserController {
                              String user_pic =userPic;
                              String pic_option=picOption;
                              saveDataService.insertUserPic(userId,user_pic,pic_option);
-                             List options = saveDataService.getPicOption(userPic);
-                             return options;
+//                             List options = saveDataService.getPicOption(userPic);
+//                             return options;
 
     }
-////取出用户编辑的数据
-//    @RequestMapping(value = "/getoption")
-//    @ResponseBody
-//    public List<String> getoption(){
-//        String currentuser =SecurityContextHolder.getContext().getAuthentication().getName();
-//        int userId = testUserService.selectIdByUsername(currentuser);
-//        List<String> options = saveDataService.getPicOption(userId);
-//        return options;
-//    }
+    //取出用户编辑的数据
+    @RequestMapping(value = "/getoption")
+    @ResponseBody
+    public List<SysPic> getoption(){
+        String currentuser =SecurityContextHolder.getContext().getAuthentication().getName();
+        int userId = testUserService.selectIdByUsername(currentuser);
+        List<SysPic> options = saveDataService.getPicOption(userId);
+        return options;
+    }
+    //取出最新option
+    @RequestMapping(value = "/getDateOption")
+    @ResponseBody
+    public List<SysPic> getdateoption(){
+
+        List<SysPic> options = saveDataService.getdateOption();
+        return options;
+    }
 }

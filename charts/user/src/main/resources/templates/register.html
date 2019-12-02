@@ -8,9 +8,12 @@
 
 <body bgcolor="#F2F6F9">
 <center>
+    <div style="position:relative;">
+        <img src="/ECharts_files/fengmian.png">
     <div class="container" align="center"
-         style="background-color: #ffffff;margin: 220px;width: 300px;height: 180px">
-<h1>请输入注册信息</h1>
+         style="position:absolute;background-color:rgba(255,255,255,0.4);border-radius: 10px;margin-top: -380px;margin-left:980px;width: 300px;height: 180px"
+    >
+<h1 style="font-size: 25px">请输入注册信息</h1>
 <!--<form action="/doRegister" method="post">-->
     <table>
         <tr>
@@ -27,7 +30,10 @@
         </tr>
     </table>
     <button id="form" type="submit" onclick="get()">提交</button>
+        <a href="/login">
+        <button id="fanhui">返回</button></a>
 <!--</form>-->
+    </div>
     </div>
 </center>
 </body>
