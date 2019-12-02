@@ -3,6 +3,7 @@ package com.s2charts.user.controller;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.util.JSONPObject;
+import com.s2charts.dao.entity.user.SysPic;
 import com.s2charts.dao.entity.user.SysUserPermission;
 import com.s2charts.user.service.SaveDataService;
 import com.s2charts.user.service.TestUserPermissionService;
@@ -73,10 +74,11 @@ public class ToolUserController {
 //
 //        }
 
-    //用户保存：把数据存进数据库
+
+    //用户保存：把数据存进数据库 并且取出option
     @RequestMapping(value = {"/savejson"})
     @ResponseBody
-    public void save(@RequestParam("userPic") String userPic,@RequestParam("picOption")
+    public List save(@RequestParam("userPic") String userPic, @RequestParam("picOption")
             String picOption)
                          {
                              System.out.println("用户标识："+userPic);
@@ -86,15 +88,17 @@ public class ToolUserController {
                              String user_pic =userPic;
                              String pic_option=picOption;
                              saveDataService.insertUserPic(userId,user_pic,pic_option);
+                             List options = saveDataService.getPicOption(userPic);
+                             return options;
 
     }
-//取出用户编辑的数据
-    @RequestMapping(value = "/getoption")
-    @ResponseBody
-    public List<String> getoption(){
-        String currentuser =SecurityContextHolder.getContext().getAuthentication().getName();
-        int userId = testUserService.selectIdByUsername(currentuser);
-        List<String> options = saveDataService.getPicOption(userId);
-        return options;
-    }
+////取出用户编辑的数据
+//    @RequestMapping(value = "/getoption")
+//    @ResponseBody
+//    public List<String> getoption(){
+//        String currentuser =SecurityContextHolder.getContext().getAuthentication().getName();
+//        int userId = testUserService.selectIdByUsername(currentuser);
+//        List<String> options = saveDataService.getPicOption(userId);
+//        return options;
+//    }
 }

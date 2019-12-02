@@ -9,5 +9,5 @@ public interface SysPicMapper {
     //插入用户保存图的信息
     SysPic insertUserPic(@Param("userId") int userId, @Param("userPic") String userPic, @Param("picOption") String picOption);
     //取出图集编辑的内容
-    List<String> getPicOption(@Param("userId") int userId);
+    List<String> getPicOption(@Param("userPic") String userPic);
 }

@@ -14,7 +14,7 @@ public class SaveDataService {
     public SysPic insertUserPic(int userId, String userPic, String picOption){
         return sysPicMapper.insertUserPic(userId,userPic,picOption);
     }
-    public List<String> getPicOption(int userId){
-        return sysPicMapper.getPicOption(userId);
+    public List<String> getPicOption(String userPic){
+        return sysPicMapper.getPicOption(userPic);
     }
 }
