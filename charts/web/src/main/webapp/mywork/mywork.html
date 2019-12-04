@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>我的作品</title>
+
+    <!--bootstrap布局框架-->
+    <link rel="stylesheet" href="mywork_css/bootstrap-grid.min.css">
+    <!--字体图标样式-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="mywork_css/picture.css">
+    <link rel="stylesheet" href="mywork_css/mainbase.css">
+    <link rel="stylesheet" href="mywork_css/mainHome.css">
+    <script src="mywork_lib/jquery-1.9.1.min.js"></script>
+    <script src="mywork_lib/SuperSlide.js"></script>
+    <script src="mywork_js/mainPage.js"></script>
+    <link href="/http/css/navBar.css" rel="stylesheet">
+    <link href="/http/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="/http/lib/semantic/css/semantic.css" rel="stylesheet">
+    <link href='/http/lib/spectrum-master/spectrum.css' rel='stylesheet' />
+    <script type="text/javascript" src="/base/http/js/common/SGIS.Base.js"></script>
+    <script type="text/javascript" src='/http/lib/spectrum-master/spectrum.js'></script>
+    <script type="text/javascript" src="/http/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./mywork_lib/echarts-3.8.5.min.js"></script>
+    <script type="text/javascript" src="./mywork_js/mywork.js"></script>
+    <link href="/http/css/navBar.css" rel="stylesheet">
+    <style>
+      .row{
+          margin-right: -150px;
+          margin-left: -150px
+      }
+      .box{
+         border: 1px sienna solid;
+          padding-top: 25px;
+          margin: 10px 0;
+      }
+      p {
+          margin-right: 24px;
+          text-align: center;
+      }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" id="navbar" role="navigation" style="background-color:#123c5f;height:60px;">
+</nav>
+<div class="index-page">
+    <div class="solution-more">
+        <div class="solution-more-slide">
+            <div class="container" style="background-color:#DCDCDC;opacity: 1">
+                <div class="hd">
+                    <ul>
+                        <li class="item-1 on">
+                            <i></i>
+                            <div class="text">
+                                <h3>图集工具</h3>
+                                <p>作品集</p>
+                            </div>
+                        </li>
+                        <li class="item-2">
+                            <i></i>
+                            <div class="text">
+                                <h3>数据地图</h3>
+                                <p>作品集</p>
+                            </div>
+                        </li>
+                        <li class="item-3">
+                            <i></i>
+                            <div class="text">
+                                <h3>数据分析</h3>
+                                <p>案例集</p>
+                            </div>
+                        </li>
+                        <li class="item-4">
+                            <i></i>
+                            <div class="text">
+                                <h3>数据大屏</h3>
+                                <p>作品集</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="bd" style="position: relative; width: 1920px; height:950px;">
+                    <li class="item-1" style="position: absolute; width: 1920px; left: 0px; top: 0px; display: list-item;">
+                        <div class="container">
+                            <div class="inner">
+                                <div class="row" id="TheTotalNode">
+<!--                                    <div class="col-md-8 col-sm-12">-->
+<!--                                        <div class="box" id="myWork1" style="height:290px;width:460px;">-->
+
+<!--                                            <img src="../mywork_img/tool/caiwuchu.png" height="320" width="440"/>-->
+<!--                                            <div class="box-content">-->
+<!--                                                <h3 class="title">趋势分析</h3>-->
+<!--                                                <span class="post">我的作品</span>-->
+<!--                                            </div>-->
+<!--                                            <ul class="icon">-->
+<!--                                                <li><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></li>-->
+<!--                                                <li><a href="#"><i class="fa fa-link"></i></a></li>-->
+<!--                                            </ul>-->
+                                        </div>
+                                    </div>
+<!--                                    <div class="col-md-4 col-sm-6">-->
+<!--                                        <div class="box">-->
+<!--                                            <img src="../mywork_img/tool/financial.png" height="320" width="440"/>-->
+<!--                                            <div class="box-content">-->
+<!--                                                <h3 class="title">财务报表</h3>-->
+<!--                                                <span class="post">我的作品</span>-->
+<!--                                            </div>-->
+<!--                                            <ul class="icon">-->
+<!--                                                <li><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></li>-->
+<!--                                                <li><a href="#"><i class="fa fa-link"></i></a></li>-->
+<!--                                            </ul>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-md-4 col-sm-6">-->
+<!--                                        <div class="box">-->
+<!--                                            <img src="../mywork_img/tool/grade.png" height="320" width="440"/>-->
+<!--                                            <div class="box-content">-->
+<!--                                                <h3 class="title">成绩分析</h3>-->
+<!--                                                <span class="post">我的作品</span>-->
+<!--                                            </div>-->
+<!--                                            <ul class="icon">-->
+<!--                                                <li><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></li>-->
+<!--                                                <li><a href="#"><i class="fa fa-link"></i></a></li>-->
+<!--                                            </ul>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-md-4 col-sm-6">-->
+<!--                                        <div class="box">-->
+<!--                                            <img src="../mywork_img/tool/stock.png" height="320" width="440"/>-->
+<!--                                            <div class="box-content">-->
+<!--                                                <h3 class="title">股市预测</h3>-->
+<!--                                                <span class="post">我的作品</span>-->
+<!--                                            </div>-->
+<!--                                            <ul class="icon">-->
+<!--                                                <li><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></li>-->
+<!--                                                <li><a href="#"><i class="fa fa-link"></i></a></li>-->
+<!--                                            </ul>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-md-4 col-sm-6">-->
+<!--                                        <div class="box">-->
+<!--                                            <img src="../mywork_img/tool/schedule.png" height="320" width="440"/>-->
+<!--                                            <div class="box-content">-->
+<!--                                                <h3 class="title">进度报表</h3>-->
+<!--                                                <span class="post">我的作品</span>-->
+<!--                                            </div>-->
+<!--                                            <ul class="icon">-->
+<!--                                                <li><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></li>-->
+<!--                                                <li><a href="#"><i class="fa fa-link"></i></a></li>-->
+<!--                                            </ul>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-md-4 col-sm-6">-->
+<!--                                        <div class="boxend">-->
+<!--                                            <img src="../mywork_img/tool/add.png" height="320" width="440"/>-->
+
+<!--                            </div>-->
+<!--                        </div>-->
+                                </div>
+<!--                            </div>-->
+<!--                        </div>-->
+                    </li>
+<!--                    <li class="item-2" style="position: absolute; width: 1920px; left: 0px; top: 0px; display: none;">-->
+<!--                        <div class="container">-->
+<!--                            <div class="inner">-->
+<!--                                <div class="row">-->
+<!--                                    <div class="col-sm-6">-->
+<!--                                        <div class="box">-->
+<!--                                            <img src="../mywork_img/map/aviation.png" height="440" width="660"/>-->
+<!--                                            <div class="box-content">-->
+<!--                                                <h3 class="title">全国航空路线概览</h3>-->
+<!--                                                <span class="post">我的作品</span>-->
+<!--                                            </div>-->
+<!--                                            <ul class="icon">-->
+<!--                                                <li><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></li>-->
+<!--                                                <li><a href="#"><i class="fa fa-link"></i></a></li>-->
+<!--                                            </ul>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+
+<!--                                    <div class="col-sm-6">-->
+<!--                                        <div class="box">-->
+<!--                                            <img src="../mywork_img/map/consumption.png" height="440" width="660"/>-->
+<!--                                            <div class="box-content">-->
+<!--                                                <h3 class="title">销量分布热力图</h3>-->
+<!--                                                <span class="post">我的作品</span>-->
+<!--                                            </div>-->
+<!--                                            <ul class="icon">-->
+<!--                                                <li><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></li>-->
+<!--                                                <li><a href="#"><i class="fa fa-link"></i></a></li>-->
+<!--                                            </ul>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-sm-6">-->
+<!--                                        <div class="boxend">-->
+<!--                                            <img src="../mywork_img/map/add.png" height="440" width="660"/>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                    <li class="item-3" style="position: absolute; width: 1920px; left: 0px; top: 0px; display: none;">-->
+<!--                        <div class="container">-->
+<!--                            <div class="inner">-->
+<!--                                <div class="row">-->
+<!--                                    <div class="col-sm-6">-->
+<!--                                        <div class="box">-->
+<!--                                            <img src="../mywork_img/analyse/database.png" height="440" width="660"/>-->
+<!--                                            <div class="box-content">-->
+<!--                                                <h3 class="title">数据库个人信息分析</h3>-->
+<!--                                                <span class="post">可视化分析案例</span>-->
+<!--                                            </div>-->
+<!--                                            <ul class="icon">-->
+<!--                                                <li><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></li>-->
+<!--                                                <li><a href="#"><i class="fa fa-link"></i></a></li>-->
+<!--                                            </ul>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+
+<!--                                    <div class="col-sm-6">-->
+<!--                                        <div class="box">-->
+<!--                                            <img src="../mywork_img/analyse/assess.png" height="440" width="660"/>-->
+<!--                                            <div class="box-content">-->
+<!--                                                <h3 class="title">信用评分卡分析</h3>-->
+<!--                                                <span class="post">算法分析案例</span>-->
+<!--                                            </div>-->
+<!--                                            <ul class="icon">-->
+<!--                                                <li><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></li>-->
+<!--                                                <li><a href="#"><i class="fa fa-link"></i></a></li>-->
+<!--                                            </ul>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-sm-6">-->
+<!--                                        <div class="boxend">-->
+<!--                                            <img src="../mywork_img/analyse/add.png" height="440" width="660"/></div>-->
+<!--                        </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                    <li class="item-4" style="position: absolute; width: 1920px; left: 0px; top: 0px; display: none;">-->
+<!--                        <div class="container">-->
+<!--                            <div class="inner">-->
+<!--                                <div class="row">-->
+<!--                                    <div class="col-sm-12">-->
+<!--                                        <div class="box">-->
+<!--                                            <img src="../mywork_img/screen/business.png" height="700" width="1320"/>-->
+<!--                                            <div class="box-content">-->
+<!--                                                <h3 class="title">上市公司总体分析</h3>-->
+<!--                                                <span class="post">我的作品</span>-->
+<!--                                            </div>-->
+<!--                                            <ul class="icon">-->
+<!--                                                <li><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></li>-->
+<!--                                                <li><a href="#"><i class="fa fa-link"></i></a></li>-->
+<!--                                            </ul>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+
+<!--                                    <div class="col-sm-12">-->
+<!--                                        <div class="box">-->
+<!--                                            <img src="../mywork_img/screen/consumption.png" height="700" width="1320"/>-->
+<!--                                            <div class="box-content">-->
+<!--                                                <h3 class="title">销售品类分析</h3>-->
+<!--                                                <span class="post">我的作品</span>-->
+<!--                                            </div>-->
+<!--                                            <ul class="icon">-->
+<!--                                                <li><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></li>-->
+<!--                                                <li><a href="#"><i class="fa fa-link"></i></a></li>-->
+<!--                                            </ul>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-sm-12">-->
+<!--                                        <div class="boxend">-->
+<!--                                         <img src="../mywork_img/screen/add.png" height="700" width="1320"/></div>-->
+<!--                            </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<script type="text/javascript" src="/base/http/lib/icon/iconfont.js"></script>-->
+<!--<script type="text/javascript" src="/http/js/narBar.js"></script>-->
+<!--<script type="text/javascript" src="/http/js/cookie.js"></script>-->
+<!--<script type="text/javascript" src="/base/http/lib/seajs/sea.js"></script>-->
+<!--<script type="text/javascript" src="/base/http/lib/seajs/seajs-text.js"></script>-->
+</body>
+<script type="text/javascript" src="/http/lib/seajs/sea.js"></script>
+<script type="text/javascript" src="/http/lib/seajs/seajs-text.js"></script>
+<script type="text/javascript" src="/http/js/narBar.js"></script>
+<script>
+    seajs.config({
+        base : SGIS.Config.TOOL_MODULE_URL,		//基础路径
+        paths:{
+            base:SGIS.Config.BASE_MODULE_URL,		//跨目录的base路径
+            tool:SGIS.Config.TOOL_MODULE_URL,		//跨目录的tool路径
+            mapData:SGIS.Config.WEB_MODULE_URL  	//跨目录的web路径
+        },
+        map : [
+            [ '.json', '.json?t=' + new Date().getTime() ],
+//			[ '.js', '.js?t=' + new Date().getTime() ],
+            [ '.css', '.css?t=' + new Date().getTime() ]
+        ]});
+    seajs.use('/http/js/narBar',function(obj){
+        obj.into();
+    });
+    seajs.use('/http/narbarlogin');
+</script>
+</html>

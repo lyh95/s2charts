@@ -896,10 +896,14 @@
 }
 
 .index-page .solution-more-slide .container {
-    height: 789px;
+    height: 100%;
     position: relative;
+    margin-right: 7%;
+    width: 1370px;
 }
+@media (min-width: 1200px){
 
+}
 .index-page .solution-more-slide .hd {
     width: 255px;
     position: fixed;
@@ -909,15 +913,15 @@
     left: 0;
     top: 0;
     color: #fff;
-    margin-top: 5%;
+    margin-top: 1%;
 }
 
 .index-page .solution-more-slide .hd ul {
-    margin-top: 100px;
+    margin-top:50%
 }
 
 .index-page .solution-more-slide .hd li {
-    height: 100px;
+    height: 150px;
     padding-top: 30px;
     position: relative;
     cursor: default;
@@ -938,7 +942,7 @@
     margin-left: 20px;
     margin-right: 20px;
     float: left;
-    background: url("../img/icon/icon-logo.png") no-repeat;
+    /*background: url("../img/icon/icon-logo.png") no-repeat;*/
     width: 40px;
     height: 40px;
     position: relative;
@@ -1045,25 +1049,25 @@
 }
 
 .index-page .solution-more-slide .bd li.item-1 {
-    background: url("../myWork_img/toolPage.jpg") no-repeat center top;
+    /*background: url("../myWork_img/toolPage.jpg") no-repeat center top;*/
 }
 
 .index-page .solution-more-slide .bd li.item-2 {
-    background: url("../myWork_img/dataMap.png") no-repeat center top;
+    /*background: url("../myWork_img/dataMap.png") no-repeat center top;*/
 }
 
 .index-page .solution-more-slide .bd li.item-3 {
-    background: url("../myWork_img/toolPage.jpg") no-repeat center top;
+    /*background: url("../myWork_img/toolPage.jpg") no-repeat center top;*/
 }
 
 .index-page .solution-more-slide .bd li.item-4 {
-    background: url("../myWork_img/dataBig.jpg") no-repeat center top;
+    /*background: url("../myWork_img/dataBig.jpg") no-repeat center top;*/
 }
 
 
 .index-page .solution-more-slide .bd .inner {
-    padding-left: 320px;
-    padding-top: 180px;
+    padding-left: 160px;
+    padding-top: 80px;
     color: #fff;
     overflow: scroll;
 

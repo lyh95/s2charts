@@ -128,7 +128,7 @@ ul li{
     margin-left: 2%;
 }
 #ulstyle{
-    /*overflow: hidden;*/
+    /*overflow:auto ;*/
     height: 60px; width:70%;list-style-type: none;margin:0 auto ;display: inline-block;float:right;
     margin-block-start: 0;
     margin-right:10%;margin-left:10%;
