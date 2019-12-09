@@ -2,6 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 
 <mapper namespace= "com.s2charts.dao.mapper.user.SysPicMapper" >
+    <resultMap id="option" type="com.s2charts.dao.entity.user.SysPic">
+        <result column="user_pic"  property="userPic"/>
+        <result column="pic_option"  property="picOption"/>
+        <result column="create_time"  property="createTime"/>
+    </resultMap>
 
 
     <select id = "insertUserPic" resultType="SysPic">
@@ -9,9 +14,13 @@
         (#{userId,jdbcType=INTEGER},#{userPic,jdbcType=VARCHAR},#{picOption,jdbcType=VARCHAR});
     </select>
 
-
-    <select id = "getPicOption" resultType="String">
-       select pic_option from tb_pic where user_id=#{userId,jdbcType=INTEGER};
+    <!--//取出图集编辑pic的所有内容-->
+    <select id = "getPicOption" resultMap="option">
+       select user_pic,pic_option,create_time from tb_pic where user_id=#{userId};
+    </select>
+    <!--//取出最新option-->
+    <select id = "getdateOption" resultMap="option">
+       select user_pic,pic_option,create_time from tb_pic ORDER BY create_time desc limit 1;
     </select>
 
 </mapper>

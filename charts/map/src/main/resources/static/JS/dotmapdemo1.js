@@ -49,21 +49,22 @@ function load_val2() {
         //  dataType : "json",
         async:false,
         success: function (data,textStatus) {
+            console.log(data[0].dot);
+            result = data.map(function (item) {
+                return {
+                    dot: item.dot,
+                    value: item.value
+                }
+            });
 
-            result = data;
-            // re = data.data;
-            // return re;
-            // data = ret.data;
-            // data = data.substring(1,data.length()-1)
-            console.log(typeof data[0].dot);
-// re = re.data;
 
+
+        }
+
+    });
+    return result;
 }
-
-});
-return result;
-}
- var data=load_val2();
+var data=load_val2();
 
 function myF7Editor(dot, value){
     if(value){
@@ -100,90 +101,66 @@ var selection = [0,0,0,0];
 //
 //     var _currentData = data;
 
-    // var setCurrentData = function(_currentData){
-        _currentData = data;
-    //     return _currentData
-    // };
+// var setCurrentData = function(_currentData){
+_currentData = data;
+//     return _currentData
+// };
 // $(document).ready(function(data){
 //     _currentData = $.extend([],data);
 //
 //     var excelData = _currentData;
-    var container = document.getElementById('example1'),hot;
-    hot = new Handsontable(container, {
-        data: load_val2(),
-        rowHeaders: true,
-        //minSpareRows: 1,//初始化行
-        //colHeaders: true,
-        colHeaders: ['经纬度', '值'],
-        columnSorting: true,sortIndicator:true,
-        autoWrapCol:true,autoWrapRow:true,
-        manualColumnResize: true,autoWrapRow: true,
-        manualRowResize: true,//stretchH: 'all',
-        //outsideClickDeselects: false,removeRowPlugin: true,
-        contextMenu: true,
-        comments: true,
-        //autoColumnSize:true,
-        colWidths:[80,80,],
-        //
+var container = document.getElementById('example1'),hot;
+hot = new Handsontable(container, {
+    data: load_val2(),
+    width: '100%',
+    height: 800,
+    rowHeights: 30,
+    rowHeaders: true,
+    colHeaders: ['起始点','值'],
+    colWidths:[150,80]
+});
+hot.render();
+var Nowdata ;
+
+console.log("bbb",Nowdata);
 
 
 
-           // daodata : changes,
-        // data : afterChange(changes),
-        cell: [{row: 0, col: 1, comment: '实际工资'}],
-        columns: [
-            {data:'dot'},{data:'value'},
+
+$('#addRow').click(function(){
+    hot.alter('insert_row',hot.countRows());
+});
+
+$('#removeRow').click(function(){
+    var ridx = selection[0];
+    var eidx = selection[2];
+    hot.alter('remove_row',ridx,eidx-ridx+1);
+    selection = [0,0,0,0];
+});
 
 
-
-        ],
-
-        afterSelectionEnd: function(x1, y1, x2, y2){
-            selection = [x1,y1,x2,y2];
-        },
-    });
-
-         var Nowdata ;
-
-       console.log("bbb",Nowdata);
+console.log("hot",hot.getData());
+// return mapdata
 
 
-    console.log("arr",);
-
-    $('#addRow').click(function(){
-        hot.alter('insert_row',hot.countRows());
-    });
-
-    $('#removeRow').click(function(){
-        var ridx = selection[0];
-        var eidx = selection[2];
-        hot.alter('remove_row',ridx,eidx-ridx+1);
-        selection = [0,0,0,0];
-    });
+function tojson(_currentData){
 
 
-    console.log("hot",hot.getData());
-      // return mapdata
-
-
-    function tojson(_currentData){
-
-
-        var i = 0,
+    var i = 0,
 
         len = _currentData.length,
 
-           array = [];
+        array = [];
 
-        for(;i<len;i++){
+    for(;i<len;i++){
 
-            array.push({dot:_currentData[i][0],value:_currentData[i][1]});
-
-        }
-             console.log(array);
-        return JSON.stringify(array);
+        array.push({dot:_currentData[i][0],value:_currentData[i][1]});
 
     }
+    console.log(array);
+    return JSON.stringify(array);
+
+}
 
 
 function isEmpty(obj){
@@ -221,9 +198,9 @@ layer.setData(_currentData, {
 
 layer.on('mousemove', function(ev) {
     openInfoWin(map, ev.originalEvent, {
-    '位置': ev.rawData.dot,
-    '值': ev.rawData.value
-});
+        '位置': ev.rawData.dot,
+        '值': ev.rawData.value
+    });
 });
 
 console.log(_currentData);
@@ -525,12 +502,12 @@ selectCoordinates.onclick = function(){
     }
     if (selectCoordinates.checked == false){
 
-            coordinatesDispaly.style.display = "none";
-            console.log(coordinatesDispaly.style.display);
+        coordinatesDispaly.style.display = "none";
+        console.log(coordinatesDispaly.style.display);
 
     }
 
-    };
+};
 
 
 
@@ -614,7 +591,7 @@ function openInfoWin(map, event, content) {
     var lngLat = map.containerToLngLat(new AMap.Pixel(x, y));
 
     if (!tableDom) {
-        let infoDom = document.createElement('div');
+        var infoDom = document.createElement('div');
         infoDom.className = 'info';
         tableDom = document.createElement('table');
         infoDom.appendChild(tableDom);
@@ -659,9 +636,7 @@ hot.addHook('afterChange',function (changedata,source) {
     _currentData = this.getSourceData();
     console.log("aaa",_currentData);
 
-    // function againRenderMap(_currentData) {
-    //
-    // }
+
     layer.setData(_currentData, {
         lnglat: 'dot'
     });

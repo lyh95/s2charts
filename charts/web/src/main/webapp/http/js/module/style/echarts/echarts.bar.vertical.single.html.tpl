@@ -87,7 +87,7 @@
 			<div class="panel-body">
 				<div class="input-group  pull-left">
 		    	<span class="input-group-addon" style="width:auto;">
-		        	<input id="chart-show-legend-check" type="checkbox">
+		        	<input id="chart-show-legend-check" type="checkbox" checked="checked">
 		        	是否显示图例
 		      	</span>
 				</div><!-- /input-group -->

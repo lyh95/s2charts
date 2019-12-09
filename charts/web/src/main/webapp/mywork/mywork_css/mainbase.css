@@ -78,7 +78,7 @@ html, body, div, dl, dt, dd, ol, ul, li, h1, h2, h3, h4, h5, h6, p, blockquote, 
 }
 
 div{
-    overflow: scroll;
+    /*overflow: scroll;*/
 }
 
 article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary {

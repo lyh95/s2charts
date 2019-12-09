@@ -3,30 +3,139 @@
 <head>
     <meta charset="UTF-8" />
     <title>注册</title>
+    <!--<script data-jsfiddle="common" src="../lib/jquery-1.11.1.js"></script>-->
 </head>
+
 <body bgcolor="#F2F6F9">
 <center>
+    <div style="position:relative;">
+        <img src="/ECharts_files/fengmian.png">
     <div class="container" align="center"
-         style="background-color: #ffffff;margin: 220px;width: 300px;height: 180px"
-<h1>请输入注册信息</h1>
-<form action="/doRegister" method="post">
+         style="position:absolute;background-color:rgba(255,255,255,0.4);border-radius: 10px;margin-top: -380px;margin-left:980px;width: 300px;height: 180px"
+    >
+<h1 style="font-size: 25px">请输入注册信息</h1>
+<!--<form action="/doRegister" method="post">-->
     <table>
         <tr>
             <td>用户名:</td>
-            <td><input name="username" type="text" /></td>
+            <td><input id="username" name="username" type="text" /></td>
         </tr>
         <tr>
             <td>密码:</td>
-            <td><input name="password" type="password" /></td>
+            <td><input id="password1" name="password" type="password" /></td>
         </tr>
         <tr>
             <td>请确认密码：</td>
-            <td><input type="password" name="password2" /></td>
+            <td><input id="password2" type="password" name="password2" /></td>
         </tr>
     </table>
-    <button type="submit">提交</button>
-</form>
+    <button id="form" type="submit" onclick="get()">提交</button>
+        <a href="/login">
+        <button id="fanhui">返回</button></a>
+<!--</form>-->
+    </div>
     </div>
 </center>
 </body>
+<script type="text/javascript">
+
+    //1.创建对象
+
+    function  ajaxFunction(){
+        var xmlHttp;
+        try{ // Firefox, Opera 8.0+, Safari
+            xmlHttp=new XMLHttpRequest();
+        }
+        catch (e){
+            try{// Internet Explorer
+                xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
+            }
+            catch (e){
+                try{
+                    xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                catch (e){}
+            }
+        }
+
+        return xmlHttp;
+    }
+
+    function get() {
+        var username = document.getElementById("username").value;
+        var password1 = document.getElementById("password1").value;
+        var password2 = document.getElementById("password2").value;
+        console.log(username)
+        //1. 创建xmlhttprequest 对象
+        var request = ajaxFunction();
+
+        var formData = new FormData();
+        formData.append('username', username)
+        formData.append('password1', password1)
+        formData.append('password2', password2)
+        console.log("formData===",formData)
+
+        //2. 发送请求
+
+        //3. 获取响应数据 注册监听的意思。  一会准备的状态发生了改变，那么就执行 = 号右边的方法
+        request.onreadystatechange = function(){
+            // console.log(request.status)
+            // var res = request.responseText;
+            // console.log('res',res)
+            // if(res==200){
+            //     console.log("註冊成功")
+            // } else if(res==401){
+            //     console.log("两次密码不相同，注册失败！！")
+            // } else  if (res==402) {
+            //     console.log("用户名或者密码并不能为空")
+            // } else {
+            //     console.log("注册失败")
+            // }
+            if (request.readyState==4 && request.status==200)
+            {
+                var res = request.responseText
+                if(res==200){
+                    window.location.href = "http://localhost:8080/http/index.html";
+                } else if(res==401){
+                    alert("两次密码不相同，注册失败！！")
+                } else  if (res==402) {
+                    alert("用户名或者密码并不能为空")
+                } else {
+                    alert("注册失败")
+                }
+            }
+        }
+        request.open("POST" ,"http://localhost:8080/doRegister" , true );
+        request.send(formData);
+    }
+    // var form =document.getElementById("#form");
+    // // form.onclick=
+    //     function test() {
+    //     $.ajax({
+    //         type: 'post',
+    //         url: '/doRegister',
+    //         dataType: 'json',
+    //         // data: params,
+    //         success: function (res) {
+    //             if(res==200){
+    //                 alert("注册成功")
+    //             }
+    //             else if(res==401){
+    //                 alert("两次密码不相同，注册失败！！")
+    //             }
+    //             else  if (res==402) {
+    //                 alert("用户名或者密码并不能为空")
+    //             }
+    //             else
+    //             {
+    //                 alert("注册失败")
+    //             }
+    //         }
+    //     })
+    //
+    // }
+
+
+</script>
+
 </html>

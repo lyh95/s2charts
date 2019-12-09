@@ -14,12 +14,23 @@
     <!-- Favicon Icon -->
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link href="/http/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="/http/lib/semantic/css/semantic.css" rel="stylesheet">
+    <link href='/http/lib/spectrum-master/spectrum.css' rel='stylesheet' />
+
+    <script type="text/javascript" src="/base/http/js/common/SGIS.Base.js"></script>
+    <script type="text/javascript" src="/http/lib/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src='/http/lib/spectrum-master/spectrum.js'></script>
+    <script type="text/javascript" src="/http/lib/bootstrap/js/bootstrap.min.js"></script>
+
     <link rel="stylesheet" href="../css/owlCarousel.min.css" />
     <link rel="stylesheet" href="../css/fontawesome.min.css" />
     <link rel="stylesheet" href="../css/flaticon.css" />
     <link rel="stylesheet" href="../css/animate.css" />
     <link rel="stylesheet" href="../css/style.css" />
+    <link href="/http/css/navBar.css" rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -66,7 +77,7 @@
                     <div class="tf-progressbar-wrap">
                         <div class="tf-single-progressbar">
                             <div class="tf-progressbar-meta">
-                               <a href="../html/describe.html"><h3 class="tf-progressbar-title">描述统计分析方法</h3></a>
+                                <a href="../html/describe.html"><h3 class="tf-progressbar-title">描述统计分析方法</h3></a>
                                 <div class="tf-progressbar-percentage">95%</div>
                             </div>
                             <div class="tf-progressbar" data-progress-percentage="95">
@@ -213,12 +224,42 @@
     <!-- End Video Popup -->
 </div>
 </body>>
-    <!-- Scripts -->
-    <script src="../lib/vendor/modernizr-3.5.0.min.js"></script>
-    <script src="../lib/vendor/jquery-1.12.4.min.js"></script>
-    <script src="../js/mailchimp.min.js"></script>
-    <script src="../js/owlCarousel.min.js"></script>
-    <script src="../js/tamjid-counter.min.js"></script>
-    <script src="../js/wow.min.js"></script>
-    <script src="../js/main.js"></script>
+<!-- Scripts -->
+<script src="../lib/vendor/modernizr-3.5.0.min.js"></script>
+<script src="../lib/vendor/jquery-1.12.4.min.js"></script>
+<script src="../js/mailchimp.min.js"></script>
+<script src="../js/owlCarousel.min.js"></script>
+<script src="../js/tamjid-counter.min.js"></script>
+<script src="../js/wow.min.js"></script>
+<script src="../js/main.js"></script>
+
+
+<script type="text/javascript" src='/base/http/lib/icon/iconfont.js'></script>
+<script type="text/javascript" src="/http/js/cookie.js"></script>
+<script type="text/javascript" src="/base/http/lib/seajs/sea.js"></script>
+<script type="text/javascript" src="/base/http/lib/seajs/seajs-text.js"></script>
+<script type="text/javascript" src="/http/js/narBar.js"></script>
+<script type="text/javascript" src="/http/narbarlogin.js"></script>
+
+
+<script>
+    seajs.config({
+        base : SGIS.Config.TOOL_MODULE_URL,		//基础路径
+        paths:{
+            base:SGIS.Config.BASE_MODULE_URL,		//跨目录的base路径
+            tool:SGIS.Config.TOOL_MODULE_URL,		//跨目录的tool路径
+            mapData:SGIS.Config.WEB_MODULE_URL  	//跨目录的web路径
+        },
+        map : [
+            [ '.json', '.json?t=' + new Date().getTime() ],
+//			[ '.js', '.js?t=' + new Date().getTime() ],
+            [ '.css', '.css?t=' + new Date().getTime() ]
+        ]});
+    seajs.use('/http/js/narBar',function(obj){
+        obj.into();
+    });
+    seajs.use('/http/narbarlogin');
+
+</script>
+
 </html>

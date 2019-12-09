@@ -8,6 +8,8 @@ import java.util.List;
 public interface SysPicMapper {
     //插入用户保存图的信息
     SysPic insertUserPic(@Param("userId") int userId, @Param("userPic") String userPic, @Param("picOption") String picOption);
-    //取出图集编辑的内容
-    List<String> getPicOption(@Param("userId") int userId);
+    //取出图集编辑pic的所有内容
+    List<SysPic> getPicOption(@Param("userId") int userId);
+    //取出最新option
+    List<SysPic> getdateOption();
 }

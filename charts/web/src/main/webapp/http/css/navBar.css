@@ -18,7 +18,6 @@
     border: none;
     border-radius: 0;
     background: transparent;
-
 }
 #go-login-btn:hover{
     color:#4169E1 ;
@@ -71,7 +70,10 @@
 #login-message{
     /*color: #ff0000;*/
 }
-
+/*注销下拉框*/
+.dropdown-menu{
+    top:57px;
+}
 /*��¼����ʽ*/
 .modal-header {
     cursor: move;
@@ -126,7 +128,8 @@ ul li{
     margin-left: 2%;
 }
 #ulstyle{
-    overflow: hidden;height: 60px; width:70%;list-style-type: none;margin:0 auto ;display: inline-block;float:right;
+    /*overflow:auto ;*/
+    height: 60px; width:70%;list-style-type: none;margin:0 auto ;display: inline-block;float:right;
     margin-block-start: 0;
     margin-right:10%;margin-left:10%;
     margin-block-end: 0px;margin-inline-start: 1%; margin-inline-end: 1%; padding-inline-start: 3%;

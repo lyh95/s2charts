@@ -1,6 +1,17 @@
 package com.s2charts.dao.entity.user;
 
+import java.util.Date;
+
 public class SysPic {
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    private Date createTime;
     private Integer userId;
 
     public Integer getUserId() {

@@ -14,7 +14,12 @@ public class SaveDataService {
     public SysPic insertUserPic(int userId, String userPic, String picOption){
         return sysPicMapper.insertUserPic(userId,userPic,picOption);
     }
-    public List<String> getPicOption(int userId){
+//       <!--//取出图集编辑pic的所有内容-->
+    public List<SysPic> getPicOption(int userId){
         return sysPicMapper.getPicOption(userId);
+    }
+//     <!--//取出最新option-->
+    public List<SysPic> getdateOption(){
+        return sysPicMapper.getdateOption();
     }
 }

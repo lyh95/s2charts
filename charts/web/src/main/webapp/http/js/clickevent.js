@@ -20,7 +20,7 @@ define(function (require, exports, module) {
                     // console.log(canvas)
                     var img = new Image();      //定义新的img存放canvas数据
                     img.src = canvas.toDataURL("image/png");    //把canvas画布里的图案转变成base64编码格式的png，然后返回 Data URL数据。
-                    console.log(img);
+                    // console.log(img);
                     var a = document.createElement('a')    //添加a标签
                     var event = new MouseEvent('click')  //a标签的鼠标点击事件
                     a.download = '图片'   //a标签的download时的文件名
@@ -40,9 +40,14 @@ define(function (require, exports, module) {
 
     //保存功能
     $("#save-pic").click(function () {
+
         var mychart = common.myECharts.getChart("content")   //getchart的API，用getchart来找图片的id content
         var pic_option = mychart.getOption()
-        console.log(pic_option)
+        console.log(typeof pic_option)
+        //从localStorage取id
+        // var IdName=userPic
+        localStorage.setItem("IdName", userPic);
+        // console.log(IdName)
         //判断echarts是否用了formatter
   if (pic_option.tooltip[0].formatter =="undefined"){
       console.log(pic_option.tooltip[0].formatter)

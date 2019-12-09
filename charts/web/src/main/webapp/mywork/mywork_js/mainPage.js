@@ -1,5 +1,5 @@
 $(function(){
     $(".solution-more-slide").slide({
-        effect: 'fold'
+        // effect: 'fold'
     });//hover
 })
